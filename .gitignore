@@ -7,12 +7,12 @@
 #
 .utmp/
 /[Rr]urunba/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+/[Rr]urunba/[Tt]emp/
+/[Rr]urunba/[Oo]bj/
+/[Rr]urunba/[Bb]uild/
+/[Rr]urunba/[Bb]uilds/
+/[Rr]urunba/[Ll]ogs/
+/[Rr]urunba/[Uu]ser[Ss]ettings/
 /[Rr]urunba/[Aa]ndroidBuild/
 *.log
 
