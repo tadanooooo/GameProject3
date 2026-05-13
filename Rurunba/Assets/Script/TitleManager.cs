@@ -1,13 +1,14 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // シーン管理に必須！
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class TitleManager : MonoBehaviour
 {
-    // ボタンから呼び出す関数
-    public void StartGame()
+    void Update()
     {
-        SceneManager.LoadScene("SampleScene");
-
-        Debug.Log("GameStart");
+        if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("StageSelectScene");
+        }
     }
 }
