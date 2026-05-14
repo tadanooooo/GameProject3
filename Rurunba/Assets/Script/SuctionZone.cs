@@ -1,96 +1,72 @@
 using UnityEngine;
+using System.Collections; // コルーチンを使うために必要
 
 public class SuctionZone : MonoBehaviour
 {
-    public float suctionSpeed = 5f;
-    public Transform suctionPoint;
-    public float shrinkSpeed = 2.0f;
-    public float killDistance = 0.1f;
-
-    // ゴミを安全に消去するための共通メソッド
-    void RemoveTrash(GameObject trash)
-    {
-        // すでに消去処理が始まっている場合は何もしない
-        if (!trash.CompareTag("Trash")) return;
-
-        // タグを先に外すことで1フレーム内に2回判定されるのを防ぐ
-        trash.tag = "Untagged";
-
-        if (GameManager.instance != null)
-        {
-            GameManager.instance.TrashCollected();
-        }
-
-        Destroy(trash);
-        Debug.Log("ゴミ残り: " + GameManager.instance.currentTrashCount);
-    }
+    public float shrinkSpeed = 5.0f; // 小さくなる速さ
+    public Transform suctionPoint;   // 吸い込みのゴール地点
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Trash"))
         {
-            // すでに親が自分なら、それは吸い込み中の本体接触判定とみなす
-            if (other.transform.parent == this.transform)
+            // 二重処理防止
+            other.tag = "Untagged";
+
+            // GameManagerへの報告
+            if (GameManager.instance != null)
             {
-                RemoveTrash(other.gameObject);
-                return;
+                GameManager.instance.TrashCollected();
             }
 
-            // 初めて吸い込み範囲に入った時の処理
-            other.transform.SetParent(this.transform);
-
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-            }
-
-            other.isTrigger = true;
+            // 吸い込みアニメーション開始（コルーチンを呼び出す）
+            StartCoroutine(ShrinkAndDestroy(other.gameObject));
         }
     }
 
-    void OnTriggerStay(Collider other)
+    // 徐々に小さくして消す魔法の処理
+    IEnumerator ShrinkAndDestroy(GameObject trash)
     {
-        if (other.CompareTag("Trash"))
+        // 物理挙動を完全に止めて、警告を防ぐ
+        Rigidbody rb = trash.GetComponent<Rigidbody>();
+        if (rb != null)
         {
-            TrashHealth health = other.GetComponent<TrashHealth>();
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.isKinematic = true;
+        }
 
-            // HPがあるゴミの耐える処理
-            if (health != null && !health.IsBroken)
+        // 当たり判定を消して、ノズルに引っかからないようにする
+        Collider col = trash.GetComponent<Collider>();
+        if (col != null) col.enabled = false;
+
+        // 小さくなるまでループ
+        while (trash != null && trash.transform.localScale.x > 0.01f)
+        {
+            // suctionPointがあれば、そこに向かって少し移動させる
+            if (suctionPoint != null)
             {
-                health.TakeDamage(Time.deltaTime);
-                other.transform.position += Random.insideUnitSphere * 0.05f;
-                return;
+                trash.transform.position = Vector3.MoveTowards(
+                    trash.transform.position,
+                    suctionPoint.position,
+                    0.1f
+                );
             }
 
-            // 吸い込まれて消える処理
-
-            // 中心に向かって移動
-            other.transform.position = Vector3.MoveTowards(
-                other.transform.position,
-                suctionPoint.position,
-                suctionSpeed * Time.deltaTime
-            );
-
-            // 回転を加えて吸い込まれてる感を出す
-            other.transform.Rotate(0, 0, 500 * Time.deltaTime);
-
-            // 中心までの距離に応じて、サイズを0に近づける
-            // 距離が killDistance に近づくほど scale が 0 になるように計算
-            float currentDist = Vector3.Distance(other.transform.position, suctionPoint.position);
-
-            // 補間（Lerp）を使って、今のサイズから0へ滑らかに変化
-            other.transform.localScale = Vector3.Lerp(
-                other.transform.localScale,
+            // サイズを徐々に小さくする
+            trash.transform.localScale = Vector3.Lerp(
+                trash.transform.localScale,
                 Vector3.zero,
-                shrinkSpeed * Time.deltaTime
+                Time.deltaTime * shrinkSpeed
             );
 
-            // 消去判定（距離が十分近い、またはサイズがほぼ0になったら）
-            if (currentDist < killDistance || other.transform.localScale.x <= 0.05f)
-            {
-                RemoveTrash(other.gameObject);
-            }
+            yield return null; // 1フレーム待機
+        }
+
+        // 最後にオブジェクトを消す
+        if (trash != null)
+        {
+            Destroy(trash);
         }
     }
 }

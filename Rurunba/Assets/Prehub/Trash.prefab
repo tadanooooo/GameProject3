@@ -153,4 +153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e36541e1b05a2419ca0730802bac76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashHealth
-  hp: 0.5
+  hp: 0.1
