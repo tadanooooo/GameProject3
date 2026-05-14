@@ -9,7 +9,6 @@ public class TimeManager : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     private float elapsedTime = 0f;
-    private bool isPaused = false;
 
     void Awake()
     {
@@ -18,7 +17,8 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-        if (!isPaused)
+        // Unity全体の時間が動いている（0じゃない）時だけタイマーを進める
+        if (Time.timeScale > 0)
         {
             elapsedTime += Time.deltaTime;
             UpdateDisplay();
@@ -33,13 +33,13 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    // 他のスクリプトからタイムを止めるための関数
+    // ゲームクリア時などに完全にタイマーを止めたい場合はこれを使う
     public void StopTimer()
     {
-        isPaused = true;
+        // Time.timeScaleを0にすれば、上のUpdate内の判定で勝手に止まります
+        // もしクリア演出中に時間を止めたくないなら、別のフラグが必要になります
     }
 
-    // 現在のタイムを取得するための関数
     public float GetTime()
     {
         return elapsedTime;

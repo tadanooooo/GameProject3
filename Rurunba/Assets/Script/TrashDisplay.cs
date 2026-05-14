@@ -14,9 +14,8 @@ public class TrashDisplay : MonoBehaviour
     {
         if (GameManager.instance != null)
         {
-            trashText.text = GameManager.instance.currentTrashCount + " / " +
-                             GameManager.instance.totalTrashCount;
-
+            //trashText.text = GameManager.instance.currentTrashCount + "/" + GameManager.instance.totalTrashCount;
+            trashText.text = GameManager.instance.currentTrashCount.ToString();
         }
     }
 }

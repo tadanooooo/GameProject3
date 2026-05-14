@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0cff2bca0f87f41bfba37bb7357eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  timerText: {fileID: 0}
+  timerText: {fileID: 594047400}
 --- !u!1001 &269702625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -512,9 +512,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 1964602102}
-  offset: {x: 0, y: 2.5, z: -1}
+  offset: {x: 0, y: 1.5, z: -1.5}
   smoothTime: 0.2
-  fixedRotation: {x: 60, y: 0, z: 0}
+  fixedRotation: {x: 40, y: 0, z: 0}
 --- !u!1 &338642153
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +755,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &594047400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4817306746190572272, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
+  m_PrefabInstance: {fileID: 1644473745}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

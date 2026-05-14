@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement; // これを忘れずに！
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI; // ポーズ画面のパネルをここに入れる
-    private bool isPaused = false;
+    //private bool isPaused = false;
 
     // 右上のポーズボタン
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f; // 時間を止める
-        isPaused = true;
+        //isPaused = true;
     }
 
     // 再開ボタン用
@@ -19,7 +19,7 @@ public class PauseManager : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f; // 時間を動かす
-        isPaused = false;
+        //isPaused = false;
     }
 
     // Rボタン（リトライ）用
