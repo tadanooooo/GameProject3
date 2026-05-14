@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4655462908316360293}
   - component: {fileID: 2021734615574117421}
   - component: {fileID: 5428532270321565039}
+  - component: {fileID: -8245197864219649170}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Trash
@@ -140,3 +141,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8245197864219649170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8288258368936561415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e36541e1b05a2419ca0730802bac76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashHealth
+  hp: 0.5

@@ -1,13 +1,25 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // シーン管理に必須！
+using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    // ボタンから呼び出す関数
-    public void StartGame()
+    public void GoToStageSelect()
     {
-        SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("StageSelectScene");
+    }
 
-        Debug.Log("GameStart");
+    // ゲーム終了ボタン用
+    public void ExitGame()
+    {
+        Debug.Log("ゲームを終了");
+
+        // ビルドしたアプリを終了
+        Application.Quit();
+
+        // Unityエディタ上での実行も停止（動作確認用）
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }

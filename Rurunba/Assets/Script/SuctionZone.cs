@@ -10,7 +10,7 @@ public class SuctionZone : MonoBehaviour
     // ゴミを安全に消去するための共通メソッド
     void RemoveTrash(GameObject trash)
     {
-        // すでに消去処理が始まっている（タグが外れている）場合は何もしない
+        // すでに消去処理が始まっている場合は何もしない
         if (!trash.CompareTag("Trash")) return;
 
         // タグを先に外すことで1フレーム内に2回判定されるのを防ぐ
@@ -22,14 +22,14 @@ public class SuctionZone : MonoBehaviour
         }
 
         Destroy(trash);
-        Debug.Log("ゴミを回収しました。残り: " + GameManager.instance.currentTrashCount);
+        Debug.Log("ゴミ残り: " + GameManager.instance.currentTrashCount);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Trash"))
         {
-            // すでに親が自分なら、それは吸い込み中の「本体接触」判定とみなす
+            // すでに親が自分なら、それは吸い込み中の本体接触判定とみなす
             if (other.transform.parent == this.transform)
             {
                 RemoveTrash(other.gameObject);
@@ -53,20 +53,41 @@ public class SuctionZone : MonoBehaviour
     {
         if (other.CompareTag("Trash"))
         {
-            // 中心へ移動
+            TrashHealth health = other.GetComponent<TrashHealth>();
+
+            // HPがあるゴミの耐える処理
+            if (health != null && !health.IsBroken)
+            {
+                health.TakeDamage(Time.deltaTime);
+                other.transform.position += Random.insideUnitSphere * 0.05f;
+                return;
+            }
+
+            // 吸い込まれて消える処理
+
+            // 中心に向かって移動
             other.transform.position = Vector3.MoveTowards(
                 other.transform.position,
                 suctionPoint.position,
                 suctionSpeed * Time.deltaTime
             );
 
-            // 小さくする
-            float shrinkAmount = shrinkSpeed * Time.deltaTime;
-            other.transform.localScale -= new Vector3(shrinkAmount, shrinkAmount, shrinkAmount);
+            // 回転を加えて吸い込まれてる感を出す
+            other.transform.Rotate(0, 0, 500 * Time.deltaTime);
 
-            // 距離またはサイズによる消去判定
-            float distance = Vector3.Distance(other.transform.position, suctionPoint.position);
-            if (distance < killDistance || other.transform.localScale.x <= 0.01f)
+            // 中心までの距離に応じて、サイズを0に近づける
+            // 距離が killDistance に近づくほど scale が 0 になるように計算
+            float currentDist = Vector3.Distance(other.transform.position, suctionPoint.position);
+
+            // 補間（Lerp）を使って、今のサイズから0へ滑らかに変化
+            other.transform.localScale = Vector3.Lerp(
+                other.transform.localScale,
+                Vector3.zero,
+                shrinkSpeed * Time.deltaTime
+            );
+
+            // 消去判定（距離が十分近い、またはサイズがほぼ0になったら）
+            if (currentDist < killDistance || other.transform.localScale.x <= 0.05f)
             {
                 RemoveTrash(other.gameObject);
             }
