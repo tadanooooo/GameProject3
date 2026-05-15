@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trash
   - Goal
+  - Wall
   layers:
   - Default
   - TransparentFX
