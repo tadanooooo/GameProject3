@@ -348,8 +348,8 @@ MonoBehaviour:
     y: 0
     width: 341.6
     height: 494.4
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 43.2
+    y: 0
     width: 1536
     height: 36
   m_SerializedDataModeController:
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 592
+    y: 536.8
     width: 843.8
     height: 178
   m_SerializedDataModeController:
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 843.8
     height: 486.8
   m_SerializedDataModeController:
@@ -1339,11 +1339,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.28748247, y: 0.63175005, z: -0.27277917, w: 0.6664649}
     speed: 2
-    m_Value: {x: 0.28808758, y: 0.63004214, z: -0.27204242, w: 0.66786623}
+    m_Value: {x: 0.28748247, y: 0.63175005, z: -0.27277917, w: 0.6664649}
   m_Size:
     m_Target: 33.897247
     speed: 2
-    m_Value: 32.437557
+    m_Value: 33.897247
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1398,8 +1398,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 844.8
-    y: 79.200005
+    x: 1
+    y: 24
     width: 347.6
     height: 214
   m_SerializedDataModeController:
@@ -1418,8 +1418,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: 56604
+      m_SelectedIDs: []
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
@@ -1487,8 +1486,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 844.8
-    y: 319.2
+    x: 1
+    y: 264
     width: 347.6
     height: 228.4
   m_SerializedDataModeController:
@@ -1539,10 +1538,7 @@ MonoBehaviour:
       m_Data: 56592
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51018
-    - m_Data: 51134
-    - m_Data: 1000000000
-    - m_Data: 2147483647
+    - m_Data: 50420
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1575,7 +1571,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51018
+    - m_Data: 50420
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1609,8 +1605,8 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: M1S1 3
-      m_OriginalName: M1S1 3
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -1618,10 +1614,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 59016
+        m_Data: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 13}
@@ -1657,8 +1653,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1194.4
-    y: 79.200005
+    x: 350.6
+    y: 24
     width: 340.6
     height: 468.4
   m_SerializedDataModeController:
@@ -1708,10 +1704,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Console\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 844.8
-    y: 573.60004
+    x: 1
+    y: 518.4
     width: 690.2
-    height: 196.4
+    height: 196.39996
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
