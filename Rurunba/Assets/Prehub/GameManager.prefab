@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5736368832737613846}
   - component: {fileID: 5429003980982999814}
   - component: {fileID: 6362869981434373566}
+  - component: {fileID: -4875210475623854717}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -73,3 +74,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   timerText: {fileID: 0}
+--- !u!114 &-4875210475623854717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722740175185280495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f1d09344f71844c9ca1d6f08d3130b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HpManager
+  maxHp: 5
+  invincibleTime: 3
+  hpSlider: {fileID: 0}
+  fillImage: {fileID: 0}
+  visibleTime: 1.5
+  fadeSpeed: 2
