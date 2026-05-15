@@ -11,6 +11,13 @@ public class GyroPlayer : MonoBehaviour
     // この値を大きくする（15~20）とクイックに、小さく（2~5）するとゆっくり向きが変わります
     public float turnSmoothSpeed = 10f;
 
+    [Header("ノックバック")]
+    public float knockbackPower = 10f;
+    public float knockbackTime = 0.3f;
+
+    private bool isKnockback = false;
+    private float knockbackTimer = 0f;
+
     private Rigidbody rb;
 
     void Start()
@@ -24,6 +31,19 @@ public class GyroPlayer : MonoBehaviour
 
     void Update()
     {
+        // ノックバック中
+        if (isKnockback)
+        {
+            knockbackTimer -= Time.deltaTime;
+
+            if (knockbackTimer <= 0)
+            {
+                isKnockback = false;
+            }
+
+            return;
+        }
+
         if (Accelerometer.current == null) return;
 
         Vector3 accel = Accelerometer.current.acceleration.ReadValue();
@@ -57,5 +77,34 @@ public class GyroPlayer : MonoBehaviour
             // 傾きが戻ったら止まる
             rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
         }
+    }
+
+    void OnCollisionStay (Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            // 無敵中なら何もしない
+            if (!HpManager.Instance.CanTakeDamage())
+                return;
+
+            HpManager.Instance.TakeDamage(1);
+
+            Knockback(collision);
+        }
+    }
+
+    void Knockback(Collision collision)
+    {
+        isKnockback = true;
+        knockbackTimer = knockbackTime;
+
+        // 接触面の法線方向
+        Vector3 normal = collision.contacts[0].normal;
+
+        // 一旦停止
+        rb.linearVelocity = Vector3.zero;
+
+        // 壁から垂直に吹き飛ばす
+        rb.AddForce(normal * knockbackPower, ForceMode.Impulse);
     }
 }
