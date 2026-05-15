@@ -33,7 +33,7 @@ public class PauseManager : MonoBehaviour
     public void GoToStageSelect()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("StageSelectScene");
+        SceneManager.LoadScene("1_StageSelectScene");
     }
 
     // Titleボタン用
