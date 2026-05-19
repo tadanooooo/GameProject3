@@ -14,6 +14,8 @@
 /[Rr]urunba/[Ll]ogs/
 /[Rr]urunba/[Uu]ser[Ss]ettings/
 /[Rr]urunba/[Aa]ndroidBuild/
+/Rurunba/UserSettings/EditorUserSettings.asset/
+/Rurunba/UserSettings/Layouts/default-6000.dwlt/
 *.log
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
