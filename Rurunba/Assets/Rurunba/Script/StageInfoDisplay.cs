@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; // 🌟 これを追加することで Image 型が使えるようになります
+using UnityEngine.UI;
 
 public class StageInfoDisplay : MonoBehaviour
 {
@@ -15,18 +15,18 @@ public class StageInfoDisplay : MonoBehaviour
         public string sceneName;
     }
 
-    [Header("全ステージの設定一覧")]
+    [Header("全ステージ設定一覧")]
     public StageData[] allStages;
 
-    [Header("表示・非表示を切り替えるパネル本体")]
+    [Header("切り替えるパネル")]
     public GameObject infoPanel;
 
-    [Header("書き換えるUIテキスト")]
+    [Header("UIテキスト")]
     public TextMeshProUGUI stageTitleText;
     public TextMeshProUGUI targetTimeText;
     public TextMeshProUGUI bestTimeText;
 
-    [Header("書き換える星の画像")]
+    [Header("星画像")]
     public Image star1;
     public Image star2;
     public Image star3;
@@ -68,13 +68,40 @@ public class StageInfoDisplay : MonoBehaviour
 
         if (bestTimeText != null)
         {
-            if (bestTime < 0) bestTimeText.text = "BestTime: None";
-            else bestTimeText.text = "BestTime: " + bestTime.ToString("F2") + "s";
+            if (bestTime >= 9999f)
+            {
+                bestTimeText.text = "BestTime: None";
+            }
+            else
+            {
+                bestTimeText.text = "BestTime: " + bestTime.ToString("F2") + "s";
+            }
         }
 
-        if (star1 != null) star1.gameObject.SetActive(bestStars >= 1);
-        if (star2 != null) star2.gameObject.SetActive(bestStars >= 2);
-        if (star3 != null) star3.gameObject.SetActive(bestStars >= 3);
+        // 星の数に応じて表示する画像を切り替え
+        switch (bestStars)
+        {
+            case 0: // まだクリアしていない時
+                if (star1 != null) star1.gameObject.SetActive(false);
+                if (star2 != null) star2.gameObject.SetActive(false);
+                if (star3 != null) star3.gameObject.SetActive(false);
+                break;
+            case 1: // 星1つの画像だけを表示
+                if (star1 != null) star1.gameObject.SetActive(true);
+                if (star2 != null) star2.gameObject.SetActive(false);
+                if (star3 != null) star3.gameObject.SetActive(false);
+                break;
+            case 2: // 星2つの画像だけを表示
+                if (star1 != null) star1.gameObject.SetActive(false);
+                if (star2 != null) star2.gameObject.SetActive(true);
+                if (star3 != null) star3.gameObject.SetActive(false);
+                break;
+            case 3: // 星3つの画像だけを表示
+                if (star1 != null) star1.gameObject.SetActive(false);
+                if (star2 != null) star2.gameObject.SetActive(false);
+                if (star3 != null) star3.gameObject.SetActive(true);
+                break;
+        }
     }
 
     public void ClickStartStage()

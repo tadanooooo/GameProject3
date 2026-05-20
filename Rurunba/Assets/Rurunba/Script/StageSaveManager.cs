@@ -27,9 +27,11 @@ public static class StageSaveManager
     public static void SaveBestTime(int stageNumber, float newTime)
     {
         string key = "Stage_" + stageNumber + "_BestTime";
-        // まだ記録がない（0秒）の時は、比較のために大きな数字（9999秒）をデフォルトにする
+
+        // データがないときの初期値を一貫
         float currentBest = PlayerPrefs.GetFloat(key, 9999f);
 
+        // 今回のタイムの方が速い（数値が小さい）場合だけ保存
         if (newTime < currentBest)
         {
             PlayerPrefs.SetFloat(key, newTime);
@@ -38,10 +40,12 @@ public static class StageSaveManager
         }
     }
 
-    // ベストタイムを読み込む（まだ記録がない時は -1 が返る）
+    // ベストタイムを読み込む（まだ記録がない時は 9999f）
     public static float LoadBestTime(int stageNumber)
     {
         string key = "Stage_" + stageNumber + "_BestTime";
-        return PlayerPrefs.GetFloat(key, -1f);
+
+        // 保存側と合わせて、記録がない時は9999fを返す
+        return PlayerPrefs.GetFloat(key, 9999f);
     }
 }

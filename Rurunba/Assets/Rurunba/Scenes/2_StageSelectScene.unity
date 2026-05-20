@@ -217,18 +217,18 @@ PrefabInstance:
     - target: {fileID: 80332604145863950, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1572180126}
     - target: {fileID: 80332604145863950, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 80332604145863950, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: LoadSceneByName
       objectReference: {fileID: 0}
     - target: {fileID: 80332604145863950, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneSwitcher, Assembly-CSharp
+      value: SimpleSceneSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 80332604145863950, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -265,18 +265,18 @@ PrefabInstance:
     - target: {fileID: 1003927863204394777, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1572180125}
     - target: {fileID: 1003927863204394777, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1003927863204394777, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadSceneByName
+      value: ChangeScene
       objectReference: {fileID: 0}
     - target: {fileID: 1003927863204394777, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SimpleSceneSwitcher, Assembly-CSharp
+      value: SceneSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1003927863204394777, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -441,77 +441,6 @@ GameObject:
 --- !u!224 &748658773 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7814549830884379357, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
-  m_PrefabInstance: {fileID: 748658771}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &748658774 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4228207415459233705, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
-  m_PrefabInstance: {fileID: 748658771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &748658775 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6401451829481875762, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
-  m_PrefabInstance: {fileID: 748658771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &748658776 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5372932201796356104, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
-  m_PrefabInstance: {fileID: 748658771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!114 &748658777 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6577643129371191397, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
-  m_PrefabInstance: {fileID: 748658771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!114 &748658778 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2701098061522787306, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
-  m_PrefabInstance: {fileID: 748658771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!114 &748658779 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4631868825341527345, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
-  m_PrefabInstance: {fileID: 748658771}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &748658780 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5701647044741431004, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &797583476
@@ -692,31 +621,31 @@ PrefabInstance:
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: star1
       value: 
-      objectReference: {fileID: 748658776}
+      objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: star2
       value: 
-      objectReference: {fileID: 748658775}
+      objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: star3
       value: 
-      objectReference: {fileID: 748658774}
+      objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: infoPanel
       value: 
-      objectReference: {fileID: 748658780}
+      objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: bestTimeText
       value: 
-      objectReference: {fileID: 748658777}
+      objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: stageTitleText
       value: 
-      objectReference: {fileID: 748658779}
+      objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: targetTimeText
       value: 
-      objectReference: {fileID: 748658778}
+      objectReference: {fileID: 0}
     - target: {fileID: 4658175259217694236, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: m_Name
       value: StageSelectManager
@@ -726,6 +655,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+--- !u!114 &1572180125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1558361629372762851, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+  m_PrefabInstance: {fileID: 1572180124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53ba63236f4133489c6a3123685bf85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageSelect_TitleSwitcher
+--- !u!114 &1572180126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6652800311641381656, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+  m_PrefabInstance: {fileID: 1572180124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0260938a745716440b045358dd55ce76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleSceneSwitcher
 --- !u!1 &1873974702
 GameObject:
   m_ObjectHideFlags: 0
