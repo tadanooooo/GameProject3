@@ -159,6 +159,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 888083674897747393, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025673867034718589, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1534461971867565192, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -231,9 +239,29 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2389877366286123681, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449928871148075235, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3040490569324516150, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3778270189396727358, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_RenderMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451878006855941933, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685768441426087978, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4888364970448577725, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -281,6 +309,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121417563408572340, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797646564732305053, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7108282273478458042, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
@@ -395,9 +427,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8868560350892769091, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8995234823751349211, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148856625505775597, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5378441077848379465, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}

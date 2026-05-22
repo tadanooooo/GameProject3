@@ -1,8 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class TitleManager : MonoBehaviour
-{
+{    void Awake()
+    {
+        // スマホのタッチパネル機能をシステムに強制的に登録して認識させる
+        InputSystem.AddDevice<Touchscreen>();
+    }
     public void GoToStageSelect()
     {
         Time.timeScale = 1f;

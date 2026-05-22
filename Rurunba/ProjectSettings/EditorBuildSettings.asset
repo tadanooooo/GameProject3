@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
+    path: Assets/Rurunba/Scenes/TitleScene.unity
     guid: 8246c8505fbe72d49bb98ee78ca978aa
   - enabled: 1
-    path: Assets/Scenes/1_StageSelectScene.unity
+    path: Assets/Rurunba/Scenes/1_StageSelectScene.unity
     guid: 1da363847b993824a9f48c5ea6ea664e
   - enabled: 1
-    path: Assets/Scenes/2_StageSelectScene.unity
+    path: Assets/Rurunba/Scenes/2_StageSelectScene.unity
     guid: a664cd7b12a7c2343b97b12686a4bb98
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Rurunba/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7a5dcec2b0ee81847ab94b31dc276466, type: 2}

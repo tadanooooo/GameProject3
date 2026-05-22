@@ -24,9 +24,13 @@ public class HpManager : MonoBehaviour
     public float visibleTime = 1.5f;
     public float fadeSpeed = 2f;
 
-    // ゲームオーバー用のUI登録を追加
+    // ----- ここから追加・修正 -----
+    [Header("消去するメインUI設定")]
+    public GameObject mainUiObject;
+    // ----------------------------
+
     [Header("ゲームオーバーUI設定")]
-    public GameObject gameOverTextObject; 
+    public GameObject gameOverTextObject;
     public GameObject gameOverPanel;
     public string stageSelectSceneName = "1_StageSelectScene";
 
@@ -35,7 +39,7 @@ public class HpManager : MonoBehaviour
 
     private bool isInvincible = false;
     private float invincibleTimer = 0f;
-    private bool isDead = false; // 死亡フラグ（二度消し防止など）
+    private bool isDead = false; // 死亡フラグ
 
     void Awake()
     {
@@ -52,7 +56,6 @@ public class HpManager : MonoBehaviour
         canvasGroup = hpSlider.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
 
-        // ゲーム開始時はゲームオーバーUIを確実に隠しておく
         if (gameOverTextObject != null) gameOverTextObject.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
 
@@ -61,28 +64,22 @@ public class HpManager : MonoBehaviour
 
     void Update()
     {
-        // 無敵時間処理
         if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;
-
             if (invincibleTimer <= 0)
             {
                 isInvincible = false;
             }
         }
 
-        // UI表示時間
         if (visibleTimer > 0)
         {
             visibleTimer -= Time.deltaTime;
         }
         else
         {
-            // フェードアウト
             canvasGroup.alpha -= fadeSpeed * Time.deltaTime;
-
-            // 0以下防止
             if (canvasGroup.alpha < 0f)
             {
                 canvasGroup.alpha = 0f;
@@ -92,26 +89,22 @@ public class HpManager : MonoBehaviour
 
     public bool CanTakeDamage()
     {
-        return !isInvincible && !isDead; // 死亡中はダメージを受けない
+        return !isInvincible && !isDead;
     }
 
     public void TakeDamage(int damage)
     {
-        // 無敵中、またはすでに死亡しているなら受けない
         if (isInvincible || isDead) return;
 
         currentHp -= damage;
-
         hpSlider.value = currentHp;
         UpdateHpColor();
 
         Debug.Log("現在HP : " + currentHp);
 
-        // UI表示
         canvasGroup.alpha = 1f;
         visibleTimer = visibleTime;
 
-        // 無敵開始
         isInvincible = true;
         invincibleTimer = invincibleTime;
 
@@ -123,18 +116,9 @@ public class HpManager : MonoBehaviour
 
     void UpdateHpColor()
     {
-        if (currentHp >= 4)
-        {
-            fillImage.color = Color.green;
-        }
-        else if (currentHp >= 2)
-        {
-            fillImage.color = Color.yellow;
-        }
-        else
-        {
-            fillImage.color = Color.red;
-        }
+        if (currentHp >= 4) fillImage.color = Color.green;
+        else if (currentHp >= 2) fillImage.color = Color.yellow;
+        else fillImage.color = Color.red;
     }
 
     void Die()
@@ -142,13 +126,10 @@ public class HpManager : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        Debug.Log("プレイヤー死亡 ゲームオーバー演出開始");
-
-        // 時間差演出コルーチンを実行
+        Debug.Log("プレイヤー死亡 ゲームオーバー");
         StartCoroutine(GameOverSequence());
     }
 
-    //  ゲームオーバー
     IEnumerator GameOverSequence()
     {
         // タイマー止める
@@ -166,24 +147,29 @@ public class HpManager : MonoBehaviour
             rb.isKinematic = true;
         }
 
-        // GAME OVER
+        // 死亡時MainUI非表示
+        if (mainUiObject != null)
+        {
+            mainUiObject.SetActive(false);
+        }
+        // -----------------------
+
+        // GAME OVERテキストを表示
         if (gameOverTextObject != null) gameOverTextObject.SetActive(true);
 
-        // 3.0秒
+        // 3.0秒待機
         yield return new WaitForSeconds(3.0f);
 
-        // パネルを追加表示
+        // パネルを追加表示（リトライボタンなどが入っているパネル）
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
     }
 
-    // リトライ
     public void ClickRetry()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
 
-    // ステージ選択
     public void ClickBackToSelect()
     {
         if (!string.IsNullOrEmpty(stageSelectSceneName))
