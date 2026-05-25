@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 2270851857203014098}
   - component: {fileID: 7556166420565523250}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BGMOption UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
