@@ -180,11 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a06354f73bf97a441811f8ffb7d9b79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuctionZone
-  suctionSpeed: 5
-  suctionPoint: {fileID: 2945104657519050850}
   shrinkSpeed: 2
-  killDistance: 0.3
-  playerCollider: {fileID: 3037418288807146283}
+  suctionPoint: {fileID: 2945104657519050850}
 --- !u!1 &5838994856736445846
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,15 +210,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5838994856736445846}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.3240163, z: -0, w: 0.94605154}
-  m_LocalPosition: {x: -3.13, y: 0.1, z: -3.36}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5033315829021989137}
   - {fileID: 4527294282434524038}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 37.812, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1939337223682472256
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -321,3 +318,5 @@ MonoBehaviour:
   moveSpeed: 3
   sensitivity: 2
   turnSmoothSpeed: 10
+  knockbackPower: 10
+  knockbackTime: 0.3
