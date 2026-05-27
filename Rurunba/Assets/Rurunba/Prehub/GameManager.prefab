@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5429003980982999814}
   - component: {fileID: 6362869981434373566}
   - component: {fileID: -4875210475623854717}
+  - component: {fileID: 4938989326282909551}
+  - component: {fileID: -9069318365544692728}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -73,7 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0cff2bca0f87f41bfba37bb7357eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
-  timerText: {fileID: 0}
+  timerTextMeshPro: {fileID: 0}
+  countdownTextMeshPro: {fileID: 0}
+  isTimerRunning: 0
 --- !u!114 &-4875210475623854717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,3 +96,39 @@ MonoBehaviour:
   fillImage: {fileID: 0}
   visibleTime: 1.5
   fadeSpeed: 2
+  mainUiObject: {fileID: 0}
+  gameOverImageObject: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  stageSelectSceneName: 1_StageSelectScene
+--- !u!114 &4938989326282909551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722740175185280495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b28f3f49342a646bb5a79c9443b639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioUpdate
+--- !u!114 &-9069318365544692728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722740175185280495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f481832c769cf34896edccc14892c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  BGMVolumeSlider: {fileID: 0}
+  SEVolumeSlider: {fileID: 0}
+  AudioUI: {fileID: 0}
+  BGMaudioSource: {fileID: 0}
+  SEaudioSource: {fileID: 0}
+  BGMs: []
+  SEs: []
+  Opened_Audio_Setting: 0

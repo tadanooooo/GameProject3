@@ -30,7 +30,7 @@ public class HpManager : MonoBehaviour
     // ----------------------------
 
     [Header("ゲームオーバーUI設定")]
-    public GameObject gameOverTextObject;
+    public GameObject gameOverImageObject;
     public GameObject gameOverPanel;
     public string stageSelectSceneName = "1_StageSelectScene";
 
@@ -56,7 +56,7 @@ public class HpManager : MonoBehaviour
         canvasGroup = hpSlider.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
 
-        if (gameOverTextObject != null) gameOverTextObject.SetActive(false);
+        if (gameOverImageObject != null) gameOverImageObject.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
 
         UpdateHpColor();
@@ -155,7 +155,7 @@ public class HpManager : MonoBehaviour
         // -----------------------
 
         // GAME OVERテキストを表示
-        if (gameOverTextObject != null) gameOverTextObject.SetActive(true);
+        if (gameOverImageObject != null) gameOverImageObject.SetActive(true);
 
         // 3.0秒待機
         yield return new WaitForSeconds(3.0f);
