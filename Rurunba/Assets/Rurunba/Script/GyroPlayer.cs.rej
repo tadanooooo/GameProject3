@@ -1,0 +1,9 @@
+diff a/Rurunba/Assets/Rurunba/Script/GyroPlayer.cs b/Rurunba/Assets/Rurunba/Script/GyroPlayer.cs	(rejected hunks)
+@@ -97,6 +97,7 @@
+             AudioManager.Instance.SEaudioSource.Play();
+ =======
+             //AudioManager.Instance.PlaySE(1);
++>>>>>>> hira
+ 
+             HpManager.Instance.TakeDamage(1);
+ 
