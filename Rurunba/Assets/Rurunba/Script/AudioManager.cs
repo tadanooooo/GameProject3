@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,8 +17,27 @@ public class AudioManager : MonoBehaviour
     public List<AudioClip> BGMs;
     public List<AudioClip> SEs;
 
-    // 音量管理システムが開かれているかどうか
-    public bool Opened_Audio_Setting = false;
+    [Header("Slider")]
+    public Slider bgmSlider;
+    public Slider seSlider;
+
+    [Header("AudioSource")]
+    public AudioSource bgmSource;
+    public AudioSource seSource;
+
+    [Header("UI")]
+    public GameObject audioUI;
+
+    [Header("Audio List")]
+    public List<AudioClip> bgms;
+    public List<AudioClip> ses;
+
+    private bool isOpen = false;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -51,7 +69,8 @@ public class AudioManager : MonoBehaviour
         if (SEaudioSource != null) SEaudioSource.volume = newVolume; // 音量を変更
     }
 
-    public void ToggleAudioSetting()
+    // BGM再生
+    public void PlayBGM(int index)
     {
         Opened_Audio_Setting = !Opened_Audio_Setting;
         if (AudioUI != null) AudioUI.SetActive(Opened_Audio_Setting);
