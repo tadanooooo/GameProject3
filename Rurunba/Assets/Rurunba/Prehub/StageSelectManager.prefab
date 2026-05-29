@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1558361629372762851}
   - component: {fileID: 6652800311641381656}
   - component: {fileID: 4505186102094494722}
+  - component: {fileID: 7197507699345582334}
   m_Layer: 0
   m_Name: StageSelectManager
   m_TagString: Untagged
@@ -78,3 +79,18 @@ MonoBehaviour:
   star1: {fileID: 0}
   star2: {fileID: 0}
   star3: {fileID: 0}
+--- !u!114 &7197507699345582334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658175259217694236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6504a3894bfd01479c30293f18cd3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageLockManager
+  requiredStarsForArea2: 15
+  nextAreaArrowButton: {fileID: 0}
+  totalStarsText: {fileID: 0}

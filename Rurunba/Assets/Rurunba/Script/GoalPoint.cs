@@ -91,18 +91,30 @@ public class GoalPoint : MonoBehaviour
 
     void ExecuteGameClear()
     {
-        // パネルやボタンを表示
+        // パネルやボタンを表示（元からあるコード）
         if (clearPanel != null) clearPanel.SetActive(true);
         if (retryButton != null) retryButton.SetActive(true);
         if (nextStageButton != null) nextStageButton.SetActive(true);
         if (stageSelectButton != null) stageSelectButton.SetActive(true);
 
-        // 画面から引っこ抜いたタイムで星を計算
+        // タイムで星を計算（元からあるコード）
         int earnedStars = CalculateStars(savedGoalTime);
 
-        // セーブデータに保存
+        // もともとあったセーブ処理（元からあるコード）
         StageSaveManager.SaveStars(stageNumber, earnedStars);
         StageSaveManager.SaveBestTime(stageNumber, savedGoalTime);
+
+        string starKey = $"Stage_{stageNumber}_MaxStars";
+        int previousMaxStars = PlayerPrefs.GetInt(starKey, 0);
+
+        // 今回の星がこれまでの最高記録を超えていたら更新！
+        if (earnedStars > previousMaxStars)
+        {
+            PlayerPrefs.SetInt(starKey, earnedStars);
+            PlayerPrefs.Save(); // データを確定
+            Debug.Log($"【連動セーブ】ステージ {stageNumber} の最高星数を {earnedStars} に更新しました！");
+        }
+        // ====================================================================
     }
 
     // 引数で固定タイムを受け取るように変更
