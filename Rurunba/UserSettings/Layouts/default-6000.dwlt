@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 168}
   m_MaxSize: {x: 16192, y: 24288}
   vertical: 1
-  controlID: 138
+  controlID: 155
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 85
+  controlID: 156
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 86
+  controlID: 95
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -348,8 +348,8 @@ MonoBehaviour:
     y: 0
     width: 362.39996
     height: 498.4
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 43.2
+    y: 0
     width: 1536
     height: 36
   m_SerializedDataModeController:
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 781.4
     height: 327.6
   m_SerializedDataModeController:
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 432.80002
+    y: 377.6
     width: 781.4
     height: 337.19998
   m_SerializedDataModeController:
@@ -1398,8 +1398,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 782.4
-    y: 79.200005
+    x: 1
+    y: 24
     width: 389.2
     height: 170
   m_SerializedDataModeController:
@@ -1417,13 +1417,12 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 59}
       m_SelectedIDs: []
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -2804
-      - m_Data: -1332
+      - m_Data: -1300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1470,8 +1469,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 782.4
-    y: 275.2
+    x: 1
+    y: 220
     width: 389.2
     height: 276.4
   m_SerializedDataModeController:
@@ -1498,7 +1497,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Rurunba/Scenes
+    - Assets/Rurunba
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1508,7 +1507,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Rurunba/Scenes
+  - Assets/Rurunba
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\GameProject 3\Rurunba
   m_LockTracker:
@@ -1517,15 +1516,12 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 2}
     m_SelectedIDs:
-    - m_Data: 50680
+    - m_Data: 51468
     m_LastClickedID:
-      m_Data: 50680
+      m_Data: 51468
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50342
-    - m_Data: 50654
-    - m_Data: 1000000000
-    - m_Data: 2147483647
+    - m_Data: 51340
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1558,7 +1554,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50342
+    - m_Data: 51340
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1639,8 +1635,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1173.6
-    y: 79.200005
+    x: 392.2
+    y: 24
     width: 361.39996
     height: 472.4
   m_SerializedDataModeController:
@@ -1690,10 +1686,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Console\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 782.4
-    y: 577.60004
+    x: 1
+    y: 522.4
     width: 752.6
-    height: 192.4
+    height: 192.39996
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
