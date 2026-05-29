@@ -1,71 +1,84 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    // Singleton
     public static AudioManager Instance;
 
-    // スライダー
-    public Slider BGMVolumeSlider;
-    public Slider SEVolumeSlider;
-    public GameObject AudioUI;
+    [Header("Slider")]
+    public Slider bgmSlider;
+    public Slider seSlider;
 
-    // オーディオソース
-    public AudioSource BGMaudioSource;
-    public AudioSource SEaudioSource;
+    [Header("AudioSource")]
+    public AudioSource bgmSource;
+    public AudioSource seSource;
 
-    // BGM・SEリスト
-    public List<AudioClip> BGMs;
-    public List<AudioClip> SEs;
+    [Header("UI")]
+    public GameObject audioUI;
 
-    public bool Opened_Audio_Setting = false;
+    [Header("Audio List")]
+    public List<AudioClip> bgms;
+    public List<AudioClip> ses;
+
+    private bool isOpen = false;
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
+        // 自分をInstanceに登録
+        Instance = this;
     }
 
     void Start()
     {
-        // 保存された音量をスライダーに反映
-        if (BGMVolumeSlider != null) BGMVolumeSlider.value = AudioUpdate.BGMsliderValue;
-        if (SEVolumeSlider != null) SEVolumeSlider.value = AudioUpdate.SEsliderValue;
+        // 保存音量反映
+        bgmSlider.value = AudioUpdate.BGMsliderValue;
+        seSlider.value = AudioUpdate.SEsliderValue;
 
-        // 現在の音量を実際のAudioSourceに即座に反映
-        if (BGMaudioSource != null) BGMaudioSource.volume = AudioUpdate.BGMsliderValue;
-        if (SEaudioSource != null) SEaudioSource.volume = AudioUpdate.SEsliderValue;
+        // 初期音量設定
+        bgmSource.volume = bgmSlider.value;
+        seSource.volume = seSlider.value;
 
-        // スライダーの値が変更された時の処理を登録
-        if (BGMVolumeSlider != null) BGMVolumeSlider.onValueChanged.AddListener(ChangeVolumeBGM);
-        if (SEVolumeSlider != null) SEVolumeSlider.onValueChanged.AddListener(ChangeVolumeSE);
+        // Slider変更時イベント
+        bgmSlider.onValueChanged.AddListener(SetBGMVolume);
+        seSlider.onValueChanged.AddListener(SetSEVolume);
 
-        // 初期状態では設定画面を隠す
-        if (AudioUI != null) AudioUI.SetActive(false);
+        // UI非表示
+        audioUI.SetActive(false);
     }
 
-    void ChangeVolumeBGM(float newVolume)
+    // BGM音量変更
+    public void SetBGMVolume(float volume)
     {
-        AudioUpdate.BGMsliderValue = newVolume; // 共有データを更新
-        if (BGMaudioSource != null) BGMaudioSource.volume = newVolume; // 音量を変更
+        AudioUpdate.BGMsliderValue = volume;
+        bgmSource.volume = volume;
     }
 
-    void ChangeVolumeSE(float newVolume)
+    // SE音量変更
+    public void SetSEVolume(float volume)
     {
-        AudioUpdate.SEsliderValue = newVolume; // 共有データを更新
-        if (SEaudioSource != null) SEaudioSource.volume = newVolume; // 音量を変更
+        AudioUpdate.SEsliderValue = volume;
+        seSource.volume = volume;
     }
 
-    public void ToggleAudioSetting()
+    // UI表示切替
+    public void ToggleAudioUI()
     {
-        Opened_Audio_Setting = !Opened_Audio_Setting;
-        if (AudioUI != null) AudioUI.SetActive(Opened_Audio_Setting);
+        isOpen = !isOpen;
+        audioUI.SetActive(isOpen);
     }
 
-    void PauseGame() { Time.timeScale = 0f; }
-    void ResumeGame() { Time.timeScale = 1f; }
+    // BGM再生
+    public void PlayBGM(int index)
+    {
+        bgmSource.clip = bgms[index];
+        bgmSource.Play();
+    }
+
+    // SE再生
+    public void PlaySE(int index)
+    {
+        seSource.PlayOneShot(ses[index]);
+    }
 }
