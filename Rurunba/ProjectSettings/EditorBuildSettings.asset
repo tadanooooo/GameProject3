@@ -15,7 +15,37 @@ EditorBuildSettings:
     path: Assets/Rurunba/Scenes/2_StageSelectScene.unity
     guid: a664cd7b12a7c2343b97b12686a4bb98
   - enabled: 1
-    path: Assets/Rurunba/Scenes/Sample.unity
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 1.unity
+    guid: 30a1e08a34859fa44a066262387e79c8
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 2.unity
+    guid: 9abef6c4746656948881effb65e5ea91
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 3.unity
+    guid: 28760e4d835ccef4e80b3fd53ad8ec9a
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 4.unity
+    guid: a3c8fa48dda8d3845a8626e53b974f2a
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 5.unity
+    guid: cb12eba2566751b45ab20858a13c33dd
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 6.unity
+    guid: b4f72626977989149aab438afe33b7c3
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 7.unity
+    guid: 18fd93eea7937a645918968616794639
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 8.unity
+    guid: 4d0f7b60dcba5064c8f9201c6c7e7f92
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 9.unity
+    guid: b2e2d45da190830418e173541f0ccf80
+  - enabled: 1
+    path: Assets/Rurunba/Scenes/Stage/1/M1S 10.unity
+    guid: b934698b53d19124c806da87cc868663
+  - enabled: 0
+    path: Assets/Rurunba/Mesh
     guid: ea75c4d18a34ef64da831f0450f39e01
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7a5dcec2b0ee81847ab94b31dc276466, type: 2}
