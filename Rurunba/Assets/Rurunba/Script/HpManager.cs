@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro; // ----- TMPを使用するために追加 -----
 
 public class HpManager : MonoBehaviour
 {
@@ -24,13 +25,11 @@ public class HpManager : MonoBehaviour
     public float visibleTime = 1.5f;
     public float fadeSpeed = 2f;
 
-    // ----- ここから追加・修正 -----
     [Header("消去するメインUI設定")]
     public GameObject mainUiObject;
-    // ----------------------------
 
     [Header("ゲームオーバーUI設定")]
-    public GameObject gameOverImageObject;
+    public TextMeshProUGUI gameOverText;
     public GameObject gameOverPanel;
     public string stageSelectSceneName = "1_StageSelectScene";
 
@@ -56,7 +55,7 @@ public class HpManager : MonoBehaviour
         canvasGroup = hpSlider.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
 
-        if (gameOverImageObject != null) gameOverImageObject.SetActive(false);
+        if (gameOverText != null) gameOverText.gameObject.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
 
         UpdateHpColor();
@@ -152,10 +151,8 @@ public class HpManager : MonoBehaviour
         {
             mainUiObject.SetActive(false);
         }
-        // -----------------------
 
-        // GAME OVERテキストを表示
-        if (gameOverImageObject != null) gameOverImageObject.SetActive(true);
+        if (gameOverText != null) gameOverText.gameObject.SetActive(true);
 
         // 3.0秒待機
         yield return new WaitForSeconds(3.0f);

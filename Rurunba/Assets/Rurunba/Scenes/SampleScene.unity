@@ -341,6 +341,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5068853227187352956, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5318409960711528768, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -372,6 +376,10 @@ PrefabInstance:
     - target: {fileID: 5799192612612867344, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303356887385780250, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6560958541279287829, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -409,6 +417,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6999956394211697824, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7500421003011794064, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -444,6 +456,10 @@ PrefabInstance:
     - target: {fileID: 7596577845499091741, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615426499743086508, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8437008886907270135, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
       propertyPath: m_IsActive
@@ -739,7 +755,7 @@ PrefabInstance:
     - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: AudioUI
       value: 
-      objectReference: {fileID: 1912615348}
+      objectReference: {fileID: 0}
     - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: SEaudioSource
       value: 
@@ -751,11 +767,11 @@ PrefabInstance:
     - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: SEVolumeSlider
       value: 
-      objectReference: {fileID: 1912615349}
+      objectReference: {fileID: 0}
     - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: BGMVolumeSlider
       value: 
-      objectReference: {fileID: 1912615350}
+      objectReference: {fileID: 0}
     - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: hpSlider
       value: 
@@ -1277,33 +1293,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4887001758552364195, guid: ca091c876bfcc2d40bdda55ae5250a38, type: 3}
   m_PrefabInstance: {fileID: 1764168532}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1912615348 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2044218426335756305, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
-  m_PrefabInstance: {fileID: 76057160}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1912615349 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2633362216710522743, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
-  m_PrefabInstance: {fileID: 76057160}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
---- !u!114 &1912615350 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 90341543652270984, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
-  m_PrefabInstance: {fileID: 76057160}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!4 &1964602102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2945104657519050850, guid: 1faa26f84a1a0d64e8232a1bb09ba155, type: 3}
