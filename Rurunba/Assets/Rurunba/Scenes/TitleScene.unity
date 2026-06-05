@@ -406,7 +406,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitleUI
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2011464744657510957, guid: e8b807c3a7911be4b8ad381dc5bd2c49, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2554779712399417534, guid: e8b807c3a7911be4b8ad381dc5bd2c49, type: 3}
     m_AddedGameObjects: []

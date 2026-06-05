@@ -43,8 +43,8 @@ public class TimeManager : MonoBehaviour
         if (countdownTextMeshPro != null) countdownTextMeshPro.text = "1";
         yield return new WaitForSeconds(1.0f);
 
-        // GO
-        if (countdownTextMeshPro != null) countdownTextMeshPro.text = "GO";
+        // Start
+        if (countdownTextMeshPro != null) countdownTextMeshPro.text = "スタート!";
 
         // ここでタイマーが動き出します
         isTimerRunning = true;
@@ -67,7 +67,7 @@ public class TimeManager : MonoBehaviour
     {
         if (timerTextMeshPro != null)
         {
-            timerTextMeshPro.text = elapsedTime.ToString("F2");
+            timerTextMeshPro.text = elapsedTime.ToString("F2") + "s";
         }
     }
 

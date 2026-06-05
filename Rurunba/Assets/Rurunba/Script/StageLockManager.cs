@@ -21,7 +21,7 @@ public class StageLockManager : MonoBehaviour
         // UIに合計数を表示（現在の星: ○ / 15）
         if (totalStarsText != null)
         {
-            totalStarsText.text = $"× {totalStarsArea1} / {requiredStarsForArea2}";
+            totalStarsText.text = $"× {totalStarsArea1}/{requiredStarsForArea2}";
         }
 
         // 星の数が足りているかチェック

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro; // TextMeshProを使用するために追加
 
 public class GoalManager : MonoBehaviour
 {
@@ -18,10 +19,16 @@ public class GoalManager : MonoBehaviour
     public GameObject nextStageButton;
     public GameObject stageSelectButton;
 
-    [Header("星画像（それぞれ1~3枚の星が描かれた単一の画像オブジェクト）")]
+    [Header("星画像（それぞれ1〜3枚の星が描かれた単一の画像オブジェクト）")]
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
+
+    [Header("【新規】スコア・ベスト更新UI設定")]
+    [Tooltip("今回のリザルトタイムを表示するTextMeshProテキストオブジェクト")]
+    public TextMeshProUGUI scoreTimeText;
+    [Tooltip("ベストタイムを更新した時に表示する『ベスト更新！』のオブジェクト（テキストや画像など）")]
+    public GameObject newRecordObject;
 
     [Header("スクリプト制御・スタンプ演出の設定")]
     [Tooltip("リザルトパネルが開いてから、星が降ってくるまでの溜め時間（秒）")]
@@ -32,6 +39,8 @@ public class GoalManager : MonoBehaviour
     public float shrinkDuration = 0.15f;
     [Tooltip("スタンプが叩きつけられた後、少し弾む（バウンドする）演出を入れるか")]
     public bool useBounceEffect = true;
+    [Tooltip("星が押されてから、スコアが降ってくるまでの時間差（秒）")]
+    public float nextStampDelay = 0.4f;
 
     [Header("TimeAttack")]
     public float targetTime = 30.0f;
@@ -95,10 +104,12 @@ public class GoalManager : MonoBehaviour
 
     void ExecuteGameClear()
     {
-        // 最初は星の画像を非表示にしておく
+        // 最初は演出パーツ（星・スコア・ベスト文字）をすべて非表示にしておく
         if (star1 != null) star1.SetActive(false);
         if (star2 != null) star2.SetActive(false);
         if (star3 != null) star3.SetActive(false);
+        if (scoreTimeText != null) scoreTimeText.gameObject.SetActive(false);
+        if (newRecordObject != null) newRecordObject.SetActive(false);
 
         // 背景パネルや各種ボタンは、リザルトが開いた瞬間にすべて普通に一斉表示
         if (clearPanel != null) clearPanel.SetActive(true);
@@ -109,12 +120,22 @@ public class GoalManager : MonoBehaviour
         // 獲得した星の数を計算 (1~3)
         int earnedStars = CalculateStarsCount(savedGoalTime);
 
+        // ロードして、今回のタイムがベスト更新（ハイスコア）か判定する
+        float previousBestTime = StageSaveManager.LoadBestTime(stageNumber);
+        bool isNewRecord = (savedGoalTime < previousBestTime);
+
         // セーブ処理
         StageSaveManager.SaveStars(stageNumber, earnedStars);
         StageSaveManager.SaveBestTime(stageNumber, savedGoalTime);
 
-        // 純粋にスクリプトだけでスケールを動かす演出コルーチンを開始
-        StartCoroutine(ScriptScaleStampSequence(earnedStars));
+        // 今回のスコアテキストにタイムを代入しておく（非表示状態のまま）
+        if (scoreTimeText != null)
+        {
+            scoreTimeText.text = "タイム: " + savedGoalTime.ToString("F2") + "s";
+        }
+
+        // 連動したスタンプリザルトシーケンスを開始
+        StartCoroutine(ResultStampSequence(earnedStars, isNewRecord));
     }
 
     int CalculateStarsCount(float finalTime)
@@ -137,67 +158,105 @@ public class GoalManager : MonoBehaviour
         return starCount;
     }
 
-    IEnumerator ScriptScaleStampSequence(int starCount)
+    // 星スタンプ → スコアスタンプ → ベスト更新を時間差で連続処理する決定版コルーチン
+    IEnumerator ResultStampSequence(int starCount, bool isNewRecord)
     {
-        // 指定した溜め時間（startDelay秒）だけ待機
+        //---------------------------------------------------------
+        // 第1のスタンプ：星の画像
+        //---------------------------------------------------------
         yield return new WaitForSeconds(startDelay);
 
         GameObject targetStarImage = null;
-
-        // 条件に合う星画像を1枚だけ選定
         if (starCount == 1) targetStarImage = star1;
         else if (starCount == 2) targetStarImage = star2;
         else if (starCount == 3) targetStarImage = star3;
 
         if (targetStarImage != null)
         {
-            // エディタ側であらかじめ綺麗に配置されているデフォルトのサイズ（Scale）を基準値として保存
-            Vector3 defaultScale = targetStarImage.transform.localScale;
+            // 星のスタンプアニメーションを実行
+            yield return StartCoroutine(AnimateStampObject(targetStarImage));
+        }
 
-            // 最初は指定された「超巨大サイズ」に設定してからアクティブ化（パッと大きく出る）
-            Vector3 startScale = defaultScale * startScaleMultiplier;
-            targetStarImage.transform.localScale = startScale;
-            targetStarImage.SetActive(true);
+        // 今回のスコア（タイム）
+        // 星が押し込まれてから、次のスコアが降ってくるまでの時間差
+        yield return new WaitForSeconds(nextStampDelay);
 
-            float elapsedTime = 0f;
+        if (scoreTimeText != null)
+        {
+            // スコアテキストのスタンプアニメーションを実行
+            yield return StartCoroutine(AnimateStampObject(scoreTimeText.gameObject));
+        }
 
-            // 巨大サイズから、勢いよくズドンと元のサイズへ縮小
-            while (elapsedTime < shrinkDuration)
+        // ベスト更新（ニューレコード）の表示
+        if (isNewRecord && newRecordObject != null)
+        {
+            // スコアがドンッと押し込まれた直後、ワンテンポ置いてからベスト文字をパッと出す
+            yield return new WaitForSeconds(0.25f);
+
+            newRecordObject.SetActive(true);
+
+            // ベスト更新文字処理
+            Vector3 originalBestScale = newRecordObject.transform.localScale;
+            newRecordObject.transform.localScale = originalBestScale * 0.5f;
+
+            float elapsed = 0f;
+            while (elapsed < 0.15f)
             {
-                elapsedTime += Time.deltaTime;
-                float t = elapsedTime / shrinkDuration;
-
-                // スタンプらしさを出すため、最初はゆっくり動きだし、激突直前に一気に加速する計算（EaseInQuad）を使用
-                t = t * t;
-
-                targetStarImage.transform.localScale = Vector3.Lerp(startScale, defaultScale, t);
+                elapsed += Time.deltaTime;
+                float t = elapsed / 0.15f;
+                // イージングを使って滑らかに大きくする
+                newRecordObject.transform.localScale = Vector3.Lerp(originalBestScale * 0.5f, originalBestScale * 1.1f, t);
                 yield return null;
             }
-
-            // スタンプが叩きつけられた衝撃のバウンド演出
-            if (useBounceEffect)
-            {
-                elapsedTime = 0f;
-                float bounceDuration = 0.12f; // バウンドが収まるまでの時間
-
-                // グッと押しつぶされて一度少し小さくなり、その後フワッと元のサイズに戻るゴムのようなクッション
-                while (elapsedTime < bounceDuration)
-                {
-                    elapsedTime += Time.deltaTime;
-                    float t = elapsedTime / bounceDuration;
-
-                    // サイン波を使って、叩きつけられた後に一瞬ギュッと縮んで戻る軌道を作る
-                    float bounceCurve = Mathf.Sin(t * Mathf.PI) * 0.25f; // 0.25fがクッションの強さ
-
-                    // 本来のサイズから、一時的に少し縮小させる
-                    targetStarImage.transform.localScale = defaultScale - (defaultScale * bounceCurve * (1f - t));
-                    yield return null;
-                }
-            }
-
-            // 最後に、寸分の狂いもなく完全にエディタ上の元のサイズに固定する
-            targetStarImage.transform.localScale = defaultScale;
+            newRecordObject.transform.localScale = originalBestScale;
         }
+    }
+
+    // 大きく表示 → 滑らかに縮小（スタンプ） → バウンドさせる共通化関数
+    IEnumerator AnimateStampObject(GameObject obj)
+    {
+        // もともと配置されている本来のサイズ（Scale）を基準値として保存
+        Vector3 defaultScale = obj.transform.localScale;
+
+        // 最初は指定された「超巨大サイズ」に設定してからアクティブ化（パッと大きく出る）
+        Vector3 startScale = defaultScale * startScaleMultiplier;
+        obj.transform.localScale = startScale;
+        obj.SetActive(true);
+
+        float elapsedTime = 0f;
+
+        // 【巨大サイズから、勢いよくズドンと元のサイズへ縮小】
+        while (elapsedTime < shrinkDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / shrinkDuration;
+
+            t = t * t; // 最初ゆっくり、直前に一気に加速（EaseInQuad）
+
+            obj.transform.transform.localScale = Vector3.Lerp(startScale, defaultScale, t);
+            yield return null;
+        }
+
+        // スタンプが叩きつけられた衝撃のバウンド演出
+        if (useBounceEffect)
+        {
+            elapsedTime = 0f;
+            float bounceDuration = 0.12f;
+
+            while (elapsedTime < bounceDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float t = elapsedTime / bounceDuration;
+
+                float bounceCurve = Mathf.Sin(t * Mathf.PI) * 0.25f; // つぶれ具合の強さ
+
+                obj.transform.localScale = defaultScale - (defaultScale * bounceCurve * (1f - t));
+                yield return null;
+            }
+        }
+
+        // 最後に本来のサイズに綺麗に固定
+        obj.transform.localScale = defaultScale;
     }
 
     public void ClickRetry()

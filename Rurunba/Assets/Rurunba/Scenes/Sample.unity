@@ -405,6 +405,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3715322005355382954, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: scoreTimeText
+      value: 
+      objectReference: {fileID: 1977483638}
+    - target: {fileID: 3715322005355382954, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: newRecordObject
+      value: 
+      objectReference: {fileID: 1977483637}
     - target: {fileID: 4191207004627984387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -540,6 +548,14 @@ PrefabInstance:
     - target: {fileID: 7592635778026828288, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: gameOverImageObject
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011517489604381880, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: m_fontSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011517489604381880, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8122867537794366184, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -976,6 +992,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de18830baa50ffd45876220a6f082206, type: 3}
+--- !u!1 &1977483637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 947183051265647214, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+  m_PrefabInstance: {fileID: 682829109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1977483638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2315089026470655040, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+  m_PrefabInstance: {fileID: 682829109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!4 &1995805930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6130059143305176649, guid: 223ac591c4ced754992a77c4a19fcf94, type: 3}
