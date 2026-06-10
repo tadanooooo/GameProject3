@@ -9,7 +9,7 @@ public class GoalPoint : MonoBehaviour
     public int stageNumber = 1;
 
     [Header("UIパネル設定")]
-    public GameObject goalTextObject;
+    public Image goalImage;
     public GameObject clearPanel;
 
     [Header("ボタン設定")]
@@ -77,13 +77,13 @@ public class GoalPoint : MonoBehaviour
         }
 
         // GOALの文字
-        if (goalTextObject != null) goalTextObject.SetActive(true);
+        if (goalImage != null) goalImage.gameObject.SetActive(true);
 
         // そのまま3.0秒待つ
         yield return new WaitForSeconds(3.0f);
 
         // GOAL文字消す
-        if (goalTextObject != null) goalTextObject.SetActive(false);
+        if (goalImage != null) goalImage.gameObject.SetActive(false);
 
         // クリアリザルト画面
         ExecuteGameClear();

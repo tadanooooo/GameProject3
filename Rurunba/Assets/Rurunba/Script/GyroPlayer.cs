@@ -94,7 +94,7 @@ public class GyroPlayer : MonoBehaviour
 
             //AudioManager.Instance.PlaySE(1);
 
-            HpManager.Instance.TakeDamage(1);
+            HpManager.Instance.TakeDamage(1, collision);
 
             Knockback(collision);
         }

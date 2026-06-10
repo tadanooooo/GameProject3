@@ -1,16 +1,50 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class TitleManager : MonoBehaviour
-{    void Awake()
+{
+    [Header("画面タップ時に消したいテキストオブジェクト")]
+    public GameObject textToHide;
+
+    void Awake()
     {
-        // スマホのタッチパネル機能をシステムに強制的に登録して認識させる
-        InputSystem.AddDevice<Touchscreen>();
+
     }
+    void Start()
+    {
+        // BGM（0番）を再生
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayBGM(0);
+        }
+    }
+
+    // ボタンや画面タップから呼び出す関数
     public void GoToStageSelect()
     {
-        Time.timeScale = 1f;
+        // コルーチン（時間差処理）を開始する
+        StartCoroutine(MoveToStageSelectSequence());
+    }
+
+    // タイムラグを作ってシーンを切り替える中身（コルーチン）
+    private IEnumerator MoveToStageSelectSequence()
+    {
+        if (textToHide != null)
+        {
+            textToHide.SetActive(false);
+        }
+        // SEを鳴らす
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(1);
+        }
+
+        // そのまま3.0秒待機
+        yield return new WaitForSeconds(2.0f);
+
+        // 3秒経ったらシーンを読込
         SceneManager.LoadScene("1_StageSelectScene");
     }
 

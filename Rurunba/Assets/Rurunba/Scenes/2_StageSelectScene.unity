@@ -398,6 +398,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4220712854140608343, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 275
+      objectReference: {fileID: 0}
     - target: {fileID: 4451878006855941933, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_Color.b
       value: 0.84313726
@@ -690,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &748658776 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3566232382778628547, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1619664999779284279, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -701,7 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!114 &748658777 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6181780064228412690, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4085509650260320613, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -712,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!114 &748658778 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5802258598937640069, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 591661784959602750, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -723,7 +727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!114 &748658779 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1773334464521771084, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 438082067205723700, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -734,7 +738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &748658780 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7182042264499358320, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4334855142758303735, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -745,7 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &748658781 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 387291937938744184, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6777923307500762256, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -756,7 +760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &748658782 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7215742189228280259, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3143187694969926269, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
   m_PrefabInstance: {fileID: 748658771}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &797583476
@@ -962,6 +966,50 @@ PrefabInstance:
       propertyPath: targetTimeText
       value: 
       objectReference: {fileID: 748658780}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[0].stageNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[1].stageNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[2].stageNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[3].stageNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[4].stageNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[5].stageNumber
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[6].stageNumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[7].stageNumber
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[8].stageNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[9].stageNumber
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4658175259217694236, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: m_Name
       value: StageSelectManager

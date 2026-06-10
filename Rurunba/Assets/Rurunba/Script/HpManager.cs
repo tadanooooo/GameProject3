@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using TMPro; // ----- TMPを使用するために追加 -----
+using TMPro;
 
 public class HpManager : MonoBehaviour
 {
@@ -29,9 +29,12 @@ public class HpManager : MonoBehaviour
     public GameObject mainUiObject;
 
     [Header("ゲームオーバーUI設定")]
-    public TextMeshProUGUI gameOverText;
+    public GameObject gameOverImage;
     public GameObject gameOverPanel;
     public string stageSelectSceneName = "1_StageSelectScene";
+
+    [Header("壁衝突時のエフェクト（Prefab）")]
+    public GameObject hitEffectPrefab;
 
     private CanvasGroup canvasGroup;
     private float visibleTimer = 0f;
@@ -55,7 +58,7 @@ public class HpManager : MonoBehaviour
         canvasGroup = hpSlider.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0f;
 
-        if (gameOverText != null) gameOverText.gameObject.SetActive(false);
+        if (gameOverImage != null) gameOverImage.gameObject.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
 
         UpdateHpColor();
@@ -91,7 +94,7 @@ public class HpManager : MonoBehaviour
         return !isInvincible && !isDead;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Collision collision = null)
     {
         if (isInvincible || isDead) return;
 
@@ -106,6 +109,17 @@ public class HpManager : MonoBehaviour
 
         isInvincible = true;
         invincibleTimer = invincibleTime;
+
+        if (hitEffectPrefab != null && collision != null && collision.contacts.Length > 0)
+        {
+            // 接触したピンポイントの座標と壁の向きを取得
+            Vector3 hitPoint = collision.contacts[0].point;
+            Quaternion hitRotation = Quaternion.LookRotation(collision.contacts[0].normal);
+
+            // エフェクト生成して2秒後に消す
+            GameObject effect = Instantiate(hitEffectPrefab, hitPoint, hitRotation);
+            Destroy(effect, 2.0f);
+        }
 
         if (currentHp <= 0)
         {
@@ -152,7 +166,7 @@ public class HpManager : MonoBehaviour
             mainUiObject.SetActive(false);
         }
 
-        if (gameOverText != null) gameOverText.gameObject.SetActive(true);
+        if (gameOverImage != null) gameOverImage.gameObject.SetActive(true);
 
         // 3.0秒待機
         yield return new WaitForSeconds(3.0f);

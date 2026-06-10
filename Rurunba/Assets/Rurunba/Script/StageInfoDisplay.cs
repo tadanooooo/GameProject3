@@ -47,7 +47,7 @@ public class StageInfoDisplay : MonoBehaviour
     {
         if (infoPanel != null) infoPanel.SetActive(true);
 
-        if (stageTitleText != null) stageTitleText.text = "ステージ " + stageNumber;
+        if (stageTitleText != null) stageTitleText.text = stageNumber.ToString();
 
         float targetTime = 0f;
         currentSelectedSceneName = "";
@@ -61,7 +61,7 @@ public class StageInfoDisplay : MonoBehaviour
                 break;
             }
         }
-        if (targetTimeText != null) targetTimeText.text = "目標タイム： " + targetTime.ToString("F2") + "s";
+        if (targetTimeText != null) targetTimeText.text = targetTime.ToString("F2") + "s";
 
         int bestStars = StageSaveManager.LoadStars(stageNumber);
         float bestTime = StageSaveManager.LoadBestTime(stageNumber);
@@ -74,7 +74,7 @@ public class StageInfoDisplay : MonoBehaviour
             }
             else
             {
-                bestTimeText.text = "ベストタイム： " + bestTime.ToString("F2") + "s";
+                bestTimeText.text =   bestTime.ToString("F2") + "s";
             }
         }
 

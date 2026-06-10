@@ -1,14 +1,18 @@
 using UnityEngine;
 using TMPro; // TextMeshPro専用
 using System.Collections; // コルーチン（時間待ち処理）に必要
+using UnityEngine.UI; // 画像（Image）コンポーネントに必要
 
 public class TimeManager : MonoBehaviour
 {
     public static TimeManager instance;
 
-    [Header("UI設定 (TextMeshPro専用)")]
+    [Header("UI設定")]
     public TextMeshProUGUI timerTextMeshPro;       // 普段のタイマー用
-    public TextMeshProUGUI countdownTextMeshPro;   // カウントダウン用
+
+    [Header("カウントダウン画像設定 (ヒエラルキーのImageを登録)")]
+    // Imageの配列を用意（0:「3」, 1:「2」, 2:「1」, 3:「スタート」）
+    public Image[] countdownImages;
 
     private float elapsedTime = 0f;
 
@@ -26,32 +30,46 @@ public class TimeManager : MonoBehaviour
         StartCoroutine(StartCountdownRoutine());
     }
 
-    // 1秒ずつ待って文字を変えるコルーチン
+    // 1秒ずつ待ってImageの表示・非表示を切り替えるコルーチン
     IEnumerator StartCountdownRoutine()
     {
-        if (countdownTextMeshPro != null) countdownTextMeshPro.gameObject.SetActive(true);
+        // 配列が正しく設定されているかチェック
+        if (countdownImages != null && countdownImages.Length >= 4)
+        {
+            // 最初にすべてのカウントダウン画像を非表示にしておく（念のため）
+            foreach (var img in countdownImages)
+            {
+                if (img != null) img.gameObject.SetActive(false);
+            }
 
-        // 3
-        if (countdownTextMeshPro != null) countdownTextMeshPro.text = "3";
-        yield return new WaitForSeconds(1.0f);
+            // 3 の画像を表示
+            if (countdownImages[0] != null) countdownImages[0].gameObject.SetActive(true);
+            yield return new WaitForSeconds(1.0f);
+            if (countdownImages[0] != null) countdownImages[0].gameObject.SetActive(false); // 消す
 
-        // 2
-        if (countdownTextMeshPro != null) countdownTextMeshPro.text = "2";
-        yield return new WaitForSeconds(1.0f);
+            // 2 の画像を表示
+            if (countdownImages[1] != null) countdownImages[1].gameObject.SetActive(true);
+            yield return new WaitForSeconds(1.0f);
+            if (countdownImages[1] != null) countdownImages[1].gameObject.SetActive(false); // 消す
 
-        // 1
-        if (countdownTextMeshPro != null) countdownTextMeshPro.text = "1";
-        yield return new WaitForSeconds(1.0f);
+            // 1 の画像を表示
+            if (countdownImages[2] != null) countdownImages[2].gameObject.SetActive(true);
+            yield return new WaitForSeconds(1.0f);
+            if (countdownImages[2] != null) countdownImages[2].gameObject.SetActive(false); // 消す
 
-        // Start
-        if (countdownTextMeshPro != null) countdownTextMeshPro.text = "スタート!";
+            // スタート! の画像を表示
+            if (countdownImages[3] != null) countdownImages[3].gameObject.SetActive(true);
+        }
 
         // ここでタイマーが動き出します
         isTimerRunning = true;
 
-        // GO! の文字を1秒だけ見せてから消す
+        // スタート! の画像を1秒だけ見せてから消す
         yield return new WaitForSeconds(1.0f);
-        if (countdownTextMeshPro != null) countdownTextMeshPro.gameObject.SetActive(false);
+        if (countdownImages != null && countdownImages.Length >= 4 && countdownImages[3] != null)
+        {
+            countdownImages[3].gameObject.SetActive(false);
+        }
     }
 
     void Update()
