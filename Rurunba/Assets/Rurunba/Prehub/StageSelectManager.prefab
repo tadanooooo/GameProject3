@@ -74,7 +74,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16e5f000bf01c34482a220014080d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageInfoDisplay
-  allStages: []
+  allStages:
+  - stageNumber: 1
+    targetTime: 10
+    sceneName: Sample
+  - stageNumber: 2
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 3
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 4
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 5
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 6
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 7
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 8
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 9
+    targetTime: 0
+    sceneName: 
+  - stageNumber: 10
+    targetTime: 0
+    sceneName: 
   infoPanel: {fileID: 0}
   stageTitleText: {fileID: 0}
   targetTimeText: {fileID: 0}
@@ -94,9 +124,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6504a3894bfd01479c30293f18cd3f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageLockManager
-  requiredStarsForArea2: 15
-  nextAreaArrowButton: {fileID: 0}
-  totalStarsText: {fileID: 0}
+  requiredStarsForArea2: 20
+  nextAreaArrowButton2: {fileID: 0}
+  totalStarsText2: {fileID: 0}
+  requiredStarsForArea3: 40
+  nextAreaArrowButton3: {fileID: 0}
+  totalStarsText3: {fileID: 0}
 --- !u!114 &4218406753397335468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,11 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   bgmSlider: {fileID: 0}
   seSlider: {fileID: 0}
-  bgmSource: {fileID: 0}
-  seSource: {fileID: 0}
+  bgmSource: {fileID: 1113764144967346759}
+  seSource: {fileID: 6326298464154089069}
+  suctionLoopSource: {fileID: 0}
   audioUI: {fileID: 0}
-  bgms: []
-  ses: []
+  bgms:
+  - {fileID: 8300000, guid: 8328696236fe6cd45abea6f04fec429a, type: 3}
+  ses:
+  - {fileID: 8300000, guid: 2a71152577ea22e46bce3f3cb8c225c8, type: 3}
+  - {fileID: 8300000, guid: f02779b21add0ec4784ff986d1aee51d, type: 3}
 --- !u!1001 &3166581910468479779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,6 +272,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+--- !u!82 &1113764144967346759 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6272827470831190685, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+  m_PrefabInstance: {fileID: 6375247484694620378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6326298464154089069 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1131224979286531767, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+  m_PrefabInstance: {fileID: 6375247484694620378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8426938893048741825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}

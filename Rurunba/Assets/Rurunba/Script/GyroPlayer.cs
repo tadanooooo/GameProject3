@@ -30,6 +30,8 @@ public class GyroPlayer : MonoBehaviour
 
     void Update()
     {
+        if (rb != null && rb.isKinematic) return;
+
         // TimeManagerが存在していて、かつ、まだタイマーが走っていない（カウントダウン中）のとき
         if (TimeManager.instance != null && !TimeManager.instance.isTimerRunning)
         {

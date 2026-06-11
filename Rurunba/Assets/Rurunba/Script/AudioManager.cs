@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    // Singleton
     public static AudioManager Instance;
 
     [Header("Slider (無いシーンでは空っぽでOK)")]
@@ -14,6 +13,9 @@ public class AudioManager : MonoBehaviour
     [Header("AudioSource")]
     public AudioSource bgmSource;
     public AudioSource seSource;
+
+    [Tooltip("吸い込みループ用のAudioSource（Loopにチェックを入れたものをインスペクターで割り当ててください）")]
+    public AudioSource suctionLoopSource;
 
     [Header("UI (無いシーンでは空っぽでOK)")]
     public GameObject audioUI;
@@ -26,21 +28,19 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        // 複雑な処理は無し！シンプルに自分を登録
         Instance = this;
     }
 
     void Start()
     {
-        // 【音量の維持】保存されたデータを読み込む（無ければ初期値 1.0）
         float savedBGM = PlayerPrefs.GetFloat("SavedBGMVolume", 1.0f);
         float savedSE = PlayerPrefs.GetFloat("SavedSEVolume", 1.0f);
 
-        // スピーカーに音量を適用
         bgmSource.volume = savedBGM;
         seSource.volume = savedSE;
 
-        // 【エラー対策】もし画面にスライダーが存在する場合だけ、スライダーの設定を行う
+        if (suctionLoopSource != null) suctionLoopSource.volume = savedSE;
+
         if (bgmSlider != null)
         {
             bgmSlider.value = savedBGM;
@@ -53,42 +53,38 @@ public class AudioManager : MonoBehaviour
             seSlider.onValueChanged.AddListener(SetSEVolume);
         }
 
-        // 【エラー対策】もし画面にUIオブジェクトがある場合だけ非表示にする
         if (audioUI != null)
         {
             audioUI.SetActive(false);
         }
     }
 
-    // BGM音量変更（スライダーを動かした時に自動で保存される）
     public void SetBGMVolume(float volume)
     {
         bgmSource.volume = volume;
-        PlayerPrefs.SetFloat("SavedBGMVolume", volume); // スマホ内へ保存
+        PlayerPrefs.SetFloat("SavedBGMVolume", volume);
         PlayerPrefs.Save();
     }
 
-    // SE音量変更（スライダーを動かした時に自動で保存される）
     public void SetSEVolume(float volume)
     {
         seSource.volume = volume;
-        PlayerPrefs.SetFloat("SavedSEVolume", volume); // スマホ内へ保存
+        if (suctionLoopSource != null) suctionLoopSource.volume = volume;
+        PlayerPrefs.SetFloat("SavedSEVolume", volume);
         PlayerPrefs.Save();
     }
 
-    // UI表示切替
     public void ToggleAudioUI()
     {
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlaySE(0);
         }
-        if (audioUI == null) return; // UIが無いシーンなら無視
+        if (audioUI == null) return;
         isOpen = !isOpen;
         audioUI.SetActive(isOpen);
     }
 
-    // BGM再生
     public void PlayBGM(int index)
     {
         if (index < 0 || index >= bgms.Count || bgms[index] == null) return;
@@ -96,10 +92,36 @@ public class AudioManager : MonoBehaviour
         bgmSource.Play();
     }
 
-    // SE再生
     public void PlaySE(int index)
     {
         if (index < 0 || index >= ses.Count || ses[index] == null) return;
         seSource.PlayOneShot(ses[index]);
+    }
+
+    public void StartSuctionSE(int index)
+    {
+        if (suctionLoopSource == null) return;
+        if (index < 0 || index >= ses.Count || ses[index] == null) return;
+
+        // すでに同じ音が鳴っている場合は無視する（ダブり防止）
+        if (suctionLoopSource.isPlaying && suctionLoopSource.clip == ses[index]) return;
+
+        suctionLoopSource.clip = ses[index];
+        suctionLoopSource.loop = true; // 強制的にループON
+        suctionLoopSource.Play();
+    }
+
+    public void StopSuctionAndPlayEndSE(int endSEIndex)
+    {
+        if (suctionLoopSource == null) return;
+
+        // 吸い込みループ音をストップする
+        if (suctionLoopSource.isPlaying)
+        {
+            suctionLoopSource.Stop();
+        }
+
+        // 吸い込んだ後のSEを通常スピーカーで1回鳴らす
+        PlaySE(endSEIndex);
     }
 }
