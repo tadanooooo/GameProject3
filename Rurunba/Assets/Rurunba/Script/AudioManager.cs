@@ -79,6 +79,10 @@ public class AudioManager : MonoBehaviour
     // UI•\¦Ø‘Ö
     public void ToggleAudioUI()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         if (audioUI == null) return; // UI‚ª–³‚¢ƒV[ƒ“‚È‚ç–³‹
         isOpen = !isOpen;
         audioUI.SetActive(isOpen);

@@ -180,6 +180,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+--- !u!82 &136526563 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4832679338700930461, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+  m_PrefabInstance: {fileID: 136526562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &136526564 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1842248409871163930, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+  m_PrefabInstance: {fileID: 136526562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &182672375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -538,7 +548,7 @@ PrefabInstance:
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: seSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 136526563}
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: bgmSlider
       value: 
@@ -546,10 +556,10 @@ PrefabInstance:
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: bgmSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 136526564}
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: ses.Array.size
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: bgms.Array.size
@@ -558,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: 'ses.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 297e8becb30b6d244ba27c308f302a5e, type: 3}
+      objectReference: {fileID: 8300000, guid: 2a71152577ea22e46bce3f3cb8c225c8, type: 3}
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: 'ses.Array.data[1]'
       value: 
@@ -567,6 +577,22 @@ PrefabInstance:
       propertyPath: 'ses.Array.data[2]'
       value: 
       objectReference: {fileID: 8300000, guid: 8288db4b9de004844bd2f6296ea07e25, type: 3}
+    - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: 'ses.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 297e8becb30b6d244ba27c308f302a5e, type: 3}
+    - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: 'ses.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: baf27afa546626448972b4ffb8955883, type: 3}
+    - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: 'ses.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2503e2b12ac66aa4eb52346e87d114e8, type: 3}
+    - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
+      propertyPath: 'ses.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ac1205691bacc449aa4f21a591b6805, type: 3}
     - target: {fileID: 6281110923999509387, guid: f0a1818efe465074c91ddd283a5b3fee, type: 3}
       propertyPath: 'bgms.Array.data[0]'
       value: 

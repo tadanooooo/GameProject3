@@ -19,10 +19,14 @@ public class StageSelectButton : MonoBehaviour
     // ボタンが押された瞬間に実行される処理
     void OnButtonClick()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         // 画面に1つだけある共通管理スクリプト（StageInfoDisplay）を探す
         if (StageInfoDisplay.instance != null)
         {
-            // ステージ番号（stageNumber）の情報を表示
+            // 待たずに、その場ですぐにステージ情報を表示
             StageInfoDisplay.instance.DisplayStageInfo(stageNumber);
         }
     }

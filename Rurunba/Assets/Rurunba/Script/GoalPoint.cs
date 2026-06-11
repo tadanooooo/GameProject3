@@ -64,7 +64,7 @@ public class GoalPoint : MonoBehaviour
             TimeManager.instance.StopTimer();
         }
 
-        // ログで「画面から取得したタイム」が本当に一致しているか確認
+        // ログで画面から取得したタイムが本当に一致しているか確認
         Debug.Log("画面から取得した確定ゴールタイム: " + savedGoalTime);
 
         // プレイヤーの動きを完全に止め、物理演算を無効
@@ -156,12 +156,20 @@ public class GoalPoint : MonoBehaviour
 
     public void ClickRetry()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
 
     public void ClickBackToSelect()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         if (!string.IsNullOrEmpty(stageSelectSceneName))
         {
             SceneManager.LoadScene(stageSelectSceneName);
@@ -170,6 +178,10 @@ public class GoalPoint : MonoBehaviour
 
     public void ClickGoToNext()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         if (!string.IsNullOrEmpty(nextStageSceneName))
         {
             SceneManager.LoadScene(nextStageSceneName);

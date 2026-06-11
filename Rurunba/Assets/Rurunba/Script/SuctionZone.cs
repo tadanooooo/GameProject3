@@ -66,6 +66,10 @@ public class SuctionZone : MonoBehaviour
         // 最後にオブジェクトを消す
         if (trash != null)
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySE(0);
+            }
             Destroy(trash);
         }
     }

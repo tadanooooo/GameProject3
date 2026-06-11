@@ -44,21 +44,37 @@ public class TimeManager : MonoBehaviour
 
             // 3 の画像を表示
             if (countdownImages[0] != null) countdownImages[0].gameObject.SetActive(true);
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySE(6);
+            }
             yield return new WaitForSeconds(1.0f);
             if (countdownImages[0] != null) countdownImages[0].gameObject.SetActive(false); // 消す
 
             // 2 の画像を表示
             if (countdownImages[1] != null) countdownImages[1].gameObject.SetActive(true);
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySE(6);
+            }
             yield return new WaitForSeconds(1.0f);
             if (countdownImages[1] != null) countdownImages[1].gameObject.SetActive(false); // 消す
 
             // 1 の画像を表示
             if (countdownImages[2] != null) countdownImages[2].gameObject.SetActive(true);
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySE(6);
+            }
             yield return new WaitForSeconds(1.0f);
             if (countdownImages[2] != null) countdownImages[2].gameObject.SetActive(false); // 消す
 
             // スタート! の画像を表示
             if (countdownImages[3] != null) countdownImages[3].gameObject.SetActive(true);
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySE(4);
+            }
         }
 
         // ここでタイマーが動き出します

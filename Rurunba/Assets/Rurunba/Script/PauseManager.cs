@@ -1,47 +1,85 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI; // ポーズ画面のパネルをここに入れる
-    //private bool isPaused = false;
 
     // 右上のポーズボタン
     public void Pause()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f; // 時間を止める
-        //isPaused = true;
     }
 
     // 再開ボタン用
     public void Resume()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f; // 時間を動かす
-        //isPaused = false;
     }
 
-    // Rボタン（リトライ）用
     public void Retry()
     {
-        Time.timeScale = 1f; // ロード前に時間を動かすのがコツ
+        StartCoroutine(RetrySequence());
+    }
+
+    private IEnumerator RetrySequence()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        // 待ったあとに時間を元に戻してロード
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // Stage Selectボタン用
     public void GoToStageSelect()
     {
+        StartCoroutine(GoToStageSelectSequence());
+    }
+
+    private IEnumerator GoToStageSelectSequence()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
         Time.timeScale = 1f;
         SceneManager.LoadScene("1_StageSelectScene");
     }
 
-    // Titleボタン用
     public void GoToTitle()
     {
+        StartCoroutine(GoToTitleSequence());
+    }
+
+    private IEnumerator GoToTitleSequence()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
         Time.timeScale = 1f;
         SceneManager.LoadScene("TitleScene");
     }
-
-
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using TMPro; // TextMeshProを使用するために追加
+using TMPro;
 
 public class GoalManager : MonoBehaviour
 {
@@ -24,7 +24,7 @@ public class GoalManager : MonoBehaviour
     public GameObject star2;
     public GameObject star3;
 
-    [Header("【新規】スコア・ベスト更新UI設定")]
+    [Header("スコア・ベスト更新UI設定")]
     [Tooltip("今回のリザルトタイムを表示するTextMeshProテキストオブジェクト")]
     public TextMeshProUGUI scoreTimeText;
     [Tooltip("ベストタイムを更新した時に表示する『ベスト更新！』のオブジェクト（テキストや画像など）")]
@@ -72,6 +72,10 @@ public class GoalManager : MonoBehaviour
 
     IEnumerator GoalSequence()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(2);
+        }
         if (TimeManager.instance != null)
         {
             TimeManager.instance.StopTimer();
@@ -104,37 +108,30 @@ public class GoalManager : MonoBehaviour
 
     void ExecuteGameClear()
     {
-        // 最初は演出パーツ（星・スコア・ベスト文字）をすべて非表示にしておく
         if (star1 != null) star1.SetActive(false);
         if (star2 != null) star2.SetActive(false);
         if (star3 != null) star3.SetActive(false);
         if (scoreTimeText != null) scoreTimeText.gameObject.SetActive(false);
         if (newRecordObject != null) newRecordObject.SetActive(false);
 
-        // 背景パネルや各種ボタンは、リザルトが開いた瞬間にすべて普通に一斉表示
         if (clearPanel != null) clearPanel.SetActive(true);
         if (retryButton != null) retryButton.SetActive(true);
         if (nextStageButton != null) nextStageButton.SetActive(true);
         if (stageSelectButton != null) stageSelectButton.SetActive(true);
 
-        // 獲得した星の数を計算 (1~3)
         int earnedStars = CalculateStarsCount(savedGoalTime);
 
-        // ロードして、今回のタイムがベスト更新（ハイスコア）か判定する
         float previousBestTime = StageSaveManager.LoadBestTime(stageNumber);
         bool isNewRecord = (savedGoalTime < previousBestTime);
 
-        // セーブ処理
         StageSaveManager.SaveStars(stageNumber, earnedStars);
         StageSaveManager.SaveBestTime(stageNumber, savedGoalTime);
 
-        // 今回のスコアテキストにタイムを代入しておく（非表示状態のまま）
         if (scoreTimeText != null)
         {
             scoreTimeText.text = "タイム: " + savedGoalTime.ToString("F2") + "s";
         }
 
-        // 連動したスタンプリザルトシーケンスを開始
         StartCoroutine(ResultStampSequence(earnedStars, isNewRecord));
     }
 
@@ -158,12 +155,8 @@ public class GoalManager : MonoBehaviour
         return starCount;
     }
 
-    // 星スタンプ → スコアスタンプ → ベスト更新を時間差で連続処理する決定版コルーチン
     IEnumerator ResultStampSequence(int starCount, bool isNewRecord)
     {
-        //---------------------------------------------------------
-        // 第1のスタンプ：星の画像
-        //---------------------------------------------------------
         yield return new WaitForSeconds(startDelay);
 
         GameObject targetStarImage = null;
@@ -173,29 +166,22 @@ public class GoalManager : MonoBehaviour
 
         if (targetStarImage != null)
         {
-            // 星のスタンプアニメーションを実行
             yield return StartCoroutine(AnimateStampObject(targetStarImage));
         }
 
-        // 今回のスコア（タイム）
-        // 星が押し込まれてから、次のスコアが降ってくるまでの時間差
         yield return new WaitForSeconds(nextStampDelay);
 
         if (scoreTimeText != null)
         {
-            // スコアテキストのスタンプアニメーションを実行
             yield return StartCoroutine(AnimateStampObject(scoreTimeText.gameObject));
         }
 
-        // ベスト更新（ニューレコード）の表示
         if (isNewRecord && newRecordObject != null)
         {
-            // スコアがドンッと押し込まれた直後、ワンテンポ置いてからベスト文字をパッと出す
             yield return new WaitForSeconds(0.25f);
 
             newRecordObject.SetActive(true);
 
-            // ベスト更新文字処理
             Vector3 originalBestScale = newRecordObject.transform.localScale;
             newRecordObject.transform.localScale = originalBestScale * 0.5f;
 
@@ -204,7 +190,6 @@ public class GoalManager : MonoBehaviour
             {
                 elapsed += Time.deltaTime;
                 float t = elapsed / 0.15f;
-                // イージングを使って滑らかに大きくする
                 newRecordObject.transform.localScale = Vector3.Lerp(originalBestScale * 0.5f, originalBestScale * 1.1f, t);
                 yield return null;
             }
@@ -212,34 +197,30 @@ public class GoalManager : MonoBehaviour
         }
     }
 
-    // 大きく表示 → 滑らかに縮小（スタンプ） → バウンドさせる共通化関数
     IEnumerator AnimateStampObject(GameObject obj)
     {
-        // もともと配置されている本来のサイズ（Scale）を基準値として保存
         Vector3 defaultScale = obj.transform.localScale;
-
-        // 最初は指定された「超巨大サイズ」に設定してからアクティブ化（パッと大きく出る）
         Vector3 startScale = defaultScale * startScaleMultiplier;
         obj.transform.localScale = startScale;
         obj.SetActive(true);
 
         float elapsedTime = 0f;
 
-        // 【巨大サイズから、勢いよくズドンと元のサイズへ縮小】
         while (elapsedTime < shrinkDuration)
         {
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / shrinkDuration;
-
-            t = t * t; // 最初ゆっくり、直前に一気に加速（EaseInQuad）
-
+            t = t * t;
             obj.transform.transform.localScale = Vector3.Lerp(startScale, defaultScale, t);
             yield return null;
         }
 
-        // スタンプが叩きつけられた衝撃のバウンド演出
         if (useBounceEffect)
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySE(5);
+            }
             elapsedTime = 0f;
             float bounceDuration = 0.12f;
 
@@ -247,26 +228,45 @@ public class GoalManager : MonoBehaviour
             {
                 elapsedTime += Time.deltaTime;
                 float t = elapsedTime / bounceDuration;
-
-                float bounceCurve = Mathf.Sin(t * Mathf.PI) * 0.25f; // つぶれ具合の強さ
-
+                float bounceCurve = Mathf.Sin(t * Mathf.PI) * 0.25f;
                 obj.transform.localScale = defaultScale - (defaultScale * bounceCurve * (1f - t));
                 yield return null;
             }
         }
 
-        // 最後に本来のサイズに綺麗に固定
         obj.transform.localScale = defaultScale;
     }
-
     public void ClickRetry()
     {
+        StartCoroutine(RetrySequence());
+    }
+    private IEnumerator RetrySequence()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
 
     public void ClickBackToSelect()
     {
+        StartCoroutine(BackToSelectSequence());
+    }
+
+    private IEnumerator BackToSelectSequence()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
         if (!string.IsNullOrEmpty(stageSelectSceneName))
         {
             SceneManager.LoadScene(stageSelectSceneName);
@@ -275,6 +275,18 @@ public class GoalManager : MonoBehaviour
 
     public void ClickGoToNext()
     {
+        StartCoroutine(GoToNextSequence());
+    }
+
+    private IEnumerator GoToNextSequence()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
         if (!string.IsNullOrEmpty(nextStageSceneName))
         {
             SceneManager.LoadScene(nextStageSceneName);

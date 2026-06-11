@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
         GameObject[] trashes = GameObject.FindGameObjectsWithTag("Trash");
         totalTrashCount = trashes.Length;
         currentTrashCount = totalTrashCount;
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayBGM(0);
+        }
     }
 
         // ゴミが吸い込まれた時に呼ぶメソッド

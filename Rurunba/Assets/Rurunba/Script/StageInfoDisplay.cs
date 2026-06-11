@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class StageInfoDisplay : MonoBehaviour
 {
@@ -74,7 +75,7 @@ public class StageInfoDisplay : MonoBehaviour
             }
             else
             {
-                bestTimeText.text =   bestTime.ToString("F2") + "s";
+                bestTimeText.text = bestTime.ToString("F2") + "s";
             }
         }
 
@@ -103,11 +104,25 @@ public class StageInfoDisplay : MonoBehaviour
                 break;
         }
     }
-
     public void ClickStartStage()
     {
+        // 押された瞬間にまずSEを鳴らす
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        // 0.5秒待つコルーチンをスタート
+        StartCoroutine(StartStageSequence());
+    }
+    private IEnumerator StartStageSequence()
+    {
+        // ここで0.5秒（0.5f）待機する
+        yield return new WaitForSeconds(0.5f);
+
         if (!string.IsNullOrEmpty(currentSelectedSceneName))
         {
+            // 待ったあとにシーンを読み込む
             SceneManager.LoadScene(currentSelectedSceneName);
         }
         else
@@ -118,6 +133,10 @@ public class StageInfoDisplay : MonoBehaviour
 
     public void ClickClosePanel()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
         if (infoPanel != null) infoPanel.SetActive(false);
     }
 }

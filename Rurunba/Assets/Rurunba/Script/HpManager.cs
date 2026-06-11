@@ -96,6 +96,11 @@ public class HpManager : MonoBehaviour
 
     public void TakeDamage(int damage, Collision collision = null)
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(1);
+        }
+
         if (isInvincible || isDead) return;
 
         currentHp -= damage;

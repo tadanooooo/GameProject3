@@ -5,8 +5,6 @@ using System.Collections;
 
 public class TitleManager : MonoBehaviour
 {
-    [Header("画面タップ時に消したいテキストオブジェクト")]
-    public GameObject textToHide;
 
     void Awake()
     {
@@ -24,6 +22,10 @@ public class TitleManager : MonoBehaviour
     // ボタンや画面タップから呼び出す関数
     public void GoToStageSelect()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(1);
+        }
         // コルーチン（時間差処理）を開始する
         StartCoroutine(MoveToStageSelectSequence());
     }
@@ -31,26 +33,30 @@ public class TitleManager : MonoBehaviour
     // タイムラグを作ってシーンを切り替える中身（コルーチン）
     private IEnumerator MoveToStageSelectSequence()
     {
-        if (textToHide != null)
-        {
-            textToHide.SetActive(false);
-        }
-        // SEを鳴らす
-        if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.PlaySE(1);
-        }
+        // そのまま待機
+        yield return new WaitForSeconds(1.5f);
 
-        // そのまま3.0秒待機
-        yield return new WaitForSeconds(2.0f);
-
-        // 3秒経ったらシーンを読込
+        // シーンを読込
         SceneManager.LoadScene("1_StageSelectScene");
     }
 
-    // ゲーム終了ボタン用
+    // ゲーム終了ボタン用（コルーチンを呼び出す窓口）
     public void ExitGame()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+
+        StartCoroutine(ExitGameSequence());
+    }
+
+    // 0.5秒の間隔を作ってからゲームを終了する中身
+    private IEnumerator ExitGameSequence()
+    {
+        // ここで0.5秒（0.5f）待機する
+        yield return new WaitForSeconds(0.5f);
+
         Debug.Log("ゲームを終了");
 
         // ビルドしたアプリを終了
