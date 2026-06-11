@@ -5,6 +5,9 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    GraphicsSettingsInspector_UserSettings:
+      value: 18134705175a055722080a3115371d4a0d55006876786860616b0471b8b2666facb566b9b76d6c6e6d50be64536b1c73b01a001bf30703051428e8021dcb090314eb19c81f8a455efe1715dad438dfe4dcd8d1a4eaeee9dcdbcda9fcf3bedbf6fce7a0e9b9a9f08e9fa1f7a7aad0d4c5cdf8b2cac8c3dbf7b3c2d4dfb7ddd7f2cac580c29b9a
+      flags: 0
     QuickInstaller_com.unity.purchasing_installRecorded:
       value: 37434103
       flags: 0
@@ -12,37 +15,52 @@ EditorUserSettings:
       value: 2550581500
       flags: 0
     RecentlyUsedSceneGuid-0:
-      value: 570707555105595a5d5a0e2316705a444f4e4f282f7970367e7a1b60b1b7666a
+      value: 0054035152010d080f5d087713745c4417154029747025362b7c4c31e6e2666c
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 5405515304045a09085d5c7114750b44154e4d7c7f787e35752b4430e0b16d61
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 06020c565500085f090f0f7a44765b4442164179297a7f667d711c62b5e5633c
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 550200055104580a5a08587a11720644464e4b79287d7e68797c1f65e4b2616a
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 5703520751055e090e08557a117a5d44171619732e7c77362c2d4960b2b73769
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 005001555202085d080f0f2346260e4217154a797d2a71612e2b4a60e3b16c39
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 53535703500c590c0959557511775c144e15487c7a7822337c78446bb4b73160
-      flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
-      flags: 0
-    RecentlyUsedSceneGuid-8:
       value: 500155570005515a5e5a547749255e444216487c7a7a70627e714a36b5b93760
       flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 5109035055505d5f555d592113265944134f48287f2e22657e28196be7e36d39
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 53535703500c590c0959557511775c144e15487c7a7822337c78446bb4b73160
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 5a53010704035d09550c0d7511750d4440151c787c792431752d4466e1e5363d
+      flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 57570c5601500b5f0f5b5e2141750944414f41737b2d77347f2b4e61bbe5673b
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0202575e03545d03090a0d7a147007444316407c7e7e23657e2b4464b6e66639
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 5605515f0750585e0b580f7b46255b4415154f7c7a7c2366292a1967e0e3353b
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 5754515352025b08550c0e7646255944144e492e282b2332287e1b36b0e2356f
+      flags: 0
     RecentlyUsedSceneGuid-9:
-      value: 015456555d02595d585d0f2048220b444e161a78787176357e2f4f30e4e66c68
+      value: 5a5504560350505e5b5d0f7a47250f44424e1c7c2e2b7469297c4f36b7e4646d
+      flags: 0
+    UnityEditor.ShaderGraph.Blackboard:
+      value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd3c3e302a07a37e0901373ae01e0008f707250d171df81a53a5405d4195489549984a4d9c4c4b969c4f84af97dbebc2d7f9eec2d1d1b4f3f8dfe8fee6f4b1b9f0f0b290e6edf38e9ccbddc18390ac86d4849395ea829f83f291cb918382d58697d7c5c6
+      flags: 0
+    UnityEditor.ShaderGraph.FloatingWindowsLayout2:
+      value: 181344140043005e1a220d3b1f364b524c0c5a27130c293326201334cee5322ca0bd30e8eb293a707b0fd0180b3d0a36fc0d3d04e649500d1002ee0b5dbd1d2c27c00ad113cb1e10e41f1addc80993b98d9884a69ae6d8f0d1cda9e8fbfefaf9f9dea3fdb9ade882f0f7b0e1e380cafbf2c3adc18e9cd285a2908b82ec879c8b8986d58781d4898b8cd9f6d5fadce5bdd1fbf5c4c1ebc1fbcdcecdea33e2ff35323130e2a1a5ab
+      flags: 0
+    UnityEditor.ShaderGraph.InspectorWindow:
+      value: 18135939215a0a5004000b0e15254b524c1119263f2d6a722016393ce1eb3d36e5d339f9a5602b2e2c07a37e0901373ae01e0008f707250d171df81a53a5485d41895ac825e0100ec20313c0d91cddccd3d0c7efcca9bd80908fecb0f9cfddf1eff4e7a1b1eae482f0fcaee1e19297949199e7919d919c90e2839d91a79188818e83cb8489d7888a8bdff0daf2c3f6f6c4bcb9
+      flags: 0
+    UnityEditor.ShaderGraph.ToggleSettings:
+      value: 18135d1527590858060c032302276919051e1a26296a7c362c250e36aea23d2bd2f533ffee3f280a3011e63e083b4365f40b0518f34748020227f31d01fa13071ed72ecc09c11d10ce5b46c8cc11c2e69994d7e5d4e4f5e8ccd0b6fbf0f5fcbaafb3f9d5a5a6f99ee8b2
       flags: 0
     UnityRemoteDevice:
       value: 225f4d46245b0d4902070862342649191512
+      flags: 0
+    lightmappingBakingProfile:
+      value: 51
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
