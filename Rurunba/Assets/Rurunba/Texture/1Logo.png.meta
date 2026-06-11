@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Rurunba/Assets/Rurunba/Texture/1Logo.png.meta
 guid: 59adb157d3571744189c61466b1e5139
+=======
+guid: 59bf445f65504334aa37706100da0adf
+>>>>>>> 629eae8 (Stage追加点):Rurunba/Assets/_Rurunba/Texture/Map/FloorTexSoftdark.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
