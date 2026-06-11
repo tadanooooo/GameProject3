@@ -152,10 +152,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 0}
   offset: {x: 0, y: 2, z: -1.5}
-  fixedRotation: {x: 40, y: 0, z: 0}
+  fixedRotation: {x: 45, y: 0, z: 0}
   smoothTime: 0.2
   heightWhenTopDown: 3
   wallRotation: {x: 90, y: 0, z: 0}
   wallLayer:
     serializedVersion: 2
     m_Bits: 8
+  shiftStrength: 0.4
+  maxShiftDistance: 3
