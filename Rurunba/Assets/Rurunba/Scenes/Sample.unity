@@ -246,6 +246,22 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1995805930}
+    - target: {fileID: 4885178807271978216, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
+      propertyPath: offset.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885178807271978216, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
+      propertyPath: shiftStrength
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885178807271978216, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
+      propertyPath: fixedRotation.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885178807271978216, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
+      propertyPath: maxShiftDistance
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
