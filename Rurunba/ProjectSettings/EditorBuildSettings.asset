@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_Rurunba/Scenes/2_StageSelectScene.unity
     guid: a664cd7b12a7c2343b97b12686a4bb98
   - enabled: 1
-    path: Assets/_Rurunba/Scenes/Sample.unity
+    path: Assets/Rurunba/gomidata/Sample.unity
     guid: 3ff65a7cb53eb414fab60a6b8bb98244
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7a5dcec2b0ee81847ab94b31dc276466, type: 2}

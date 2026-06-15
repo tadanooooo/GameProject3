@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4963391130302142790}
   - component: {fileID: 3175745125052424789}
   - component: {fileID: 4885178807271978216}
+  - component: {fileID: 8402132364525153613}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -161,3 +162,19 @@ MonoBehaviour:
     m_Bits: 8
   shiftStrength: 0.4
   maxShiftDistance: 3
+--- !u!114 &8402132364525153613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768962408340298474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7abe40045403ce0409d2b9ec2c998e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleHider
+  player: {fileID: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
