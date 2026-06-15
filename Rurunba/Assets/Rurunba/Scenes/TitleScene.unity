@@ -1180,6 +1180,7 @@ MonoBehaviour:
   seSlider: {fileID: 57340041}
   bgmSource: {fileID: 1636745184}
   seSource: {fileID: 53481865}
+  suctionLoopSource: {fileID: 0}
   audioUI: {fileID: 57340040}
   bgms:
   - {fileID: 8300000, guid: 8328696236fe6cd45abea6f04fec429a, type: 3}
@@ -1832,6 +1833,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 675094588533311413, guid: 223ac591c4ced754992a77c4a19fcf94, type: 3}
+      propertyPath: m_Size.z
+      value: 0.3237099
+      objectReference: {fileID: 0}
     - target: {fileID: 682604025218952025, guid: 223ac591c4ced754992a77c4a19fcf94, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1880,6 +1885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rurunba
       objectReference: {fileID: 0}
+    - target: {fileID: 6798615622682377459, guid: 223ac591c4ced754992a77c4a19fcf94, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 682604025218952025, guid: 223ac591c4ced754992a77c4a19fcf94, type: 3}
     m_RemovedGameObjects: []
@@ -1889,6 +1898,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1915836721}
   m_SourcePrefab: {fileID: 100100000, guid: 223ac591c4ced754992a77c4a19fcf94, type: 3}
+--- !u!1001 &921366686184947281
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.828473
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.12612
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.019885
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9044068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4266713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 50.513
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037723724134633020, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701389404544308358, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
+      propertyPath: m_Name
+      value: RuRumba_animation1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0952260f61e309d4c9c76ebd3cf4d630, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1902,3 +1968,4 @@ SceneRoots:
   - {fileID: 1837996383}
   - {fileID: 634739951}
   - {fileID: 1754401764}
+  - {fileID: 921366686184947281}
