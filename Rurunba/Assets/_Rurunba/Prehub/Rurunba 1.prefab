@@ -118,6 +118,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8128168532001608025, guid: 08d2c3ea5b2b94b4ba57ec7b991cbbba, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8128168532001608025, guid: 08d2c3ea5b2b94b4ba57ec7b991cbbba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f5c352920cad21b46967cf0d1ca5cc48, type: 2}
+    - target: {fileID: -8128168532001608025, guid: 08d2c3ea5b2b94b4ba57ec7b991cbbba, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5958275944857482922, guid: 08d2c3ea5b2b94b4ba57ec7b991cbbba, type: 3}
     - target: {fileID: -4789804576787290084, guid: 08d2c3ea5b2b94b4ba57ec7b991cbbba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 11.259666
@@ -163,7 +175,8 @@ PrefabInstance:
       value: Rumba_animation_Correction
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -1988923338398882516, guid: 08d2c3ea5b2b94b4ba57ec7b991cbbba, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -2718643082614786062, guid: 08d2c3ea5b2b94b4ba57ec7b991cbbba, type: 3}
       insertIndex: -1

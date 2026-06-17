@@ -42,6 +42,9 @@ public class TimeManager : MonoBehaviour
                 if (img != null) img.gameObject.SetActive(false);
             }
 
+            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForEndOfFrame();
+
             // 3 ‚Ì‰æ‘œ‚ð•\Ž¦
             if (countdownImages[0] != null) countdownImages[0].gameObject.SetActive(true);
             if (AudioManager.Instance != null)
