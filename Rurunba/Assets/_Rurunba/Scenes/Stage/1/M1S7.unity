@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 620199}
   - component: {fileID: 620201}
   - component: {fileID: 620200}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 1187263}
   - component: {fileID: 1187262}
   - component: {fileID: 1187261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,6 +372,14 @@ PrefabInstance:
     - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
       propertyPath: m_Name
       value: fourHorizontalbackrestChair (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1829971115455401260, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
       propertyPath: m_LocalScale.x
@@ -525,6 +533,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProFloor (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2250124765222870178, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -610,7 +626,7 @@ GameObject:
   - component: {fileID: 13182751}
   - component: {fileID: 13182753}
   - component: {fileID: 13182752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Freezer_Inside_Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +717,7 @@ GameObject:
   - component: {fileID: 13821529}
   - component: {fileID: 13821531}
   - component: {fileID: 13821530}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,9 +805,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 19378186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kitchen (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -825,7 +841,7 @@ GameObject:
   - component: {fileID: 34776537}
   - component: {fileID: 34776539}
   - component: {fileID: 34776538}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +931,7 @@ GameObject:
   - component: {fileID: 35051846}
   - component: {fileID: 35051848}
   - component: {fileID: 35051847}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Shelf_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,7 +1022,7 @@ GameObject:
   - component: {fileID: 45989408}
   - component: {fileID: 45989410}
   - component: {fileID: 45989409}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bulb.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1186,7 @@ GameObject:
   - component: {fileID: 53599672}
   - component: {fileID: 53599674}
   - component: {fileID: 53599673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,6 +1281,14 @@ PrefabInstance:
     - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_Name
       value: ProFloor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2250124765222870178, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_LocalScale.x
@@ -3443,7 +3467,7 @@ GameObject:
   - component: {fileID: 77949582}
   - component: {fileID: 77949584}
   - component: {fileID: 77949583}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Handle.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3533,7 +3557,7 @@ GameObject:
   - component: {fileID: 84769521}
   - component: {fileID: 84769523}
   - component: {fileID: 84769522}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulbBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3625,7 +3649,7 @@ GameObject:
   - component: {fileID: 103644199}
   - component: {fileID: 103644198}
   - component: {fileID: 103644197}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Counter_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3810,7 +3834,7 @@ GameObject:
   - component: {fileID: 109668850}
   - component: {fileID: 109668852}
   - component: {fileID: 109668851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Shelf_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3900,7 +3924,7 @@ GameObject:
   - component: {fileID: 117594896}
   - component: {fileID: 117594898}
   - component: {fileID: 117594897}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bulb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4242,7 +4266,7 @@ GameObject:
   - component: {fileID: 153642062}
   - component: {fileID: 153642064}
   - component: {fileID: 153642063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Bracket Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4336,7 +4360,7 @@ GameObject:
   - component: {fileID: 172341982}
   - component: {fileID: 172341984}
   - component: {fileID: 172341983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4426,7 +4450,7 @@ GameObject:
   - component: {fileID: 176280398}
   - component: {fileID: 176280400}
   - component: {fileID: 176280399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Shelf_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4520,7 +4544,7 @@ GameObject:
   - component: {fileID: 192730274}
   - component: {fileID: 192730273}
   - component: {fileID: 192730272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4767,9 +4791,9 @@ GameObject:
   - component: {fileID: 197145057}
   - component: {fileID: 197145056}
   - component: {fileID: 197145055}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5055,7 +5079,7 @@ GameObject:
   - component: {fileID: 199146391}
   - component: {fileID: 199146393}
   - component: {fileID: 199146392}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5219,7 +5243,7 @@ GameObject:
   - component: {fileID: 207262714}
   - component: {fileID: 207262716}
   - component: {fileID: 207262715}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Door_Shelf_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5737,7 +5761,7 @@ GameObject:
   - component: {fileID: 291285474}
   - component: {fileID: 291285473}
   - component: {fileID: 291285472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5887,7 +5911,7 @@ GameObject:
   - component: {fileID: 312548774}
   - component: {fileID: 312548773}
   - component: {fileID: 312548772}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Counter_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5999,7 +6023,7 @@ GameObject:
   - component: {fileID: 312906511}
   - component: {fileID: 312906510}
   - component: {fileID: 312906509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Base_DD_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6189,7 +6213,7 @@ GameObject:
   - component: {fileID: 349361399}
   - component: {fileID: 349361401}
   - component: {fileID: 349361400}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ControlPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6354,6 +6378,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorLight (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79999983
@@ -6427,7 +6459,7 @@ GameObject:
   - component: {fileID: 380253569}
   - component: {fileID: 380253571}
   - component: {fileID: 380253570}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Handle_Fridge.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6591,7 +6623,7 @@ GameObject:
   - component: {fileID: 393986698}
   - component: {fileID: 393986700}
   - component: {fileID: 393986699}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6755,7 +6787,7 @@ GameObject:
   - component: {fileID: 422604424}
   - component: {fileID: 422604426}
   - component: {fileID: 422604425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7046,6 +7078,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtain_240x140 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8049096419728846460, guid: fdc1059a7ab76be4f9ded8df239e51c8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049096419728846460, guid: fdc1059a7ab76be4f9ded8df239e51c8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7067,6 +7107,14 @@ PrefabInstance:
     - target: {fileID: 813342878700963613, guid: fe3d3e03122497641bdfc0ecc459d5a0, type: 3}
       propertyPath: m_Name
       value: Directional Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 813342878700963613, guid: fe3d3e03122497641bdfc0ecc459d5a0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 813342878700963613, guid: fe3d3e03122497641bdfc0ecc459d5a0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1498060030870680852, guid: fe3d3e03122497641bdfc0ecc459d5a0, type: 3}
       propertyPath: m_LocalScale.x
@@ -7161,7 +7209,7 @@ GameObject:
   - component: {fileID: 464699082}
   - component: {fileID: 464699084}
   - component: {fileID: 464699083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Grate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7328,7 +7376,7 @@ GameObject:
   - component: {fileID: 474146455}
   - component: {fileID: 474146454}
   - component: {fileID: 474146453}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7478,6 +7526,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorLight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79999983
@@ -7551,7 +7607,7 @@ GameObject:
   - component: {fileID: 485174991}
   - component: {fileID: 485174993}
   - component: {fileID: 485174992}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7641,7 +7697,7 @@ GameObject:
   - component: {fileID: 488915370}
   - component: {fileID: 488915372}
   - component: {fileID: 488915371}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7910,7 +7966,7 @@ GameObject:
   - component: {fileID: 512128100}
   - component: {fileID: 512128099}
   - component: {fileID: 512128098}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8180,7 +8236,7 @@ GameObject:
   - component: {fileID: 519630430}
   - component: {fileID: 519630432}
   - component: {fileID: 519630431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8271,7 +8327,7 @@ GameObject:
   - component: {fileID: 527538077}
   - component: {fileID: 527538079}
   - component: {fileID: 527538078}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8361,7 +8417,7 @@ GameObject:
   - component: {fileID: 528663499}
   - component: {fileID: 528663501}
   - component: {fileID: 528663500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Door_Shelf_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8578,6 +8634,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: brownWoodTable
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 28f8f3ad57ca7a50dab5d12a42a0ef75, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 28f8f3ad57ca7a50dab5d12a42a0ef75, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8599,7 +8663,7 @@ GameObject:
   - component: {fileID: 544131247}
   - component: {fileID: 544131249}
   - component: {fileID: 544131248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Drawer_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8689,7 +8753,7 @@ GameObject:
   - component: {fileID: 544887131}
   - component: {fileID: 544887133}
   - component: {fileID: 544887132}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8779,7 +8843,7 @@ GameObject:
   - component: {fileID: 545173909}
   - component: {fileID: 545173911}
   - component: {fileID: 545173910}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8870,6 +8934,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorLight (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79999983
@@ -8941,7 +9013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 550945802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Appliances
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8978,7 +9050,7 @@ GameObject:
   - component: {fileID: 557290422}
   - component: {fileID: 557290421}
   - component: {fileID: 557290420}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Counter_Sink_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9169,7 +9241,7 @@ GameObject:
   - component: {fileID: 566897080}
   - component: {fileID: 566897079}
   - component: {fileID: 566897078}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9319,7 +9391,7 @@ GameObject:
   - component: {fileID: 584201371}
   - component: {fileID: 584201373}
   - component: {fileID: 584201372}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9409,7 +9481,7 @@ GameObject:
   - component: {fileID: 596670590}
   - component: {fileID: 596670592}
   - component: {fileID: 596670591}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Door_Shelf_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9752,7 +9824,7 @@ GameObject:
   - component: {fileID: 628797822}
   - component: {fileID: 628797824}
   - component: {fileID: 628797823}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulbBase.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9843,7 +9915,7 @@ GameObject:
   - component: {fileID: 646503454}
   - component: {fileID: 646503456}
   - component: {fileID: 646503455}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Electronic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10008,7 +10080,7 @@ GameObject:
   - component: {fileID: 655733920}
   - component: {fileID: 655733922}
   - component: {fileID: 655733921}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10098,7 +10170,7 @@ GameObject:
   - component: {fileID: 660310438}
   - component: {fileID: 660310440}
   - component: {fileID: 660310439}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glass.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10192,7 +10264,7 @@ GameObject:
   - component: {fileID: 661005119}
   - component: {fileID: 661005118}
   - component: {fileID: 661005117}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_R.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10344,7 +10416,7 @@ GameObject:
   - component: {fileID: 665194858}
   - component: {fileID: 665194857}
   - component: {fileID: 665194856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Broiler_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10493,7 +10565,7 @@ GameObject:
   - component: {fileID: 665445838}
   - component: {fileID: 665445840}
   - component: {fileID: 665445839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Grate_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10583,7 +10655,7 @@ GameObject:
   - component: {fileID: 675497757}
   - component: {fileID: 675497759}
   - component: {fileID: 675497758}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Drawer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10674,7 +10746,7 @@ GameObject:
   - component: {fileID: 678720859}
   - component: {fileID: 678720858}
   - component: {fileID: 678720857}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sink_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10786,7 +10858,7 @@ GameObject:
   - component: {fileID: 679308167}
   - component: {fileID: 679308169}
   - component: {fileID: 679308168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hood_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10877,7 +10949,7 @@ GameObject:
   - component: {fileID: 694813519}
   - component: {fileID: 694813521}
   - component: {fileID: 694813520}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10973,7 +11045,7 @@ GameObject:
   - component: {fileID: 694826277}
   - component: {fileID: 694826279}
   - component: {fileID: 694826278}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Faucet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11213,7 +11285,7 @@ GameObject:
   - component: {fileID: 711103506}
   - component: {fileID: 711103505}
   - component: {fileID: 711103504}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Base_Sink_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11329,7 +11401,7 @@ GameObject:
   - component: {fileID: 713656260}
   - component: {fileID: 713656262}
   - component: {fileID: 713656261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Glass_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11494,7 +11566,7 @@ GameObject:
   - component: {fileID: 723856886}
   - component: {fileID: 723856885}
   - component: {fileID: 723856884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Base_SD_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11609,9 +11681,9 @@ GameObject:
   - component: {fileID: 731438445}
   - component: {fileID: 731438444}
   - component: {fileID: 731438443}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Point Light (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11736,7 +11808,7 @@ GameObject:
   - component: {fileID: 735367662}
   - component: {fileID: 735367664}
   - component: {fileID: 735367663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11868,6 +11940,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProFloor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2250124765222870178, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -11954,7 +12034,7 @@ GameObject:
   - component: {fileID: 737267810}
   - component: {fileID: 737267809}
   - component: {fileID: 737267808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Counter_Corner_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12069,7 +12149,7 @@ GameObject:
   - component: {fileID: 759581698}
   - component: {fileID: 759581697}
   - component: {fileID: 759581696}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12271,6 +12351,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtain_240x140
       objectReference: {fileID: 0}
+    - target: {fileID: 8049096419728846460, guid: fdc1059a7ab76be4f9ded8df239e51c8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049096419728846460, guid: fdc1059a7ab76be4f9ded8df239e51c8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12292,7 +12380,7 @@ GameObject:
   - component: {fileID: 767045368}
   - component: {fileID: 767045370}
   - component: {fileID: 767045369}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Drawer_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12435,6 +12523,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PFB_TV (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2691394821113370350, guid: 1fa3c52d58699414f81328681bc12b65, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691394821113370350, guid: 1fa3c52d58699414f81328681bc12b65, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12533,7 +12629,7 @@ GameObject:
   - component: {fileID: 780460251}
   - component: {fileID: 780460250}
   - component: {fileID: 780460249}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oven_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12684,7 +12780,7 @@ GameObject:
   - component: {fileID: 783146557}
   - component: {fileID: 783146559}
   - component: {fileID: 783146558}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Broiler_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12774,7 +12870,7 @@ GameObject:
   - component: {fileID: 783649932}
   - component: {fileID: 783649934}
   - component: {fileID: 783649933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Door_Shelf_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12864,7 +12960,7 @@ GameObject:
   - component: {fileID: 803285930}
   - component: {fileID: 803285932}
   - component: {fileID: 803285931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12957,7 +13053,7 @@ GameObject:
   - component: {fileID: 807865953}
   - component: {fileID: 807865952}
   - component: {fileID: 807865951}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13106,7 +13202,7 @@ GameObject:
   - component: {fileID: 811537398}
   - component: {fileID: 811537400}
   - component: {fileID: 811537399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Shelf_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13196,7 +13292,7 @@ GameObject:
   - component: {fileID: 816713391}
   - component: {fileID: 816713393}
   - component: {fileID: 816713392}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glass.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13658,7 +13754,7 @@ GameObject:
   - component: {fileID: 852210939}
   - component: {fileID: 852210938}
   - component: {fileID: 852210937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer_Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13751,7 +13847,7 @@ GameObject:
   - component: {fileID: 863432820}
   - component: {fileID: 863432819}
   - component: {fileID: 863432818}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13868,7 +13964,7 @@ GameObject:
   - component: {fileID: 868826867}
   - component: {fileID: 868826869}
   - component: {fileID: 868826868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulbBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13964,6 +14060,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProFloor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2250124765222870178, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -14049,7 +14153,7 @@ GameObject:
   - component: {fileID: 877324705}
   - component: {fileID: 877324707}
   - component: {fileID: 877324706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14467,6 +14571,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorLight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79999983
@@ -14540,7 +14652,7 @@ GameObject:
   - component: {fileID: 900534944}
   - component: {fileID: 900534946}
   - component: {fileID: 900534945}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bulb.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15071,7 +15183,7 @@ GameObject:
   - component: {fileID: 939276730}
   - component: {fileID: 939276729}
   - component: {fileID: 939276728}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Wall_Corner_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15186,7 +15298,7 @@ GameObject:
   - component: {fileID: 951235545}
   - component: {fileID: 951235547}
   - component: {fileID: 951235546}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer_Fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15278,7 +15390,7 @@ GameObject:
   - component: {fileID: 952308771}
   - component: {fileID: 952308773}
   - component: {fileID: 952308772}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Shelf_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15443,7 +15555,7 @@ GameObject:
   - component: {fileID: 960383013}
   - component: {fileID: 960383015}
   - component: {fileID: 960383014}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glass.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15786,7 +15898,7 @@ GameObject:
   - component: {fileID: 980862780}
   - component: {fileID: 980862782}
   - component: {fileID: 980862781}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glass.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15878,7 +15990,7 @@ GameObject:
   - component: {fileID: 1001303808}
   - component: {fileID: 1001303807}
   - component: {fileID: 1001303806}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16044,7 +16156,7 @@ GameObject:
   - component: {fileID: 1010297464}
   - component: {fileID: 1010297466}
   - component: {fileID: 1010297465}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulbBase.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16138,9 +16250,9 @@ GameObject:
   - component: {fileID: 1024462291}
   - component: {fileID: 1024462290}
   - component: {fileID: 1024462289}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16491,7 +16603,7 @@ GameObject:
   - component: {fileID: 1025642855}
   - component: {fileID: 1025642857}
   - component: {fileID: 1025642856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door.Fridge.Inside.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16658,7 +16770,7 @@ GameObject:
   - component: {fileID: 1033406164}
   - component: {fileID: 1033406166}
   - component: {fileID: 1033406165}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16748,7 +16860,7 @@ GameObject:
   - component: {fileID: 1040962132}
   - component: {fileID: 1040962134}
   - component: {fileID: 1040962133}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulbBase.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16839,7 +16951,7 @@ GameObject:
   - component: {fileID: 1042150554}
   - component: {fileID: 1042150556}
   - component: {fileID: 1042150555}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Faucet_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17003,7 +17115,7 @@ GameObject:
   - component: {fileID: 1059931266}
   - component: {fileID: 1059931268}
   - component: {fileID: 1059931267}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bulb.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17093,7 +17205,7 @@ GameObject:
   - component: {fileID: 1061646378}
   - component: {fileID: 1061646380}
   - component: {fileID: 1061646379}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hood_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17257,7 +17369,7 @@ GameObject:
   - component: {fileID: 1064371160}
   - component: {fileID: 1064371162}
   - component: {fileID: 1064371161}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Door_Shelf_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17348,7 +17460,7 @@ GameObject:
   - component: {fileID: 1076717952}
   - component: {fileID: 1076717954}
   - component: {fileID: 1076717953}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17438,9 +17550,9 @@ GameObject:
   - component: {fileID: 1086458095}
   - component: {fileID: 1086458094}
   - component: {fileID: 1086458093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lamp_Apt_01 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17683,6 +17795,14 @@ PrefabInstance:
     - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_Name
       value: ProFloor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 2250124765222870178, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_LocalScale.x
@@ -19537,7 +19657,7 @@ GameObject:
   - component: {fileID: 1121612009}
   - component: {fileID: 1121612011}
   - component: {fileID: 1121612010}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19627,7 +19747,7 @@ GameObject:
   - component: {fileID: 1127979237}
   - component: {fileID: 1127979239}
   - component: {fileID: 1127979238}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Door_Shelf_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19792,7 +19912,7 @@ GameObject:
   - component: {fileID: 1135297975}
   - component: {fileID: 1135297977}
   - component: {fileID: 1135297976}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19922,9 +20042,9 @@ GameObject:
   - component: {fileID: 1135963448}
   - component: {fileID: 1135963447}
   - component: {fileID: 1135963446}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20208,7 +20328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1150906080}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Props
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20241,7 +20361,7 @@ GameObject:
   - component: {fileID: 1151552458}
   - component: {fileID: 1151552460}
   - component: {fileID: 1151552459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Shelf_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20479,7 +20599,7 @@ GameObject:
   - component: {fileID: 1206498139}
   - component: {fileID: 1206498141}
   - component: {fileID: 1206498140}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Handle_Fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20570,7 +20690,7 @@ GameObject:
   - component: {fileID: 1209346925}
   - component: {fileID: 1209346924}
   - component: {fileID: 1209346923}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Base_Corner_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20742,7 +20862,7 @@ GameObject:
   - component: {fileID: 1224540032}
   - component: {fileID: 1224540034}
   - component: {fileID: 1224540033}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oven_Grate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21084,7 +21204,7 @@ GameObject:
   - component: {fileID: 1229774551}
   - component: {fileID: 1229774553}
   - component: {fileID: 1229774552}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21353,7 +21473,7 @@ GameObject:
   - component: {fileID: 1245389063}
   - component: {fileID: 1245389065}
   - component: {fileID: 1245389064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Door_Shelf_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21519,7 +21639,7 @@ GameObject:
   - component: {fileID: 1264969565}
   - component: {fileID: 1264969564}
   - component: {fileID: 1264969563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Wall_DD_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21637,7 +21757,7 @@ GameObject:
   - component: {fileID: 1265797275}
   - component: {fileID: 1265797274}
   - component: {fileID: 1265797273}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22264,7 +22384,7 @@ GameObject:
   - component: {fileID: 1287017942}
   - component: {fileID: 1287017944}
   - component: {fileID: 1287017943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glass.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22582,9 +22702,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5996265224498263510, guid: 8ac1dcc791a69a64ea3450f2a92f58ba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227763142895956827, guid: 8ac1dcc791a69a64ea3450f2a92f58ba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8019379243662535823, guid: 8ac1dcc791a69a64ea3450f2a92f58ba, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019379243662535823, guid: 8ac1dcc791a69a64ea3450f2a92f58ba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019379243662535823, guid: 8ac1dcc791a69a64ea3450f2a92f58ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22608,7 +22744,7 @@ GameObject:
   - component: {fileID: 1296783675}
   - component: {fileID: 1296783674}
   - component: {fileID: 1296783673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Tall_DD_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22725,7 +22861,7 @@ GameObject:
   - component: {fileID: 1306593116}
   - component: {fileID: 1306593115}
   - component: {fileID: 1306593114}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22875,7 +23011,7 @@ GameObject:
   - component: {fileID: 1315426957}
   - component: {fileID: 1315426959}
   - component: {fileID: 1315426958}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Burner_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22965,9 +23101,9 @@ GameObject:
   - component: {fileID: 1321790870}
   - component: {fileID: 1321790869}
   - component: {fileID: 1321790868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Point Light (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23092,7 +23228,7 @@ GameObject:
   - component: {fileID: 1325405656}
   - component: {fileID: 1325405658}
   - component: {fileID: 1325405657}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Door_Shelf_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23182,7 +23318,7 @@ GameObject:
   - component: {fileID: 1340977577}
   - component: {fileID: 1340977579}
   - component: {fileID: 1340977578}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_LargeShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23273,7 +23409,7 @@ GameObject:
   - component: {fileID: 1341847097}
   - component: {fileID: 1341847099}
   - component: {fileID: 1341847098}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23364,7 +23500,7 @@ GameObject:
   - component: {fileID: 1349715882}
   - component: {fileID: 1349715881}
   - component: {fileID: 1349715880}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23732,7 +23868,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380836060}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23775,7 +23911,7 @@ GameObject:
   - component: {fileID: 1381065218}
   - component: {fileID: 1381065217}
   - component: {fileID: 1381065216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23972,9 +24108,9 @@ GameObject:
   - component: {fileID: 1396694654}
   - component: {fileID: 1396694653}
   - component: {fileID: 1396694652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24373,7 +24509,7 @@ GameObject:
   - component: {fileID: 1428995379}
   - component: {fileID: 1428995381}
   - component: {fileID: 1428995380}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane.035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24613,7 +24749,7 @@ GameObject:
   - component: {fileID: 1450103896}
   - component: {fileID: 1450103895}
   - component: {fileID: 1450103894}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Wall_SD_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25052,7 +25188,7 @@ GameObject:
   - component: {fileID: 1463749686}
   - component: {fileID: 1463749688}
   - component: {fileID: 1463749687}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25142,7 +25278,7 @@ GameObject:
   - component: {fileID: 1473612113}
   - component: {fileID: 1473612115}
   - component: {fileID: 1473612114}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25235,7 +25371,7 @@ GameObject:
   - component: {fileID: 1480748699}
   - component: {fileID: 1480748698}
   - component: {fileID: 1480748697}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25384,7 +25520,7 @@ GameObject:
   - component: {fileID: 1483317897}
   - component: {fileID: 1483317899}
   - component: {fileID: 1483317898}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bulb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25475,7 +25611,7 @@ GameObject:
   - component: {fileID: 1495530885}
   - component: {fileID: 1495530884}
   - component: {fileID: 1495530883}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Drawer_Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25715,7 +25851,7 @@ GameObject:
   - component: {fileID: 1510052996}
   - component: {fileID: 1510052998}
   - component: {fileID: 1510052997}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25805,7 +25941,7 @@ GameObject:
   - component: {fileID: 1519329140}
   - component: {fileID: 1519329142}
   - component: {fileID: 1519329141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulbBase.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25970,7 +26106,7 @@ GameObject:
   - component: {fileID: 1528132054}
   - component: {fileID: 1528132056}
   - component: {fileID: 1528132055}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26121,7 +26257,7 @@ GameObject:
   - component: {fileID: 1549724005}
   - component: {fileID: 1549724007}
   - component: {fileID: 1549724006}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26212,6 +26348,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: tvStandBase (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 143673152363864845, guid: 1dd66c9a985801045aa3f048e6cfa1e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 143673152363864845, guid: 1dd66c9a985801045aa3f048e6cfa1e9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 7878976631920238306, guid: 1dd66c9a985801045aa3f048e6cfa1e9, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.6964052
@@ -26286,7 +26430,7 @@ GameObject:
   - component: {fileID: 1555470408}
   - component: {fileID: 1555470407}
   - component: {fileID: 1555470406}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cabinet_Base_SD_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26475,7 +26619,7 @@ GameObject:
   - component: {fileID: 1558853725}
   - component: {fileID: 1558853727}
   - component: {fileID: 1558853726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Freezer_Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26565,7 +26709,7 @@ GameObject:
   - component: {fileID: 1560039692}
   - component: {fileID: 1560039694}
   - component: {fileID: 1560039693}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Shelf_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26659,7 +26803,7 @@ GameObject:
   - component: {fileID: 1561577247}
   - component: {fileID: 1561577246}
   - component: {fileID: 1561577245}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27105,7 +27249,7 @@ GameObject:
   - component: {fileID: 1618675484}
   - component: {fileID: 1618675483}
   - component: {fileID: 1618675482}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Range_Hood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27293,6 +27437,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofa_03
       objectReference: {fileID: 0}
+    - target: {fileID: 40621143302533383, guid: 6746a45ee5760ce4d81395a7cbfb21b9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 40621143302533383, guid: 6746a45ee5760ce4d81395a7cbfb21b9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 854417405258673085, guid: 6746a45ee5760ce4d81395a7cbfb21b9, type: 3}
       propertyPath: m_LocalScale.x
       value: -3.5096848
@@ -27366,7 +27518,7 @@ GameObject:
   - component: {fileID: 1652851825}
   - component: {fileID: 1652851827}
   - component: {fileID: 1652851826}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Door_Shelf_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27531,7 +27683,7 @@ GameObject:
   - component: {fileID: 1659695711}
   - component: {fileID: 1659695713}
   - component: {fileID: 1659695712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_LargeShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27624,7 +27776,7 @@ GameObject:
   - component: {fileID: 1662425590}
   - component: {fileID: 1662425589}
   - component: {fileID: 1662425588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_R.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27847,6 +27999,14 @@ PrefabInstance:
     - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_Name
       value: FloorLight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -28321,7 +28481,7 @@ GameObject:
   - component: {fileID: 1738674181}
   - component: {fileID: 1738674183}
   - component: {fileID: 1738674182}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oven_Grate_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28663,7 +28823,7 @@ GameObject:
   - component: {fileID: 1750138530}
   - component: {fileID: 1750138532}
   - component: {fileID: 1750138531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28828,7 +28988,7 @@ GameObject:
   - component: {fileID: 1753942844}
   - component: {fileID: 1753942843}
   - component: {fileID: 1753942842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Counter_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29235,7 +29395,7 @@ GameObject:
   - component: {fileID: 1777050248}
   - component: {fileID: 1777050250}
   - component: {fileID: 1777050249}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bulb.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29325,7 +29485,7 @@ GameObject:
   - component: {fileID: 1777646313}
   - component: {fileID: 1777646315}
   - component: {fileID: 1777646314}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Door_Shelf_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29567,7 +29727,7 @@ GameObject:
   - component: {fileID: 1810592691}
   - component: {fileID: 1810592690}
   - component: {fileID: 1810592689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door.Fridge.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29944,10 +30104,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 495852017}
+    - target: {fileID: 592522499413799883, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1648868280074262974, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1272295992}
+    - target: {fileID: 2043081729418477126, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2315978263779850311, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003011515980703402, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4383866054658544571, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -30016,14 +30192,38 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 512150614}
+    - target: {fileID: 7079873348496864515, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238629022168379513, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7727478661137773666, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
       propertyPath: m_Name
       value: Window1-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727478661137773666, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727478661137773666, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077241739524126291, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8396890644483637058, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 512150614}
+    - target: {fileID: 9009398152911871510, guid: 77404efc400cf5145b05a5beb5d107bf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30045,6 +30245,14 @@ PrefabInstance:
     - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_Name
       value: FloorLight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -30193,6 +30401,14 @@ PrefabInstance:
     - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
       propertyPath: m_Name
       value: fourHorizontalbackrestChair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1829971115455401260, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
       propertyPath: m_LocalScale.x
@@ -30416,6 +30632,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: fourHorizontalbackrestChair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310140278052591510, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 1829971115455401260, guid: 70e752a130d152ec6b7eebc69f8fd836, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.289075
@@ -30489,7 +30713,7 @@ GameObject:
   - component: {fileID: 1846541730}
   - component: {fileID: 1846541732}
   - component: {fileID: 1846541731}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30653,7 +30877,7 @@ GameObject:
   - component: {fileID: 1872966761}
   - component: {fileID: 1872966763}
   - component: {fileID: 1872966762}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Door_Shelf_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30817,7 +31041,7 @@ GameObject:
   - component: {fileID: 1883990133}
   - component: {fileID: 1883990135}
   - component: {fileID: 1883990134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Shelf_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30907,7 +31131,7 @@ GameObject:
   - component: {fileID: 1891358502}
   - component: {fileID: 1891358504}
   - component: {fileID: 1891358503}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Knob_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31002,9 +31226,9 @@ GameObject:
   - component: {fileID: 1907805129}
   - component: {fileID: 1907805128}
   - component: {fileID: 1907805127}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lamp_Apt_01 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31098,7 +31322,7 @@ GameObject:
   - component: {fileID: 1909313492}
   - component: {fileID: 1909313491}
   - component: {fileID: 1909313490}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door.Fridge.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31248,7 +31472,7 @@ GameObject:
   - component: {fileID: 1912737763}
   - component: {fileID: 1912737765}
   - component: {fileID: 1912737764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Glass.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31342,7 +31566,7 @@ GameObject:
   - component: {fileID: 1927116752}
   - component: {fileID: 1927116751}
   - component: {fileID: 1927116750}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31491,7 +31715,7 @@ GameObject:
   - component: {fileID: 1927427031}
   - component: {fileID: 1927427033}
   - component: {fileID: 1927427032}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31907,7 +32131,7 @@ GameObject:
   - component: {fileID: 1955084643}
   - component: {fileID: 1955084645}
   - component: {fileID: 1955084644}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door.Fridge.Inside.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32179,7 +32403,7 @@ GameObject:
   - component: {fileID: 1975056919}
   - component: {fileID: 1975056918}
   - component: {fileID: 1975056917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stove_Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32512,7 +32736,7 @@ GameObject:
   - component: {fileID: 2019090097}
   - component: {fileID: 2019090099}
   - component: {fileID: 2019090098}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Handle_Fridge.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32679,7 +32903,7 @@ GameObject:
   - component: {fileID: 2025870068}
   - component: {fileID: 2025870067}
   - component: {fileID: 2025870066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_L.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32829,6 +33053,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorLight (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79999983
@@ -32902,7 +33134,7 @@ GameObject:
   - component: {fileID: 2031914075}
   - component: {fileID: 2031914077}
   - component: {fileID: 2031914076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Knob.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33140,7 +33372,7 @@ GameObject:
   - component: {fileID: 2064258280}
   - component: {fileID: 2064258282}
   - component: {fileID: 2064258281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pull.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33305,6 +33537,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorLight
       objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79999983
@@ -33382,6 +33622,14 @@ PrefabInstance:
     - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_Name
       value: ProFloor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2250124765222870178, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_LocalScale.x
@@ -33469,6 +33717,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorLight (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855211793160793751, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7946417105798400986, guid: 75d22d1d703138a41a4759dd16d9e7b6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.79999983
@@ -33542,7 +33798,7 @@ GameObject:
   - component: {fileID: 2108187840}
   - component: {fileID: 2108187842}
   - component: {fileID: 2108187841}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fridge_Glass_Door_Shelf_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33707,6 +33963,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 975318071}
+    - target: {fileID: 899088113728968689, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 923556046064967457, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -33727,10 +33987,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Window1
       objectReference: {fileID: 0}
+    - target: {fileID: 2167736445785648162, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2167736445785648162, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 2866317353262745026, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 975318071}
+    - target: {fileID: 2936953898558261200, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118272532091532415, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4526410433696749324, guid: 15da101c1a16ddd4e9ff3df59b60e58f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.0034099
@@ -33820,7 +34096,7 @@ GameObject:
   - component: {fileID: 2145066449}
   - component: {fileID: 2145066451}
   - component: {fileID: 2145066450}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33988,6 +34264,14 @@ PrefabInstance:
     - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_Name
       value: ProFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 845273878601343515, guid: f087d57aea4110d4d914edddf0209423, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2250124765222870178, guid: f087d57aea4110d4d914edddf0209423, type: 3}
       propertyPath: m_LocalScale.x
