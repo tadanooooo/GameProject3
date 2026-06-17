@@ -1261,9 +1261,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -9.796852, y: 0.16060753, z: 51.968063}
+    m_Target: {x: -51.611828, y: 0.1716399, z: -35.830135}
     speed: 2
-    m_Value: {x: -9.796852, y: 0.16060753, z: 51.968063}
+    m_Value: {x: -51.611828, y: 0.1716399, z: -35.830135}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1309,17 +1309,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.16129048, y: -0.5092258, z: 0.09886587, w: -0.8403002}
+    m_Target: {x: -0.101113476, y: 0.87634933, z: -0.4213916, w: -0.21028127}
     speed: 2
-    m_Value: {x: -0.1613119, y: -0.50791126, z: 0.098612875, w: -0.84040475}
+    m_Value: {x: -0.10212161, y: 0.8743161, z: -0.42559302, w: -0.20979339}
   m_Size:
-    m_Target: 3.0244424
+    m_Target: 0.6540823
     speed: 2
-    m_Value: 3.1669555
+    m_Value: 0.6000755
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1492,43 +1492,25 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 983}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -569958
+      - m_Data: -52312
       m_LastClickedID:
-        m_Data: -569958
+        m_Data: -52312
       m_ExpandedIDs:
-      - m_Data: -568366
-      - m_Data: -567736
-      - m_Data: -567672
-      - m_Data: -547738
-      - m_Data: -546148
-      - m_Data: -545188
-      - m_Data: -543596
-      - m_Data: -542830
-      - m_Data: -523046
-      - m_Data: -521456
-      - m_Data: -501828
-      - m_Data: -499774
-      - m_Data: -499758
-      - m_Data: -469980
-      - m_Data: -441370
-      - m_Data: -440352
-      - m_Data: -309548
-      - m_Data: -309546
-      - m_Data: -265856
-      - m_Data: -113680
-      - m_Data: -83442
-      - m_Data: -81912
-      - m_Data: -62604
-      - m_Data: -61074
-      - m_Data: -30334
-      - m_Data: -29372
-      - m_Data: -1302
+      - m_Data: -51684
+      - m_Data: -50994
+      - m_Data: -31416
+      - m_Data: -29790
+      - m_Data: -28776
+      - m_Data: -8674
+      - m_Data: -7048
+      - m_Data: -6044
+      - m_Data: -4612
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Gomi
-        m_OriginalName: Gomi
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -1536,10 +1518,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: -500544
+          m_Data: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 12}
@@ -1618,29 +1600,29 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 136.40002}
     m_SelectedIDs:
-    - m_Data: 57046
+    - m_Data: 57740
     m_LastClickedID:
-      m_Data: 57046
+      m_Data: 57740
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 57024
-    - m_Data: 57026
-    - m_Data: 57028
-    - m_Data: 57030
-    - m_Data: 57032
-    - m_Data: 57034
-    - m_Data: 57036
-    - m_Data: 57038
-    - m_Data: 57040
-    - m_Data: 57042
-    - m_Data: 57044
-    - m_Data: 57046
-    - m_Data: 57048
-    - m_Data: 57050
-    - m_Data: 57052
-    - m_Data: 57054
-    - m_Data: 57056
-    - m_Data: 57058
+    - m_Data: 57718
+    - m_Data: 57720
+    - m_Data: 57722
+    - m_Data: 57724
+    - m_Data: 57726
+    - m_Data: 57728
+    - m_Data: 57730
+    - m_Data: 57732
+    - m_Data: 57734
+    - m_Data: 57736
+    - m_Data: 57738
+    - m_Data: 57740
+    - m_Data: 57742
+    - m_Data: 57744
+    - m_Data: 57746
+    - m_Data: 57748
+    - m_Data: 57750
+    - m_Data: 57752
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1674,24 +1656,24 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 57024
-    - m_Data: 57026
-    - m_Data: 57028
-    - m_Data: 57030
-    - m_Data: 57032
-    - m_Data: 57034
-    - m_Data: 57036
-    - m_Data: 57038
-    - m_Data: 57040
-    - m_Data: 57042
-    - m_Data: 57044
-    - m_Data: 57046
-    - m_Data: 57048
-    - m_Data: 57050
-    - m_Data: 57052
-    - m_Data: 57054
-    - m_Data: 57056
-    - m_Data: 57058
+    - m_Data: 57718
+    - m_Data: 57720
+    - m_Data: 57722
+    - m_Data: 57724
+    - m_Data: 57726
+    - m_Data: 57728
+    - m_Data: 57730
+    - m_Data: 57732
+    - m_Data: 57734
+    - m_Data: 57736
+    - m_Data: 57738
+    - m_Data: 57740
+    - m_Data: 57742
+    - m_Data: 57744
+    - m_Data: 57746
+    - m_Data: 57748
+    - m_Data: 57750
+    - m_Data: 57752
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1719,8 +1701,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -569958
-    m_LastClickedInstanceID: -569958
+    - m_Data: -52312
+    m_LastClickedInstanceID: -52312
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 53304
@@ -1731,8 +1713,8 @@ MonoBehaviour:
     - m_Data: 96536
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TimeManager
-      m_OriginalName: TimeManager
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -1740,10 +1722,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 38772
+        m_Data: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 13}
