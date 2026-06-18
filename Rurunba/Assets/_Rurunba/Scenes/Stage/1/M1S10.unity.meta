@@ -1,18 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Rurunba/Assets/Rurunba/Scenes/Stage/1/M1S2.unity.meta
-<<<<<<<< HEAD:Rurunba/Assets/Rurunba/Animator.meta
-<<<<<<< HEAD
-guid: 5e6619167963ce245b98f7c6a75c9b06
-=======
-guid: 79a89e96b5eecc54aa442ce823ed8a27
->>>>>>> 02d4122d799ab548a57ccb543579e5cd9779fbb8
-folderAsset: yes
-========
-guid: 54e9be1ef6c96fd4cb7664e6dcd4bcac
->>>>>>>> AssetPlace:Rurunba/Assets/Rurunba/Scenes/Stage/1/M1S2.unity.meta
-=======
-guid: af4ce7b672f05724f82e1e45bcea7744
->>>>>>> AssetPlace:Rurunba/Assets/_Rurunba/Scenes/Stage/1/M1S10.unity.meta
+guid: dfa06f80c36bcc347914ebd5fcdda919
 DefaultImporter:
   externalObjects: {}
   userData: 
