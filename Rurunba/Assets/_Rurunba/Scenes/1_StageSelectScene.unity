@@ -1567,6 +1567,14 @@ PrefabInstance:
       propertyPath: targetTimeText
       value: 
       objectReference: {fileID: 21547138}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[9].sceneName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[9].targetTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4658175259217694236, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: m_Name
       value: StageSelectManager

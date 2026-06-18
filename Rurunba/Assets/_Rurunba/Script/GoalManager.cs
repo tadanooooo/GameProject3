@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+using UnityEngine.UI; // ボタンのコンポーネント（Button）を制御するために追加
 
 public class GoalManager : MonoBehaviour
 {
@@ -19,6 +20,15 @@ public class GoalManager : MonoBehaviour
     public GameObject nextStageButton;
     public GameObject stageSelectButton;
 
+    // 星の数による次のステージ制限設定
+    [Header("次ステージの解放制限設定")]
+    [Tooltip("制限をかけたい現在のステージ番号（例: 10ステージクリア時に判定なら 10）")]
+    public int lockBorderStageNumber = 10;
+    [Tooltip("進むために必要な累計の獲得星数")]
+    public int requiredTotalStars = 15;
+    [Tooltip("合計何ステージ分の星をチェックするか（例: 10ステージ分なら 10）")]
+    public int totalStagesToCheck = 10;
+
     [Header("星画像（それぞれ1〜3枚の星が描かれた単一の画像オブジェクト）")]
     public GameObject star1;
     public GameObject star2;
@@ -27,7 +37,7 @@ public class GoalManager : MonoBehaviour
     [Header("スコア・ベスト更新UI設定")]
     [Tooltip("今回のリザルトタイムを表示するTextMeshProテキストオブジェクト")]
     public TextMeshProUGUI scoreTimeText;
-    [Tooltip("ベストタイムを更新した時に表示する『ベスト更新！』のオブジェクト（テキストや画像など）")]
+    [Tooltip("ベストタイムを更新した時に表示するベスト更新！のオブジェクト（テキストや画像など）")]
     public GameObject newRecordObject;
 
     [Header("スクリプト制御・スタンプ演出の設定")]
@@ -121,9 +131,13 @@ public class GoalManager : MonoBehaviour
 
         int earnedStars = CalculateStarsCount(savedGoalTime);
 
+        // セーブする前に過去のベストタイムを取得して判定する
         float previousBestTime = StageSaveManager.LoadBestTime(stageNumber);
-        bool isNewRecord = (savedGoalTime < previousBestTime);
 
+        // 初回プレイ（過去の記録が0秒、または今回のタイムが過去のベストより速い）なら新記録！
+        bool isNewRecord = (previousBestTime <= 0f || savedGoalTime < previousBestTime);
+
+        // 判定が終わったらセーブ実行
         StageSaveManager.SaveStars(stageNumber, earnedStars);
         StageSaveManager.SaveBestTime(stageNumber, savedGoalTime);
 
@@ -133,6 +147,36 @@ public class GoalManager : MonoBehaviour
         }
 
         StartCoroutine(ResultStampSequence(earnedStars, isNewRecord));
+    }
+
+    // すべてのステージから星の合計を計算し、ボタンの有効・無効を切り替える
+    void CheckNextStageLock()
+    {
+        if (nextStageButton == null) return;
+
+        // もし制限をかけたい特定のステージ（例:10）だったら星のチェックを行う
+        if (stageNumber == lockBorderStageNumber)
+        {
+            int totalStars = 0;
+            // 1ステージ〜指定数までの星を全て足し算する
+            for (int i = 1; i <= totalStagesToCheck; i++)
+            {
+                totalStars += StageSaveManager.LoadStars(i);
+            }
+
+            Debug.Log("これまでの累計獲得星数: " + totalStars + " / 必要数: " + requiredTotalStars);
+
+            // 必要数に届いていない場合、ボタンを押せなくする
+            if (totalStars < requiredTotalStars)
+            {
+                Button btn = nextStageButton.GetComponent<Button>();
+                if (btn != null)
+                {
+                    btn.interactable = false; // ボタンをクリック不可能にする（見た目も自動で半透明になります）
+                }
+                Debug.LogWarning("星が足りないため、次のステージボタンをロックしました。");
+            }
+        }
     }
 
     int CalculateStarsCount(float finalTime)
@@ -236,6 +280,7 @@ public class GoalManager : MonoBehaviour
 
         obj.transform.localScale = defaultScale;
     }
+
     public void ClickRetry()
     {
         StartCoroutine(RetrySequence());

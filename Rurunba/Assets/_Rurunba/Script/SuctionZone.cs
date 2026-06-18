@@ -105,7 +105,6 @@ public class SuctionZone : MonoBehaviour
         if (suctionEffectPrefab != null)
         {
             // インスタンス化（生成）する
-            // 【修正】高さを調整した新しいeffectPositionを使う
             GameObject effect = Instantiate(suctionEffectPrefab, effectPosition, Quaternion.identity);
 
             // エフェクトがずっと残り続けないように、3秒後に自動消滅させる
@@ -130,11 +129,40 @@ public class SuctionZone : MonoBehaviour
         {
             if (AudioManager.Instance != null)
             {
-                if (AudioManager.Instance != null)
-                {
-                    AudioManager.Instance.PlaySE(3);
-                }
+                AudioManager.Instance.PlaySE(3);
             }
+        }
+    }
+
+    // ─── ここから下を追加 ───
+
+    /// <summary>
+    /// ゲームクリアやゲームオーバーでスクリプト（またはプレイヤー）が無効化されたとき
+    /// </summary>
+    private void OnDisable()
+    {
+        ForceStopSuctionSound();
+    }
+
+    /// <summary>
+    /// ステージ遷移（シーン切り替え）などでこのオブジェクトが破壊されたとき
+    /// </summary>
+    private void OnDestroy()
+    {
+        ForceStopSuctionSound();
+    }
+
+    /// <summary>
+    /// 残ってしまっている吸い込みループ音を強制的に停止する安全弁
+    /// </summary>
+    private void ForceStopSuctionSound()
+    {
+        activeSuctionCount = 0;
+
+        if (AudioManager.Instance != null)
+        {
+            // なければ、通常の終了SE付きのメソッドで強制停止
+            AudioManager.Instance.StopSuctionAndPlayEndSE(3);
         }
     }
 }

@@ -632,6 +632,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 355141803546172852, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
   m_PrefabInstance: {fileID: 1811028083057236621}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &3564559359935712388 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2906453058514916873, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
+  m_PrefabInstance: {fileID: 1811028083057236621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3699758847522625893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3060828593699668968, guid: 62c7392bf74544542bf78d6a0eca9a9c, type: 3}
@@ -834,54 +839,6 @@ PrefabInstance:
       propertyPath: bgmSlider
       value: 
       objectReference: {fileID: 8469814448662633955}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: ses.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: bgms.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 2a71152577ea22e46bce3f3cb8c225c8, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: d2bbbf1f5eb5a8e4d8c0bce54131294a, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 8288db4b9de004844bd2f6296ea07e25, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[3]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 297e8becb30b6d244ba27c308f302a5e, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[4]'
-      value: 
-      objectReference: {fileID: 8300000, guid: baf27afa546626448972b4ffb8955883, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[5]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 2503e2b12ac66aa4eb52346e87d114e8, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[6]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 4ac1205691bacc449aa4f21a591b6805, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'ses.Array.data[7]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 54ad39912e679624a9efdb747fcefb1c, type: 3}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: suctionLoopSource
-      value: 
-      objectReference: {fileID: 2377201163796531927}
-    - target: {fileID: -9069318365544692728, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'bgms.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: fead4f27585f33b4488a5fe639ba7c45, type: 3}
     - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: hpSlider
       value: 
@@ -891,13 +848,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 853868905952052731}
     - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: gameOverText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: mainUiObject
       value: 
       objectReference: {fileID: 8694618605544181999}
+    - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
+      propertyPath: blinkInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: gameOverImage
       value: 
@@ -907,53 +864,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4818118961680781753}
     - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: hitEffectPrefab
-      value: 
-      objectReference: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
-    - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: gameOverImageObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: stageSelectSceneName
-      value: 1_StageSelectScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141110910677174823, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141110910677174823, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
+      value: 2_StageSelectScene
       objectReference: {fileID: 0}
     - target: {fileID: 5722740175185280495, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: timerText
+    - target: {fileID: 6026054348706228242, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
+      propertyPath: arrowUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3564559359935712388}
     - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: timerTextMeshPro
       value: 
       objectReference: {fileID: 6627207947915767933}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: countdownTextMeshPro
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: countdownImages.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: countdownimages.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: countdownSprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: 'countdownImages.Array.data[0]'
       value: 
@@ -968,22 +893,6 @@ PrefabInstance:
       objectReference: {fileID: 846737740027549535}
     - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: 'countdownImages.Array.data[3]'
-      value: 
-      objectReference: {fileID: 7304887033950554610}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'countdownimages.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8170271426313183009}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'countdownimages.Array.data[1]'
-      value: 
-      objectReference: {fileID: 1363295844632513060}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'countdownimages.Array.data[2]'
-      value: 
-      objectReference: {fileID: 846737740027549535}
-    - target: {fileID: 6362869981434373566, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-      propertyPath: 'countdownimages.Array.data[3]'
       value: 
       objectReference: {fileID: 7304887033950554610}
     - target: {fileID: 8427944546124132909, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
@@ -1034,11 +943,6 @@ PrefabInstance:
 --- !u!4 &1392584348567073501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8427944546124132909, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
-  m_PrefabInstance: {fileID: 7468488804118069488}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &2377201163796531927 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5141110910677174823, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
   m_PrefabInstance: {fileID: 7468488804118069488}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &6625537326923500915 stripped
@@ -1155,6 +1059,14 @@ PrefabInstance:
       propertyPath: stageSelectButton
       value: 
       objectReference: {fileID: 115012563393861890}
+    - target: {fileID: 6838619008210686417, guid: f263369156afd314ab409f918058b6d0, type: 3}
+      propertyPath: nextStageSceneName
+      value: School_M_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838619008210686417, guid: f263369156afd314ab409f918058b6d0, type: 3}
+      propertyPath: stageSelectSceneName
+      value: 2_StageSelectScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

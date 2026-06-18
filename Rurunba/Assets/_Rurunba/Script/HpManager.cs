@@ -36,12 +36,22 @@ public class HpManager : MonoBehaviour
     [Header("壁衝突時のエフェクト（Prefab）")]
     public GameObject hitEffectPrefab;
 
+    // 点滅用の設定
+    [Header("点滅設定")]
+    [Tooltip("点滅させる間隔（秒）")]
+    public float blinkInterval = 0.2f;
+
+    [Tooltip("Rurunba 1 のすぐ下にある子オブジェクト（Rumba_animation_Correctionなど）をここにドラッグ")]
+    public GameObject modelRootChild;
+
     private CanvasGroup canvasGroup;
     private float visibleTimer = 0f;
 
     private bool isInvincible = false;
     private float invincibleTimer = 0f;
     private bool isDead = false; // 死亡フラグ
+
+    private Coroutine blinkCoroutine; // コルーチン管理用
 
     void Awake()
     {
@@ -115,13 +125,15 @@ public class HpManager : MonoBehaviour
         isInvincible = true;
         invincibleTimer = invincibleTime;
 
+        // ダメージ時に点滅コルーチンを開始
+        if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
+        blinkCoroutine = StartCoroutine(BlinkRoutine());
+
         if (hitEffectPrefab != null && collision != null && collision.contacts.Length > 0)
         {
-            // 接触したピンポイントの座標と壁の向きを取得
             Vector3 hitPoint = collision.contacts[0].point;
             Quaternion hitRotation = Quaternion.LookRotation(collision.contacts[0].normal);
 
-            // エフェクト生成して2秒後に消す
             GameObject effect = Instantiate(hitEffectPrefab, hitPoint, hitRotation);
             Destroy(effect, 2.0f);
         }
@@ -130,6 +142,36 @@ public class HpManager : MonoBehaviour
         {
             Die();
         }
+    }
+
+    // 点滅処理
+    IEnumerator BlinkRoutine()
+    {
+        // もしインスペクターで指定されていなければ、自動で最初の子オブジェクトを見つける
+        if (modelRootChild == null && transform.childCount > 0)
+        {
+            modelRootChild = transform.GetChild(0).gameObject;
+        }
+
+        if (modelRootChild == null)
+        {
+            Debug.LogError("【HpManager】点滅させる子オブジェクトが見つかりません。インスペクターで設定してください。");
+            yield break;
+        }
+
+        while (isInvincible)
+        {
+            // 子オブジェクトごと見た目を丸ごと消す
+            modelRootChild.SetActive(false);
+            yield return new WaitForSeconds(blinkInterval);
+
+            // 戻す
+            modelRootChild.SetActive(true);
+            yield return new WaitForSeconds(blinkInterval);
+        }
+
+        // 無敵時間が終わったら必ず表示状態にする
+        modelRootChild.SetActive(true);
     }
 
     void UpdateHpColor()
@@ -144,19 +186,32 @@ public class HpManager : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        // 死亡時は点滅を止めモデル表示
+        if (blinkCoroutine != null)
+        {
+            StopCoroutine(blinkCoroutine);
+        }
+        if (modelRootChild != null)
+        {
+            modelRootChild.SetActive(true);
+        }
+
         Debug.Log("プレイヤー死亡 ゲームオーバー");
         StartCoroutine(GameOverSequence());
     }
 
     IEnumerator GameOverSequence()
     {
-        // タイマー止める
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(8);
+        }
+
         if (TimeManager.instance != null)
         {
             TimeManager.instance.StopTimer();
         }
 
-        // プレイヤーの動きを完全に止め、物理を無効化
         Rigidbody rb = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -165,7 +220,6 @@ public class HpManager : MonoBehaviour
             rb.isKinematic = true;
         }
 
-        // 死亡時MainUI非表示
         if (mainUiObject != null)
         {
             mainUiObject.SetActive(false);
@@ -173,10 +227,8 @@ public class HpManager : MonoBehaviour
 
         if (gameOverImage != null) gameOverImage.gameObject.SetActive(true);
 
-        // 3.0秒待機
         yield return new WaitForSeconds(3.0f);
 
-        // パネルを追加表示（リトライボタンなどが入っているパネル）
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
     }
 
