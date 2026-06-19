@@ -33,12 +33,12 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        float savedBGM = PlayerPrefs.GetFloat("SavedBGMVolume", 1.0f);
-        float savedSE = PlayerPrefs.GetFloat("SavedSEVolume", 1.0f);
+        float savedBGM = PlayerPrefs.GetFloat("SavedBGMVolume", 0.5f);
+        float savedSE = PlayerPrefs.GetFloat("SavedSEVolume", 0.5f);
 
-        bgmSource.volume = savedBGM;
-        seSource.volume = savedSE;
-
+        // 音量を初期化
+        if (bgmSource != null) bgmSource.volume = savedBGM;
+        if (seSource != null) seSource.volume = savedSE;
         if (suctionLoopSource != null) suctionLoopSource.volume = savedSE;
 
         if (bgmSlider != null)
@@ -61,14 +61,16 @@ public class AudioManager : MonoBehaviour
 
     public void SetBGMVolume(float volume)
     {
-        bgmSource.volume = volume;
+        // 存在チェック
+        if (bgmSource != null) bgmSource.volume = volume;
         PlayerPrefs.SetFloat("SavedBGMVolume", volume);
         PlayerPrefs.Save();
     }
 
     public void SetSEVolume(float volume)
     {
-        seSource.volume = volume;
+        // 存在チェック
+        if (seSource != null) seSource.volume = volume;
         if (suctionLoopSource != null) suctionLoopSource.volume = volume;
         PlayerPrefs.SetFloat("SavedSEVolume", volume);
         PlayerPrefs.Save();
@@ -87,14 +89,20 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBGM(int index)
     {
+        // Source と Clip の存在チェック
+        if (bgmSource == null) return;
         if (index < 0 || index >= bgms.Count || bgms[index] == null) return;
+
         bgmSource.clip = bgms[index];
         bgmSource.Play();
     }
 
     public void PlaySE(int index)
     {
+        // Source と Clip の存在チェック
+        if (seSource == null) return;
         if (index < 0 || index >= ses.Count || ses[index] == null) return;
+
         seSource.PlayOneShot(ses[index]);
     }
 

@@ -6,7 +6,27 @@ public static class StageSaveManager
     private const int MaxStageCount = 30;
     private const string TotalStarsKey = "Total_Stars";
 
-    // 星の数を保存する（今までの最高記録を超えたときだけ保存する）
+    // ========================================================
+    public static void ResetAllStars()
+    {
+        // 1. 各ステージの記録を0にする
+        for (int i = 1; i <= MaxStageCount; i++)
+        {
+            string key = "Stage_" + i + "_Stars";
+            if (PlayerPrefs.HasKey(key))
+            {
+                PlayerPrefs.DeleteKey(key); // キー自体を削除（0にするより確実）
+            }
+        }
+
+        // 2. 合計値を最新（0）にして保存する
+        UpdateAndSaveTotalStars();
+        PlayerPrefs.Save(); // 変更を確定
+
+        Debug.Log("すべての星の記録をリセットしました（0個になりました）。");
+    }
+
+    // 星の数を保存
     public static void SaveStars(int stageNumber, int starCount)
     {
         string key = "Stage_" + stageNumber + "_Stars";

@@ -131,10 +131,18 @@ public class HpManager : MonoBehaviour
         if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
         blinkCoroutine = StartCoroutine(BlinkRoutine());
 
+        // ★実機（Android）向けの衝突エフェクトバグ対策
         if (hitEffectPrefab != null && collision != null && collision.contacts.Length > 0)
         {
             Vector3 hitPoint = collision.contacts[0].point;
-            Quaternion hitRotation = Quaternion.LookRotation(collision.contacts[0].normal);
+            Vector3 hitNormal = collision.contacts[0].normal;
+            Quaternion hitRotation = Quaternion.identity; // 初期値は回転なし（計算エラー時の保険）
+
+            // 法線ベクトルがほぼゼロ（計算不可能）でなければ、壁の向きに合わせる
+            if (hitNormal.sqrMagnitude > 0.001f)
+            {
+                hitRotation = Quaternion.LookRotation(hitNormal);
+            }
 
             GameObject effect = Instantiate(hitEffectPrefab, hitPoint, hitRotation);
             Destroy(effect, 2.0f);

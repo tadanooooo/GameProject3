@@ -87,30 +87,39 @@ public class GyroPlayer : MonoBehaviour
         }
     }
 
-    void OnCollisionStay(Collision collision)
+    // OnCollisionStay から OnCollisionEnter（当たった瞬間だけ）に変更
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            if (!HpManager.Instance.CanTakeDamage())
-                return;
+            // 実機でのヌルリファレンスエラーを防ぐための安全ガード
+            if (HpManager.Instance == null) return;
 
-            //AudioManager.Instance.PlaySE(1);
+            // 無敵時間、または死亡中ならダメージ処理を無視する
+            if (!HpManager.Instance.CanTakeDamage()) return;
 
+            // ダメージとエフェクト生成を実行
             HpManager.Instance.TakeDamage(1, collision);
 
+            // ノックバックを実行
             Knockback(collision);
         }
     }
 
     void Knockback(Collision collision)
     {
+        // 接触ポイントが万が一取得できなかった場合のエラー回避
+        if (collision.contacts.Length == 0) return;
+
         isKnockback = true;
         knockbackTimer = knockbackTime;
 
         Vector3 normal = collision.contacts[0].normal;
 
-        rb.linearVelocity = Vector3.zero;
-
-        rb.AddForce(normal * knockbackPower, ForceMode.Impulse);
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.AddForce(normal * knockbackPower, ForceMode.Impulse);
+        }
     }
 }

@@ -864,6 +864,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4818118961680781753}
     - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
+      propertyPath: hitEffectPrefab
+      value: 
+      objectReference: {fileID: 8680598818964007281, guid: dcd90c4976197424b9958a7c54b6bb8c, type: 3}
+    - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: stageSelectSceneName
       value: 1_StageSelectScene
       objectReference: {fileID: 0}
