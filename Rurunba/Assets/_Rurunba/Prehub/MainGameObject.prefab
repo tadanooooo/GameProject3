@@ -865,7 +865,11 @@ PrefabInstance:
       objectReference: {fileID: 4818118961680781753}
     - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: stageSelectSceneName
-      value: 2_StageSelectScene
+      value: 1_StageSelectScene
+      objectReference: {fileID: 0}
+    - target: {fileID: -4875210475623854717, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
+      propertyPath: targetBlinkObjects.Array.size
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5722740175185280495, guid: 52a0d18e490a6d845800b39a6b461d1c, type: 3}
       propertyPath: m_Name
@@ -1040,6 +1044,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1735219648435999657}
     - target: {fileID: 6838619008210686417, guid: f263369156afd314ab409f918058b6d0, type: 3}
+      propertyPath: stageNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838619008210686417, guid: f263369156afd314ab409f918058b6d0, type: 3}
       propertyPath: scoreTimeText
       value: 
       objectReference: {fileID: 6787280788392583617}
@@ -1061,11 +1069,15 @@ PrefabInstance:
       objectReference: {fileID: 115012563393861890}
     - target: {fileID: 6838619008210686417, guid: f263369156afd314ab409f918058b6d0, type: 3}
       propertyPath: nextStageSceneName
-      value: School_M_2
+      value: M2S1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838619008210686417, guid: f263369156afd314ab409f918058b6d0, type: 3}
+      propertyPath: requiredTotalStars
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6838619008210686417, guid: f263369156afd314ab409f918058b6d0, type: 3}
       propertyPath: stageSelectSceneName
-      value: 2_StageSelectScene
+      value: 1_StageSelectScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

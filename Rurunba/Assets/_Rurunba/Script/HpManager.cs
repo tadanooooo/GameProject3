@@ -1,8 +1,9 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HpManager : MonoBehaviour
 {
@@ -41,8 +42,9 @@ public class HpManager : MonoBehaviour
     [Tooltip("点滅させる間隔（秒）")]
     public float blinkInterval = 0.2f;
 
-    [Tooltip("Rurunba 1 のすぐ下にある子オブジェクト（Rumba_animation_Correctionなど）をここにドラッグ")]
-    public GameObject modelRootChild;
+    // インスペクターから確実に点滅させたいオブジェクト直接指定
+    [Tooltip("点滅させたい見た目オブジェクト（RuRumba本体など）をここにドラッグしてください。SuctionAreaは絶対に入れないでください。")]
+    public List<GameObject> targetBlinkObjects = new List<GameObject>();
 
     private CanvasGroup canvasGroup;
     private float visibleTimer = 0f;
@@ -144,34 +146,38 @@ public class HpManager : MonoBehaviour
         }
     }
 
-    // 点滅処理
+    // 指定されたオブジェクトだけを確実に SetActive でオンオフする
     IEnumerator BlinkRoutine()
     {
-        // もしインスペクターで指定されていなければ、自動で最初の子オブジェクトを見つける
-        if (modelRootChild == null && transform.childCount > 0)
+        // もしインスペクターで何も指定されていなければ、安全のために全消え（以前の方式）で動かす
+        if (targetBlinkObjects == null || targetBlinkObjects.Count == 0)
         {
-            modelRootChild = transform.GetChild(0).gameObject;
-        }
+            Transform firstChild = transform.childCount > 0 ? transform.GetChild(0) : null;
+            if (firstChild == null) yield break;
 
-        if (modelRootChild == null)
-        {
-            Debug.LogError("【HpManager】点滅させる子オブジェクトが見つかりません。インスペクターで設定してください。");
+            while (isInvincible)
+            {
+                firstChild.gameObject.SetActive(false);
+                yield return new WaitForSeconds(blinkInterval);
+                firstChild.gameObject.SetActive(true);
+                yield return new WaitForSeconds(blinkInterval);
+            }
+            firstChild.gameObject.SetActive(true);
             yield break;
         }
 
+        // 無敵時間中、指定されたオブジェクトだけを確実にチカチカさせる（SuctionAreaはリストに入っていないので消えません！）
         while (isInvincible)
         {
-            // 子オブジェクトごと見た目を丸ごと消す
-            modelRootChild.SetActive(false);
+            foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(false); }
             yield return new WaitForSeconds(blinkInterval);
 
-            // 戻す
-            modelRootChild.SetActive(true);
+            foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
             yield return new WaitForSeconds(blinkInterval);
         }
 
-        // 無敵時間が終わったら必ず表示状態にする
-        modelRootChild.SetActive(true);
+        // 最後は必ず確実にすべて表示に戻す
+        foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
     }
 
     void UpdateHpColor()
@@ -186,15 +192,8 @@ public class HpManager : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        // 死亡時は点滅を止めモデル表示
-        if (blinkCoroutine != null)
-        {
-            StopCoroutine(blinkCoroutine);
-        }
-        if (modelRootChild != null)
-        {
-            modelRootChild.SetActive(true);
-        }
+        if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
+        foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
 
         Debug.Log("プレイヤー死亡 ゲームオーバー");
         StartCoroutine(GameOverSequence());
