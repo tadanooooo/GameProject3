@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1572180125}
+    - target: {fileID: 1881581018822242465, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b3de501fcfae8054ab029fedc1346e5f, type: 3}
     - target: {fileID: 3217688224558250712, guid: 53616b7259baf52419cf60593f1fae7e, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -625,15 +629,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[2].sceneName
-      value: School_M_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
-      propertyPath: allStages.Array.data[3].sceneName
       value: School2
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
-      propertyPath: allStages.Array.data[4].sceneName
+      propertyPath: allStages.Array.data[3].sceneName
       value: School3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[4].sceneName
+      value: School_M_2
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[5].sceneName
@@ -642,6 +646,14 @@ PrefabInstance:
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[6].sceneName
       value: Studyroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[7].sceneName
+      value: Trainingroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[8].sceneName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[0].targetTime
@@ -654,22 +666,6 @@ PrefabInstance:
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[2].targetTime
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
-      propertyPath: allStages.Array.data[3].targetTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
-      propertyPath: allStages.Array.data[4].targetTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
-      propertyPath: allStages.Array.data[5].targetTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
-      propertyPath: allStages.Array.data[6].targetTime
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[0].stageNumber
@@ -718,7 +714,7 @@ PrefabInstance:
     - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: totalStarsText2
       value: 
-      objectReference: {fileID: 748658774}
+      objectReference: {fileID: 0}
     - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: totalStarsText3
       value: 
@@ -726,11 +722,15 @@ PrefabInstance:
     - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: nextAreaArrowButton2
       value: 
-      objectReference: {fileID: 748658775}
+      objectReference: {fileID: 0}
     - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: nextAreaArrowButton3
       value: 
       objectReference: {fileID: 748658775}
+    - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: requiredStarsForArea2
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

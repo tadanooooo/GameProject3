@@ -141,6 +141,8 @@ public class GoalManager : MonoBehaviour
         StageSaveManager.SaveStars(stageNumber, earnedStars);
         StageSaveManager.SaveBestTime(stageNumber, savedGoalTime);
 
+        CheckNextStageLock();
+
         if (scoreTimeText != null)
         {
             scoreTimeText.text = "タイム: " + savedGoalTime.ToString("F2") + "s";

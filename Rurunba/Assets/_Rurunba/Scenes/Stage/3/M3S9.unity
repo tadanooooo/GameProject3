@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 67859071}
   - component: {fileID: 67859070}
   - component: {fileID: 67859069}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Folder (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 74449300}
   - component: {fileID: 74449299}
   - component: {fileID: 74449298}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 141124731}
   - component: {fileID: 141124730}
   - component: {fileID: 141124729}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1554,7 +1554,7 @@ GameObject:
   - component: {fileID: 150651884}
   - component: {fileID: 150651883}
   - component: {fileID: 150651882}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1667,7 +1667,7 @@ GameObject:
   - component: {fileID: 161890697}
   - component: {fileID: 161890696}
   - component: {fileID: 161890695}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: File cupboard (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2040,7 +2040,7 @@ GameObject:
   - component: {fileID: 171806405}
   - component: {fileID: 171806404}
   - component: {fileID: 171806403}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Plant 2
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3410,7 +3410,7 @@ GameObject:
   - component: {fileID: 303366471}
   - component: {fileID: 303366470}
   - component: {fileID: 303366469}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: plant 1
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3522,7 +3522,7 @@ GameObject:
   - component: {fileID: 309603458}
   - component: {fileID: 309603457}
   - component: {fileID: 309603456}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: File cupboard (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3697,7 +3697,7 @@ GameObject:
   - component: {fileID: 321749553}
   - component: {fileID: 321749552}
   - component: {fileID: 321749551}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5230,10 +5230,94 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3748611721043224802, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: goalTarget
+      value: 
+      objectReference: {fileID: 1500265489}
+    - target: {fileID: 3748611721043224802, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 801703484}
+    - target: {fileID: 3748611721043224802, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1768845265}
+    - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: stageNumber
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: nextStageSceneName
+      value: M3S10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: requiredTotalStars
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: totalStagesToCheck
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: stageSelectSceneName
+      value: 3_StageSelectScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: lockBorderStageNumber
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: stageSelectSceneName
+      value: 3_StageSelectScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1768845274}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1768845273}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1768845272}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1768845271}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1768845270}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1768845269}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1768845268}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1768845267}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[8]'
+      value: 
+      objectReference: {fileID: 1768845266}
     - target: {fileID: 6729919975860584269, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7315578625455604984, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: seSource
+      value: 
+      objectReference: {fileID: 1593080918}
+    - target: {fileID: 7315578625455604984, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: bgmSource
+      value: 
+      objectReference: {fileID: 1593080917}
     - target: {fileID: 7857795151442547402, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: m_Name
       value: MainGameObject
@@ -5295,7 +5379,7 @@ GameObject:
   - component: {fileID: 520165739}
   - component: {fileID: 520165738}
   - component: {fileID: 520165737}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (8)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5676,7 +5760,7 @@ GameObject:
   - component: {fileID: 535445937}
   - component: {fileID: 535445936}
   - component: {fileID: 535445935}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: File cupboard 2 (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5789,7 +5873,7 @@ GameObject:
   - component: {fileID: 537361163}
   - component: {fileID: 537361162}
   - component: {fileID: 537361161}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5964,7 +6048,7 @@ GameObject:
   - component: {fileID: 570132429}
   - component: {fileID: 570132428}
   - component: {fileID: 570132427}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Kitchen Table B
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7209,7 +7293,7 @@ GameObject:
   - component: {fileID: 682426184}
   - component: {fileID: 682426183}
   - component: {fileID: 682426182}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Clock
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7864,7 +7948,7 @@ GameObject:
   - component: {fileID: 761864287}
   - component: {fileID: 761864286}
   - component: {fileID: 761864285}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: conference table
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7977,7 +8061,7 @@ GameObject:
   - component: {fileID: 765803100}
   - component: {fileID: 765803099}
   - component: {fileID: 765803098}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: File cupboard 2
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8507,7 +8591,7 @@ GameObject:
   - component: {fileID: 796369319}
   - component: {fileID: 796369318}
   - component: {fileID: 796369317}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Leaf
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8638,6 +8722,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4885178807271978216, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1768845265}
     - target: {fileID: 8402132364525153613, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
       propertyPath: player
       value: 
@@ -8647,6 +8735,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
+--- !u!20 &801703484 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8424343588078083174, guid: c29c0476376060e48aa8b9085345dc36, type: 3}
+  m_PrefabInstance: {fileID: 801703483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &811843148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12103,7 +12196,7 @@ GameObject:
   - component: {fileID: 1100822811}
   - component: {fileID: 1100822810}
   - component: {fileID: 1100822809}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (10)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12726,7 +12819,7 @@ GameObject:
   - component: {fileID: 1199507659}
   - component: {fileID: 1199507658}
   - component: {fileID: 1199507657}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (11)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12839,7 +12932,7 @@ GameObject:
   - component: {fileID: 1200339562}
   - component: {fileID: 1200339561}
   - component: {fileID: 1200339560}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Folder (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13326,7 +13419,7 @@ GameObject:
   - component: {fileID: 1230663126}
   - component: {fileID: 1230663125}
   - component: {fileID: 1230663124}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Plant 3
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13439,7 +13532,7 @@ GameObject:
   - component: {fileID: 1235915892}
   - component: {fileID: 1235915891}
   - component: {fileID: 1235915890}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: File cupboard (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13812,7 +13905,7 @@ GameObject:
   - component: {fileID: 1269498315}
   - component: {fileID: 1269498314}
   - component: {fileID: 1269498313}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: filing B
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -14068,7 +14161,7 @@ GameObject:
   - component: {fileID: 1295201506}
   - component: {fileID: 1295201505}
   - component: {fileID: 1295201504}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Little cactus 1
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15008,7 +15101,7 @@ GameObject:
   - component: {fileID: 1378542792}
   - component: {fileID: 1378542791}
   - component: {fileID: 1378542790}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15121,7 +15214,7 @@ GameObject:
   - component: {fileID: 1386993061}
   - component: {fileID: 1386993060}
   - component: {fileID: 1386993059}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (9)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15768,7 +15861,7 @@ GameObject:
   - component: {fileID: 1448221466}
   - component: {fileID: 1448221465}
   - component: {fileID: 1448221464}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001 (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15963,7 +16056,7 @@ GameObject:
   - component: {fileID: 1467082655}
   - component: {fileID: 1467082654}
   - component: {fileID: 1467082653}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Metal cupboard
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -16545,6 +16638,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec45f217180447409e9815d6e2fe72d, type: 3}
+--- !u!4 &1500265489 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 969438175818616666, guid: bec45f217180447409e9815d6e2fe72d, type: 3}
+  m_PrefabInstance: {fileID: 1500265488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1518108850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17658,6 +17756,73 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8797111012741890749, guid: 323b50f4936257d40aa54902ca39aab1, type: 3}
   m_PrefabInstance: {fileID: 1591521151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1593080916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 559.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 226.62502
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209920335595640603, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861368202598854592, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+      propertyPath: m_Name
+      value: AudioList
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+--- !u!82 &1593080917 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1842248409871163930, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+  m_PrefabInstance: {fileID: 1593080916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1593080918 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1131224979286531767, guid: 1d41c3fe1337f5f499149740a540adbe, type: 3}
+  m_PrefabInstance: {fileID: 1593080916}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1620101172
 PrefabInstance:
@@ -19117,6 +19282,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6130059143305176649, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
   m_PrefabInstance: {fileID: 1768845264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5271267073963013921, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7805077763838473960, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5850141478361999338, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7212850718822520459, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8679190353300790263, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8368125168347045839, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6735888396387061050, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7477503638803467885, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1768845274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8257034512465229120, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1768845264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1775366332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19211,7 +19421,7 @@ GameObject:
   - component: {fileID: 1787922963}
   - component: {fileID: 1787922962}
   - component: {fileID: 1787922961}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Plant 2 (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20371,7 +20581,7 @@ GameObject:
   - component: {fileID: 1860225840}
   - component: {fileID: 1860225839}
   - component: {fileID: 1860225838}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Office chair.001
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20484,7 +20694,7 @@ GameObject:
   - component: {fileID: 1860309610}
   - component: {fileID: 1860309609}
   - component: {fileID: 1860309608}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Trash bin
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21422,7 +21632,7 @@ GameObject:
   - component: {fileID: 1957872841}
   - component: {fileID: 1957872843}
   - component: {fileID: 1957872842}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Leafs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21583,6 +21793,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1508316602168334535, guid: d60e36349d0a84c43b5e7a0385eec350, type: 3}
   m_PrefabInstance: {fileID: 1960998538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1962445973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 559.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 226.62502
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 922504795106786159, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486511698200702788, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
+      propertyPath: m_Name
+      value: AudioUpdate
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37f2a5b7857e9324d9f43b23830ec65e, type: 3}
 --- !u!1001 &1978211887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22029,7 +22296,7 @@ GameObject:
   - component: {fileID: 2005238320}
   - component: {fileID: 2005238322}
   - component: {fileID: 2005238321}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Leafs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22120,7 +22387,7 @@ GameObject:
   - component: {fileID: 2022694261}
   - component: {fileID: 2022694260}
   - component: {fileID: 2022694259}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: filing A
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -22823,7 +23090,7 @@ GameObject:
   - component: {fileID: 2082105700}
   - component: {fileID: 2082105699}
   - component: {fileID: 2082105698}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Folder
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23017,7 +23284,7 @@ GameObject:
   - component: {fileID: 2098360922}
   - component: {fileID: 2098360921}
   - component: {fileID: 2098360920}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Folder (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23353,3 +23620,5 @@ SceneRoots:
   - {fileID: 1724795597}
   - {fileID: 1500265488}
   - {fileID: 492541743}
+  - {fileID: 1593080916}
+  - {fileID: 1962445973}

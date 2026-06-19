@@ -611,6 +611,10 @@ PrefabInstance:
       propertyPath: currentPage
       value: 
       objectReference: {fileID: 21547135}
+    - target: {fileID: 5845886663098722265, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b3de501fcfae8054ab029fedc1346e5f, type: 3}
     - target: {fileID: 6121417563408572340, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_Name
       value: StageSelectUI
@@ -1671,6 +1675,10 @@ PrefabInstance:
       propertyPath: nextAreaArrowButton2
       value: 
       objectReference: {fileID: 762206401}
+    - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: requiredStarsForArea3
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

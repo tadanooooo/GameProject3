@@ -3844,13 +3844,17 @@ PrefabInstance:
     - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: 'targetBlinkObjects.Array.data[5]'
       value: 
-      objectReference: {fileID: 1066345027}
+      objectReference: {fileID: 1845675940}
     - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: 'targetBlinkObjects.Array.data[6]'
       value: 
-      objectReference: {fileID: 1066345026}
+      objectReference: {fileID: 1066345027}
     - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: 'targetBlinkObjects.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1066345026}
+    - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: 'targetBlinkObjects.Array.data[8]'
       value: 
       objectReference: {fileID: 1066345025}
     - target: {fileID: 6729919975860584269, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
@@ -15181,6 +15185,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3278284051205128387, guid: de18830baa50ffd45876220a6f082206, type: 3}
   m_PrefabInstance: {fileID: 1833624257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1845675940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7212850718822520459, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1066345022}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1858937246
 PrefabInstance:
