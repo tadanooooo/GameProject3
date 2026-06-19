@@ -131,9 +131,69 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1572180125}
+    - target: {fileID: 1367140563775034035, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088067845528344587, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123041048176685257, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867292237506382921, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922694321361018581, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025255939152766578, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664738980628783978, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674673374851931513, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337952994119400016, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776574019707398328, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 6121417563408572340, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
       propertyPath: m_Name
       value: StageSelectUI_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173748876122395421, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331458105485616756, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406432768237415691, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462260386579547838, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787233648316572938, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7108282273478458042, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
       propertyPath: m_UiScaleMode
@@ -217,6 +277,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7814549830884379357, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099237699757605475, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451721037642972640, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548895462122484844, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: stageNumber
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612894902825201815, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720087581353401827, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

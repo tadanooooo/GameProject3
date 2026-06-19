@@ -1,8 +1,9 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HpManager : MonoBehaviour
 {
@@ -36,12 +37,23 @@ public class HpManager : MonoBehaviour
     [Header("壁衝突時のエフェクト（Prefab）")]
     public GameObject hitEffectPrefab;
 
+    // 点滅用の設定
+    [Header("点滅設定")]
+    [Tooltip("点滅させる間隔（秒）")]
+    public float blinkInterval = 0.2f;
+
+    // インスペクターから確実に点滅させたいオブジェクト直接指定
+    [Tooltip("点滅させたい見た目オブジェクト（RuRumba本体など）をここにドラッグしてください。SuctionAreaは絶対に入れないでください。")]
+    public List<GameObject> targetBlinkObjects = new List<GameObject>();
+
     private CanvasGroup canvasGroup;
     private float visibleTimer = 0f;
 
     private bool isInvincible = false;
     private float invincibleTimer = 0f;
     private bool isDead = false; // 死亡フラグ
+
+    private Coroutine blinkCoroutine; // コルーチン管理用
 
     void Awake()
     {
@@ -115,13 +127,15 @@ public class HpManager : MonoBehaviour
         isInvincible = true;
         invincibleTimer = invincibleTime;
 
+        // ダメージ時に点滅コルーチンを開始
+        if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
+        blinkCoroutine = StartCoroutine(BlinkRoutine());
+
         if (hitEffectPrefab != null && collision != null && collision.contacts.Length > 0)
         {
-            // 接触したピンポイントの座標と壁の向きを取得
             Vector3 hitPoint = collision.contacts[0].point;
             Quaternion hitRotation = Quaternion.LookRotation(collision.contacts[0].normal);
 
-            // エフェクト生成して2秒後に消す
             GameObject effect = Instantiate(hitEffectPrefab, hitPoint, hitRotation);
             Destroy(effect, 2.0f);
         }
@@ -130,6 +144,40 @@ public class HpManager : MonoBehaviour
         {
             Die();
         }
+    }
+
+    // 指定されたオブジェクトだけを確実に SetActive でオンオフする
+    IEnumerator BlinkRoutine()
+    {
+        // もしインスペクターで何も指定されていなければ、安全のために全消え（以前の方式）で動かす
+        if (targetBlinkObjects == null || targetBlinkObjects.Count == 0)
+        {
+            Transform firstChild = transform.childCount > 0 ? transform.GetChild(0) : null;
+            if (firstChild == null) yield break;
+
+            while (isInvincible)
+            {
+                firstChild.gameObject.SetActive(false);
+                yield return new WaitForSeconds(blinkInterval);
+                firstChild.gameObject.SetActive(true);
+                yield return new WaitForSeconds(blinkInterval);
+            }
+            firstChild.gameObject.SetActive(true);
+            yield break;
+        }
+
+        // 無敵時間中、指定されたオブジェクトだけを確実にチカチカさせる（SuctionAreaはリストに入っていないので消えません！）
+        while (isInvincible)
+        {
+            foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(false); }
+            yield return new WaitForSeconds(blinkInterval);
+
+            foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
+            yield return new WaitForSeconds(blinkInterval);
+        }
+
+        // 最後は必ず確実にすべて表示に戻す
+        foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
     }
 
     void UpdateHpColor()
@@ -144,19 +192,25 @@ public class HpManager : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
+        foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
+
         Debug.Log("プレイヤー死亡 ゲームオーバー");
         StartCoroutine(GameOverSequence());
     }
 
     IEnumerator GameOverSequence()
     {
-        // タイマー止める
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(8);
+        }
+
         if (TimeManager.instance != null)
         {
             TimeManager.instance.StopTimer();
         }
 
-        // プレイヤーの動きを完全に止め、物理を無効化
         Rigidbody rb = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -165,7 +219,6 @@ public class HpManager : MonoBehaviour
             rb.isKinematic = true;
         }
 
-        // 死亡時MainUI非表示
         if (mainUiObject != null)
         {
             mainUiObject.SetActive(false);
@@ -173,10 +226,8 @@ public class HpManager : MonoBehaviour
 
         if (gameOverImage != null) gameOverImage.gameObject.SetActive(true);
 
-        // 3.0秒待機
         yield return new WaitForSeconds(3.0f);
 
-        // パネルを追加表示（リトライボタンなどが入っているパネル）
         if (gameOverPanel != null) gameOverPanel.SetActive(true);
     }
 

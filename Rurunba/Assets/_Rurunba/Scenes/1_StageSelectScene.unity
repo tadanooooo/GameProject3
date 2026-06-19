@@ -1567,6 +1567,50 @@ PrefabInstance:
       propertyPath: targetTimeText
       value: 
       objectReference: {fileID: 21547138}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[0].sceneName
+      value: M1S1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[1].sceneName
+      value: M1S2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[2].sceneName
+      value: M1S3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[3].sceneName
+      value: M1S4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[4].sceneName
+      value: M1S5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[5].sceneName
+      value: M1S6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[6].sceneName
+      value: M1S7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[7].sceneName
+      value: M1S8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[8].sceneName
+      value: M1S9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[9].sceneName
+      value: M1S10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[9].targetTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4658175259217694236, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: m_Name
       value: StageSelectManager

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4938989326282909551}
   - component: {fileID: -9069318365544692728}
   - component: {fileID: 5141110910677174823}
+  - component: {fileID: 6026054348706228242}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -77,7 +78,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   timerTextMeshPro: {fileID: 0}
-  countdownImages: []
+  countdownImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isTimerRunning: 0
 --- !u!114 &-4875210475623854717
 MonoBehaviour:
@@ -101,7 +106,9 @@ MonoBehaviour:
   gameOverImage: {fileID: 0}
   gameOverPanel: {fileID: 0}
   stageSelectSceneName: 1_StageSelectScene
-  hitEffectPrefab: {fileID: 0}
+  hitEffectPrefab: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
+  blinkInterval: 0.1
+  modelRootChild: {fileID: 0}
 --- !u!114 &4938989326282909551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,9 +137,20 @@ MonoBehaviour:
   seSlider: {fileID: 0}
   bgmSource: {fileID: 0}
   seSource: {fileID: 0}
+  suctionLoopSource: {fileID: 5141110910677174823}
   audioUI: {fileID: 0}
-  bgms: []
-  ses: []
+  bgms:
+  - {fileID: 8300000, guid: fead4f27585f33b4488a5fe639ba7c45, type: 3}
+  ses:
+  - {fileID: 8300000, guid: 2a71152577ea22e46bce3f3cb8c225c8, type: 3}
+  - {fileID: 8300000, guid: d2bbbf1f5eb5a8e4d8c0bce54131294a, type: 3}
+  - {fileID: 8300000, guid: 8288db4b9de004844bd2f6296ea07e25, type: 3}
+  - {fileID: 8300000, guid: 297e8becb30b6d244ba27c308f302a5e, type: 3}
+  - {fileID: 8300000, guid: baf27afa546626448972b4ffb8955883, type: 3}
+  - {fileID: 8300000, guid: 2503e2b12ac66aa4eb52346e87d114e8, type: 3}
+  - {fileID: 8300000, guid: 4ac1205691bacc449aa4f21a591b6805, type: 3}
+  - {fileID: 8300000, guid: 54ad39912e679624a9efdb747fcefb1c, type: 3}
+  - {fileID: 8300000, guid: daf7a09b01b18f34bb950d693e822da2, type: 3}
 --- !u!82 &5141110910677174823
 AudioSource:
   m_ObjectHideFlags: 0
@@ -145,10 +163,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -230,3 +248,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6026054348706228242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722740175185280495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aaca3ca8a3df85459f33f300f0c6e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalArrowPointer
+  goalTarget: {fileID: 0}
+  playerTransform: {fileID: 0}
+  heightOffset: 0.5
