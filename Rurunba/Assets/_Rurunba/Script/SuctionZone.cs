@@ -1,5 +1,6 @@
 using UnityEngine;
-using System.Collections; // コルーチンを使うために必要
+using System.Collections;
+using System.Collections.Generic;
 
 public class SuctionZone : MonoBehaviour
 {
@@ -39,9 +40,8 @@ public class SuctionZone : MonoBehaviour
     {
         // 吸い込み中ループ音
         activeSuctionCount++; // 吸い込み中のゴミの数を1増やす
-        if (AudioManager.Instance != null)
+        if (IsAudioPlayable())
         {
-            // ループSE
             AudioManager.Instance.StartSuctionSE(7);
         }
 
@@ -104,10 +104,7 @@ public class SuctionZone : MonoBehaviour
         // 吸い込みエフェクトを発生させる
         if (suctionEffectPrefab != null)
         {
-            // インスタンス化（生成）する
             GameObject effect = Instantiate(suctionEffectPrefab, effectPosition, Quaternion.identity);
-
-            // エフェクトがずっと残り続けないように、3秒後に自動消滅させる
             Destroy(effect, 3.0f);
         }
 
@@ -119,34 +116,25 @@ public class SuctionZone : MonoBehaviour
         {
             activeSuctionCount = 0; // 念のためマイナスにならないよう安全策
 
-            if (AudioManager.Instance != null)
+            if (IsAudioPlayable())
             {
-                // ループ音停止
                 AudioManager.Instance.StopSuctionAndPlayEndSE(3);
             }
         }
         else
         {
-            if (AudioManager.Instance != null)
+            if (IsAudioPlayable())
             {
                 AudioManager.Instance.PlaySE(3);
             }
         }
     }
 
-    // ─── ここから下を追加 ───
-
-    /// <summary>
-    /// ゲームクリアやゲームオーバーでスクリプト（またはプレイヤー）が無効化されたとき
-    /// </summary>
     private void OnDisable()
     {
         ForceStopSuctionSound();
     }
 
-    /// <summary>
-    /// ステージ遷移（シーン切り替え）などでこのオブジェクトが破壊されたとき
-    /// </summary>
     private void OnDestroy()
     {
         ForceStopSuctionSound();
@@ -159,10 +147,42 @@ public class SuctionZone : MonoBehaviour
     {
         activeSuctionCount = 0;
 
-        if (AudioManager.Instance != null)
+        // オーディオが「本当に、確実に」再生・操作可能な状態のときだけ命令を送る
+        if (IsAudioPlayable())
         {
-            // なければ、通常の終了SE付きのメソッドで強制停止
-            AudioManager.Instance.StopSuctionAndPlayEndSE(3);
+            try
+            {
+                AudioManager.Instance.StopSuctionAndPlayEndSE(3);
+            }
+            catch (System.Exception)
+            {
+                // それでも漏れ出たUnity内部のエラーは完全に無視する（ゲームの進行に影響させない）
+            }
         }
+    }
+
+    /// <summary>
+    /// AudioManagerおよび、その内部にあるすべてのAudioSourceが正常に動作可能かを【徹底的】に検証する
+    /// </summary>
+    private bool IsAudioPlayable()
+    {
+        // マネージャー自体が存在するか
+        if (AudioManager.Instance == null) return false;
+        if (AudioManager.Instance.gameObject == null) return false;
+
+        // AudioManagerオブジェクト、またはその配下に付いているAudioSourceコンポーネントをすべて集める
+        AudioSource[] sources = AudioManager.Instance.GetComponentsInChildren<AudioSource>(true);
+
+        // もし1つもスピーカーが見つからない、あるいはすでに壊れている場合は「再生不可」とみなす
+        if (sources == null || sources.Length == 0) return false;
+
+        foreach (AudioSource source in sources)
+        {
+            // 配下のどれか1つでも既に破棄されている（Missing）状態があれば、危険信号として触らない
+            // Unityの仕様上、オブジェクトが消滅しかけている時は型比較やnullチェックが特殊になるため、Equals(null)で検知
+            if (source == null || source.Equals(null)) return false;
+        }
+
+        return true; // すべてのチェックをすり抜けたら、安全に音が鳴らせる状態
     }
 }
