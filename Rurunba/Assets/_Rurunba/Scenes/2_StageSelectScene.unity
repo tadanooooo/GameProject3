@@ -640,6 +640,10 @@ PrefabInstance:
       value: Scienceroom
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[6].sceneName
+      value: Studyroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[0].targetTime
       value: 15
       objectReference: {fileID: 0}
@@ -662,6 +666,10 @@ PrefabInstance:
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[5].targetTime
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[6].targetTime
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[0].stageNumber
