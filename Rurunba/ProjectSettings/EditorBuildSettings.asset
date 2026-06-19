@@ -69,6 +69,9 @@ EditorBuildSettings:
     path: Assets/_Rurunba/Scenes/School4.unity
     guid: b42eec3d40066314eb1528921f4a0119
   - enabled: 1
+    path: Assets/_Rurunba/Scenes/Computeroom.unity
+    guid: 76cc9acc9edb56942a781c4a180442dd
+  - enabled: 1
     path: Assets/_Rurunba/Scenes/Stage/3/M3S1.unity
     guid: e5d06bf5cc747e545962a2b04e99b158
   - enabled: 1
