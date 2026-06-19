@@ -22,6 +22,9 @@ public class StageLockManager : MonoBehaviour
 
     void Start()
     {
+        // ステージセレクトに入った瞬間に、念のため最新のトータル星数を裏で集計し直す
+        StageSaveManager.UpdateAndSaveTotalStars();
+
         // エリア2の解放処理
         int totalStarsArea1 = CalculateStars(1, 10); // 1〜10ステージの星を合計
 
@@ -55,7 +58,8 @@ public class StageLockManager : MonoBehaviour
         int sum = 0;
         for (int i = startStage; i <= endStage; i++)
         {
-            int stageStars = PlayerPrefs.GetInt($"Stage_{i}_MaxStars", 0);
+            // キーの名前を StageSaveManager の保存名 "_Stars" に統一
+            int stageStars = PlayerPrefs.GetInt($"Stage_{i}_Stars", 0);
             sum += stageStars;
         }
         return sum;
@@ -81,8 +85,11 @@ public class StageLockManager : MonoBehaviour
     {
         for (int i = 1; i <= 30; i++) // 30ステージ分に拡張
         {
-            PlayerPrefs.DeleteKey($"Stage_{i}_MaxStars");
+            // リセット対象のキーも "_Stars" に統一
+            PlayerPrefs.DeleteKey($"Stage_{i}_Stars");
         }
+        PlayerPrefs.DeleteKey("Total_Stars"); // トータル星数のデータもリセット
+        PlayerPrefs.Save();
         Debug.Log("すべてのステージの星データをリセットしました");
     }
 }

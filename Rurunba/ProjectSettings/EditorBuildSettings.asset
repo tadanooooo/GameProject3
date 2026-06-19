@@ -18,18 +18,6 @@ EditorBuildSettings:
     path: Assets/_Rurunba/Scenes/3_StageSelectScene.unity
     guid: 219d0b97ce568aa4e8f002863826d1a8
   - enabled: 1
-    path: Assets/_Rurunba/Scenes/Sample.unity
-    guid: 74e5a132e303d644c956308e8b9cb199
-  - enabled: 1
-    path: Assets/_Rurunba/Scenes/School.unity
-    guid: 1ffd0a82d21bf06429bb926b377b346d
-  - enabled: 1
-    path: Assets/_Rurunba/Scenes/School1.unity
-    guid: ef9ec5b8f8ad2f541b5fbd338060ccf3
-  - enabled: 1
-    path: Assets/_Rurunba/Scenes/School_M_2.unity
-    guid: c6704bc42e5bfb54395ae27645dc520b
-  - enabled: 1
     path: Assets/_Rurunba/Scenes/Stage/1/M1S1.unity
     guid: 3006fc3e208ddda468bfbe5236c35422
   - enabled: 1
@@ -59,6 +47,54 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Rurunba/Scenes/Stage/1/M1S10.unity
     guid: dfa06f80c36bcc347914ebd5fcdda919
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/School.unity
+    guid: 1ffd0a82d21bf06429bb926b377b346d
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/School1.unity
+    guid: ef9ec5b8f8ad2f541b5fbd338060ccf3
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/School_M_2.unity
+    guid: c6704bc42e5bfb54395ae27645dc520b
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Scienceroom.unity
+    guid: 6f74c0e014d5bf549858a6822d50f2fc
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Studyroom.unity
+    guid: d50702fbb82ae7e4bba81b9a65ab6900
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Trainingroom.unity
+    guid: 4892973384392964c92761e8a6b56b68
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S1.unity
+    guid: e5d06bf5cc747e545962a2b04e99b158
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S2.unity
+    guid: 4e719c46baff6fc40bd950d36f68a6e5
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S3.unity
+    guid: 31a3fc3feea6ad648ab1fccfac50db3f
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S4.unity
+    guid: 034e13dec1faae14b9f28bd5485e92f8
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S5.unity
+    guid: 2ce2c4c08a412ed4c9b931c879d7be0f
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S6.unity
+    guid: 34f3ed5a5b70969408445285a7d18d67
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S7.unity
+    guid: 75b1f9956e23e9d4ea67053b8cb0edfb
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S8.unity
+    guid: 0f3dfc46a01617c46af7faaf8bd12923
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S9.unity
+    guid: e9d366a2ca854944bb40d5dc92483a09
+  - enabled: 1
+    path: Assets/_Rurunba/Scenes/Stage/3/M3S10.unity
+    guid: 3f925abdc4b84b740a4f4991cf09da8f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7a5dcec2b0ee81847ab94b31dc276466, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
