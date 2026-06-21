@@ -865,7 +865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7844955957850512585, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 130
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8058886868773943378, guid: d73e2d3cef46d254faa62c48971d65b6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1668,9 +1668,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1252506669}
     - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: conditionTextArea2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: nextAreaArrowButton
       value: 
       objectReference: {fileID: 762206401}
+    - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: globalTotalStarsText
+      value: 
+      objectReference: {fileID: 1252506669}
     - target: {fileID: 7197507699345582334, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: nextAreaArrowButton2
       value: 

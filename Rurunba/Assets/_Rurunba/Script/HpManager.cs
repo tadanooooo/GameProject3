@@ -10,10 +10,10 @@ public class HpManager : MonoBehaviour
     public static HpManager Instance;
 
     [Header("HP設定")]
-    public int maxHp = 5;
-    private int currentHp;
+    public float maxHp = 5f;
+    private float currentHp;
 
-    [Header("無敵時間")]
+    [Header("無敵時間（通常の壁衝突用）")]
     public float invincibleTime = 3f;
 
     [Header("HPのUI")]
@@ -106,39 +106,61 @@ public class HpManager : MonoBehaviour
         return !isInvincible && !isDead;
     }
 
-    public void TakeDamage(int damage, Collision collision = null)
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
+    // 第一引数の damage を float 型に変更
+    public void TakeDamage(float damage, Collision collision = null, float customInvincibleTime = -1f)
     {
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlaySE(1);
         }
 
-        if (isInvincible || isDead) return;
+        if (customInvincibleTime == 0f)
+        {
+            if (isDead) return;
+        }
+        else
+        {
+            if (isInvincible || isDead) return;
+        }
 
         currentHp -= damage;
         hpSlider.value = currentHp;
         UpdateHpColor();
 
-        Debug.Log("現在HP : " + currentHp);
+        // 小数点以下も見やすいようにログ出力を修正
+        Debug.Log("現在HP : " + currentHp.ToString("F1"));
 
         canvasGroup.alpha = 1f;
         visibleTimer = visibleTime;
 
-        isInvincible = true;
-        invincibleTimer = invincibleTime;
+        if (customInvincibleTime >= 0f)
+        {
+            invincibleTimer = customInvincibleTime;
+            isInvincible = (customInvincibleTime > 0f);
+        }
+        else
+        {
+            isInvincible = true;
+            invincibleTimer = invincibleTime;
+        }
 
-        // ダメージ時に点滅コルーチンを開始
-        if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
-        blinkCoroutine = StartCoroutine(BlinkRoutine());
+        if (isInvincible)
+        {
+            if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
+            blinkCoroutine = StartCoroutine(BlinkRoutine());
+        }
 
-        // ★実機（Android）向けの衝突エフェクトバグ対策
         if (hitEffectPrefab != null && collision != null && collision.contacts.Length > 0)
         {
             Vector3 hitPoint = collision.contacts[0].point;
             Vector3 hitNormal = collision.contacts[0].normal;
-            Quaternion hitRotation = Quaternion.identity; // 初期値は回転なし（計算エラー時の保険）
+            Quaternion hitRotation = Quaternion.identity;
 
-            // 法線ベクトルがほぼゼロ（計算不可能）でなければ、壁の向きに合わせる
             if (hitNormal.sqrMagnitude > 0.001f)
             {
                 hitRotation = Quaternion.LookRotation(hitNormal);
@@ -148,16 +170,14 @@ public class HpManager : MonoBehaviour
             Destroy(effect, 2.0f);
         }
 
-        if (currentHp <= 0)
+        if (currentHp <= 0f)
         {
             Die();
         }
     }
 
-    // 指定されたオブジェクトだけを確実に SetActive でオンオフする
     IEnumerator BlinkRoutine()
     {
-        // もしインスペクターで何も指定されていなければ、安全のために全消え（以前の方式）で動かす
         if (targetBlinkObjects == null || targetBlinkObjects.Count == 0)
         {
             Transform firstChild = transform.childCount > 0 ? transform.GetChild(0) : null;
@@ -174,7 +194,6 @@ public class HpManager : MonoBehaviour
             yield break;
         }
 
-        // 無敵時間中、指定されたオブジェクトだけを確実にチカチカさせる（SuctionAreaはリストに入っていないので消えません！）
         while (isInvincible)
         {
             foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(false); }
@@ -184,14 +203,14 @@ public class HpManager : MonoBehaviour
             yield return new WaitForSeconds(blinkInterval);
         }
 
-        // 最後は必ず確実にすべて表示に戻す
         foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
     }
 
     void UpdateHpColor()
     {
-        if (currentHp >= 4) fillImage.color = Color.green;
-        else if (currentHp >= 2) fillImage.color = Color.yellow;
+        // 基準値も小数に対応
+        if (currentHp >= 4f) fillImage.color = Color.green;
+        else if (currentHp >= 2f) fillImage.color = Color.yellow;
         else fillImage.color = Color.red;
     }
 

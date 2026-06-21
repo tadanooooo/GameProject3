@@ -697,11 +697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: requiredTotalStars
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: totalStagesToCheck
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: stageSelectSceneName
@@ -709,7 +709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: lockBorderStageNumber
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6625537326923500915, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: stageSelectSceneName

@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: stageNumber
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 1743089408669534016, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743089408669534016, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2088067845528344587, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -359,6 +367,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4134332974489507201, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
     - {fileID: 5594004883412332229, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
+    - {fileID: 2037751293577689090, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 988f9b05fa4abbb4781e4e353f367a19, type: 3}

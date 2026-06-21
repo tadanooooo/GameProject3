@@ -1543,11 +1543,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rurunba 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 682604025218952025, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6798615622682377459, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1728643729}
   m_SourcePrefab: {fileID: 100100000, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+--- !u!1 &1728643728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6798615622682377459, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1728643727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1728643729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728643728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5bdb419ad597345a67c7ff5ed0dd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleScenePlayer
+  moveSpeed: 3
+  changeDirectionTime: 3
+  trashTag: Trash
+  wallTag: Wall
 --- !u!1001 &1754401764
 PrefabInstance:
   m_ObjectHideFlags: 0
