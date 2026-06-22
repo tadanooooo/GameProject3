@@ -10,14 +10,14 @@ public class GyroPlayer : MonoBehaviour
     [Header("カーペット設定")]
     [Tooltip("カーペットの上に乗ったときの減速倍率（0.5なら速度半分、0.3なら速度30%）")]
     public float carpetSpeedMultiplier = 0.5f;
-    private bool isOnCarpet = false; // 今カーペットの上に乗っているかどうかのフラグ
+    private bool isOnCarpet = false;
 
     [Header("障害物（継続ダメージ）設定")]
     [Tooltip("障害物に触れている時にダメージを与える間隔（秒）。")]
     public float damageInterval = 0.5f;
     [Tooltip("1回あたりに受けるダメージ量（小数対応）")]
     public float obstacleDamage = 0.2f;
-    private float damageTimer = 0f; // 次のダメージまでの時間を測るタイマー
+    private float damageTimer = 0f;
 
     [Header("回転の速さ")]
     public float turnSmoothSpeed = 10f;
@@ -50,14 +50,18 @@ public class GyroPlayer : MonoBehaviour
             damageTimer -= Time.deltaTime;
         }
 
-        // TimeManagerが存在していて、かつ、まだタイマーが走っていない（カウントダウン中）のとき
-        if (TimeManager.instance != null && !TimeManager.instance.isTimerRunning)
+        // 本編(TimeManager) または チュートリアル(TutorialManager) のタイマーが動いていない時は完全に移動を遮断
+        bool shouldStop = false;
+        if (TimeManager.instance != null && !TimeManager.instance.isTimerRunning) shouldStop = true;
+        if (TutorialManager.instance != null && !TutorialManager.instance.isTimerRunning) shouldStop = true;
+
+        if (shouldStop)
         {
             if (rb != null)
             {
                 rb.linearVelocity = Vector3.zero;
             }
-            return;
+            return; // ジャイロの検知や移動処理をすべてスキップ！
         }
 
         // ノックバック中
@@ -101,7 +105,6 @@ public class GyroPlayer : MonoBehaviour
         }
     }
 
-    // 当たった瞬間の判定（壁や床）
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
@@ -109,9 +112,14 @@ public class GyroPlayer : MonoBehaviour
             if (HpManager.Instance == null) return;
             if (!HpManager.Instance.CanTakeDamage()) return;
 
-            // 壁に当たった時は今まで通り「1」ダメージ
             HpManager.Instance.TakeDamage(1f, collision);
             Knockback(collision);
+
+            // チュートリアルマネージャーへダメージ（壁衝突）を通知
+            if (TutorialManager.instance != null)
+            {
+                TutorialManager.instance.NotifyDamage();
+            }
         }
         else if (collision.gameObject.CompareTag("Carpet"))
         {
@@ -120,7 +128,6 @@ public class GyroPlayer : MonoBehaviour
         }
     }
 
-    // 触れている間ずっとの判定（障害物オブジェクト用）
     void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
@@ -130,18 +137,19 @@ public class GyroPlayer : MonoBehaviour
 
             if (damageTimer <= 0f)
             {
-                // 設定した小数ダメージ（0.2f）を与えるようにしました！
                 HpManager.Instance.TakeDamage(obstacleDamage, collision, 0f);
-
-                // タイマーをリセット（0.5秒待つ）
                 damageTimer = damageInterval;
-
                 Debug.Log("障害物に接触中：継続ダメージを与えました");
+
+                // チュートリアル中にObstacleタグの障害物でダメージを受けた場合もカウントを進める
+                if (TutorialManager.instance != null)
+                {
+                    TutorialManager.instance.NotifyDamage();
+                }
             }
         }
     }
 
-    // カーペットから離れた瞬間の判定
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Carpet"))

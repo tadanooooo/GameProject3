@@ -28,6 +28,7 @@ public class ObstacleHider : MonoBehaviour
     {
         if (player == null) return;
 
+        // カメラからプレイヤーにレイ(光線)を飛ばし、間の障害物を全て検知
         Vector3 direction = player.position - transform.position;
         float distance = direction.magnitude;
 
@@ -46,17 +47,16 @@ public class ObstacleHider : MonoBehaviour
                 {
                     ObstacleData data = new ObstacleData();
 
-                    // 1. 最初期の綺麗なオリジナルをバックアップ（sharedMaterialsを使うのがミソ）
-                    data.originalMaterials = renderer.sharedMaterials;
+                    // アセット破壊とメモリリークを防ぐためのマテリアル複製
+                    data.originalMaterials = renderer.sharedMaterials; // オリジナル
 
-                    // 2. 透過アニメーション用に、現在のマテリアルのコピー（インスタンス）を作成
-                    data.runtimeMaterials = renderer.materials;
+                    data.runtimeMaterials = renderer.materials;        // 透過制御用の複製
 
                     data.currentAlpha = 1.0f;
                     obstacleHistory.Add(renderer, data);
                 }
             }
-        }
+        } // その後毎フレーム滑らかにアルファ値を変化させることで半透明化実現
 
         List<MeshRenderer> keys = new List<MeshRenderer>(obstacleHistory.Keys);
         foreach (MeshRenderer renderer in keys)

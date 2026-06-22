@@ -5,11 +5,17 @@ using System.Collections;
 
 public class TitleManager : MonoBehaviour
 {
+    [Header("シーン名設定")]
+    [Tooltip("ステージ選択画面のシーン名")]
+    public string stageSelectSceneName = "1_StageSelectScene";
+    [Tooltip("チュートリアル画面のシーン名（ここにチュートリアルのシーン名を入れてね）")]
+    public string tutorialSceneName = "TutorialScene";
 
     void Awake()
     {
 
     }
+
     void Start()
     {
         // BGM（0番）を再生
@@ -19,7 +25,28 @@ public class TitleManager : MonoBehaviour
         }
     }
 
-    // ボタンや画面タップから呼び出す関数
+    // チュートリアルボタンから呼び出す関数
+    public void GoToTutorial()
+    {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySE(0);
+        }
+        // チュートリアル用のコルーチンを開始
+        StartCoroutine(MoveToTutorialSequence());
+    }
+
+    // タイムラグを作ってチュートリアルシーンに切り替える（コルーチン）
+    private IEnumerator MoveToTutorialSequence()
+    {
+        // 1.5秒待機
+        yield return new WaitForSeconds(1.5f);
+
+        // シーンを読込
+        SceneManager.LoadScene(tutorialSceneName);
+    }
+
+    // ボタンや画面タップから呼び出す関数（ステージ選択へ）
     public void GoToStageSelect()
     {
         if (AudioManager.Instance != null)
@@ -37,7 +64,7 @@ public class TitleManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         // シーンを読込
-        SceneManager.LoadScene("1_StageSelectScene");
+        SceneManager.LoadScene(stageSelectSceneName);
     }
 
     // ゲーム終了ボタン用（コルーチンを呼び出す窓口）

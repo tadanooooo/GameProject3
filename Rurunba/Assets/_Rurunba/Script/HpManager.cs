@@ -175,8 +175,8 @@ public class HpManager : MonoBehaviour
             Die();
         }
     }
-
-    IEnumerator BlinkRoutine()
+    
+    IEnumerator BlinkRoutine() // ダメージを受けた後の無敵時間中にプレイヤーの見た目のみを点滅
     {
         if (targetBlinkObjects == null || targetBlinkObjects.Count == 0)
         {
@@ -194,15 +194,19 @@ public class HpManager : MonoBehaviour
             yield break;
         }
 
+        // 指定されたターゲット（ルンバの見た目の3Dモデル）を一斉に非表示
         while (isInvincible)
         {
+            // 指定されたターゲット（ルンバの見た目の3Dモデル）を一斉に非表示にする
             foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(false); }
             yield return new WaitForSeconds(blinkInterval);
 
+            // 再び一斉に表示状態に戻す
             foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
             yield return new WaitForSeconds(blinkInterval);
         }
 
+        // 無敵時間が終了したら、確実に表示状態（Active = true）にしてループを抜ける
         foreach (GameObject obj in targetBlinkObjects) { if (obj != null) obj.SetActive(true); }
     }
 

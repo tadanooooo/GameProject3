@@ -42,7 +42,6 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        // 進行方向へカメラを先回りさせる
         Vector3 shiftOffset = Vector3.zero;
         if (targetRb != null)
         {
@@ -56,24 +55,23 @@ public class CameraFollow : MonoBehaviour
             shiftOffset = Vector3.ClampMagnitude(shiftOffset, maxShiftDistance);
         }
 
-        // 本来行きたい理想の位置に、先回り分のオフセット（shiftOffset）を足し算する
+        // 本来カメラが配置されるべき理想の位置（desiredPosition）を計算
         Vector3 desiredPosition = target.position + offset + shiftOffset;
 
-        // レイキャストで壁があるかチェック
+        // プレイヤーからカメラに向かってレイ（光線）を飛ばし、壁レイヤーを検知
         RaycastHit hit;
         Vector3 direction = desiredPosition - target.position;
         float distance = direction.magnitude;
 
         if (Physics.Raycast(target.position, direction.normalized, out hit, distance, wallLayer))
         {
-            // 壁あり
-            // 後ろに下がれないので、位置を「ターゲットの真上（指定の高さ）」にする
-            targetPosition = target.position + Vector3.up * heightWhenTopDown;
-            targetRotation = Quaternion.Euler(wallRotation);
+            // 壁を検知した場合、カメラの位置を自機の真上に移動
+            targetPosition = target.position + Vector3.up * heightWhenTopDown; // 真上
+            targetRotation = Quaternion.Euler(wallRotation);                   // 角度90度
         }
         else
         {
-            // 壁なし通常通り
+            // 壁がない場合は、通常通りの斜め見下ろし視点
             targetPosition = desiredPosition;
             targetRotation = Quaternion.Euler(fixedRotation);
         }
