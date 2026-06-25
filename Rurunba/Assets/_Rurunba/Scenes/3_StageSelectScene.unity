@@ -798,7 +798,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[0].targetTime
-      value: 0
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[1].targetTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[2].targetTime
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[3].targetTime
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[4].targetTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[5].targetTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[6].targetTime
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[7].targetTime
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[8].targetTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
+      propertyPath: allStages.Array.data[9].targetTime
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4505186102094494722, guid: 0b0c99842bbae104ebb9c783292817fb, type: 3}
       propertyPath: allStages.Array.data[0].stageNumber
