@@ -3093,6 +3093,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2089782829548458039, guid: e8b807c3a7911be4b8ad381dc5bd2c49, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2084484573}
+    - target: {fileID: 2089782829548458039, guid: e8b807c3a7911be4b8ad381dc5bd2c49, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToTutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 2480402213070246531, guid: e8b807c3a7911be4b8ad381dc5bd2c49, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5105,11 +5113,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rurunba 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 682604025218952025, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6798615622682377459, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904115972}
   m_SourcePrefab: {fileID: 100100000, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+--- !u!1 &1904115971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6798615622682377459, guid: 6a2308f7b732fe54e89f1e65cfbf8660, type: 3}
+  m_PrefabInstance: {fileID: 1904115970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1904115972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904115971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5bdb419ad597345a67c7ff5ed0dd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TitleScenePlayer
+  moveSpeed: 3
+  changeDirectionTime: 3
+  trashTag: Trash
+  wallTag: Wall
 --- !u!1 &1958344171
 GameObject:
   m_ObjectHideFlags: 0
