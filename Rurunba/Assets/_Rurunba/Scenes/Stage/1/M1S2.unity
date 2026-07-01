@@ -7675,6 +7675,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1067903560}
     - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
+      propertyPath: targetTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847894325148085008, guid: b3dd5e374211143468c8bd8203d637bb, type: 3}
       propertyPath: nextStageSceneName
       value: M1S3
       objectReference: {fileID: 0}
